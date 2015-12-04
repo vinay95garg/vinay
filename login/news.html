@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<?php
+    require '../slim_eg/start.php'; 
+    require '../slim_files/start.php'; 
+    require '../slim_files/start1.php'; 
+
+?>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Welcome</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/sb-admin.css" rel="stylesheet">
+    <link href="css/plugins/morris.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/morris/raphael.min.js"></script>
+    <script src="js/plugins/morris/morris.min.js"></script>
+    <script src="js/plugins/morris/morris-data.js"></script>
+
+
+<script type="text/javascript" src="final_selection.js"></script>
+
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+          <!-- CSS goes in the document HEAD or added to your external stylesheet -->
+
+
+
+<style>
+
+
+
+
+
+body {
+    background: url(m.jpg);
+    background-attachment: fixed;
+     background-repeat: repeat-y;
+    font-family: 'Open Sans', sans-serif;
+    color: #4e4e4e;
+    line-height: 22px;
+}
+
+
+h1{
+  color: #396;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 40px 0px 20px;
+}
+
+
+</style>
+
+    </head>
+
+<body onload="formation1()">
+
+    <div id="wrapper">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            
+<!--Header-->
+          
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only"></span>
+                    
+                </button>
+                <a class="navbar-brand" href="index.html">Welcome</a>
+            </div>
+            
+                
+
+<!---Username-->
+
+
+
+
+              <ul class="nav navbar-right top-nav">
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> vishal soni<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href=""><i class="fa fa-fw fa-user"></i> Profile</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa fa-fw fa-gear"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href=""><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+<!---Menus Sidebar-->
+
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li >
+                        
+                    <a href="C:\Users\Eagle\Desktop\minor2\FFL\index.html" ><span class="fa fa-home fa-2">Home</a>
+                    </li>
+                    <li class="">
+                        <a href="index.html"> <span class="fa fa-briefcase fa-2">Pick A Team</a>
+                    </li>
+                    <li class="">
+                        <a href="playing_game.html"><span class="fa fa-futbol-o fa-2">Playing Game</a>
+                    </li>
+                    <li>
+                        <a href="Match_day.html"><span class="fa fa-clock-o fa-2">Match Day</a>
+                    </li>
+                    <li class="active">
+                        <a href="News.html"><span class="fa fa-film fa-2">News & Features</a>
+                    </li>
+                     
+                    <li><a  id="multiplayer_submit" href="chMult/pages/UserLogin.php" value="Multiplayer game">Multiplayer</a></li>
+
+                </ul>
+           </nav>
+
+<!------>
+<div id="page-wrapper">
+
+
+
+
+
+
+</div>
+
+
+
+
+
+            <div class="container-fluid" >
+            <div class="row">
+            <div class="col-lg-12">
+<div id="content" class="container">
+
+
+
+                    <!-- begin ts -->
+
+                        <div class="span-4"><div class="span-4">
+<!-- begin top-stories -->
+<div id="top-stories" class="span-4 last">
+<!-- begin mod-container -->
+<div class="mod-container mod-tabs mod-no-footer ui-tabs ui-widget ui-widget-content ui-corner-all">
+<!-- begin mod-header -->
+<div class="mod-header">
+<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+</ul>
+</div>
+<!-- end mod-header -->
+<!-- begin mod-content -->
+<div class="mod-content">
+<!-- begin mod-tab-content-top-stories -->
+<div id="mod-tab-content-top-stories" class="mod-tab-content ui-tabs-panel ui-widget-content ui-corner-bottom">
+<div class="top-story-content single">
+<!-- nbtest /photo/2015/0815/nfl_a_cutler_576x324.jpg -->
+<div class="top-story-image">
+<img src="http://assets.espn.go.com/photo/2015/0815/nfl_a_cutler_576x324.jpg" width="576" height="324" border="0" alt="Cutler">
+</div>
+<div class="top-story-headline">
+<div class="transparent-background"></div>
+
+
+
+
+<!--img src="http://assets.espn.go.com/icons/in.gif" width="11" height="11" border="0" alt="Insider" /-->
+<!--img src="http://assets.espn.go.com/icons/video.png" width="16" height="8" border="0" alt="Video" /-->
+<!--img src="http://assets.espn.go.com/icons/audio.png" width="10" height="9" border="0" alt="Listen" /-->
+</div>
+
+            <script>
+            espn.mem.video(14282069,{playerType:'index09', playRelatedExternally: 'false', thumbnailID: 13445922, thumbnailURL: 'http://assets.espn.go.com/photo/2015/0815/nfl_a_cutler_576x324.jpg'},false);
+            </script>
+            </div>
+<div class="mod-mem-carousel" id="tscar-1449215398846">
+</div>
+        <script>
+        espn.mem.init(jQuery('#tscar-1449215398846'))
+        </script>
+        <ol>
+        </div><div id="ui-tabs-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide"></div>
+<!-- end mod-tab-content-top-stories -->
+<div class="top-story-content single videoplayer videoplayer-index09 videoplayer-show"><object type="application/x-shockwave-flash" width="576" height="324" id="videoPlayer" class="OoyalaVideoPlayer" data="http://player.ooyala.com/player_v2.swf"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"><param name="bgcolor" value="#000000"><param name="wmode" value="opaque"><param name="flashvars" value="me=videoPlayer&amp;embedCode=53dHdheTqi8xAicxBxUsgE0N05FN5LBt&amp;width=576&amp;height=324&amp;pcode=1kNG061cgaoolOncv54OAO1ceO-I&amp;externalId=espn%3A14282069&amp;callback=espn.video.handleEvents&amp;adSetCode=91cDU6NuXTGKz3OdjOxFdAgJVtQcKJnI&amp;hasModuleParams=1&amp;playerBrandingId=a28f1994885a41098953d166c34cf81c&amp;video_pcode=1kNG061cgaoolOncv54OAO1ceO-I&amp;contactServer=player.ooyala.com/Q2HGKJ-PryQsG7CT&amp;text=3P_NPPsrVD_aKeYr374RlKPqCaxwi9ySeraixO-JQE0jJi7UbmAdgAD7eUnBV_HpKw_FLZj534sekUuSOl7A7Mxbnc0ZR14_0Bk-Tg2q22mAd-Fio7Epr9djaHKDTfusa0WQ4X2dABAysFhTfRgL4n8a0tyv_b4Iw--wUyRG0IiaW_N_Es6RXKPYEmS2o5yJTVskHUJiydlh4A90eoRiK0wtrX0AtnmdJf4Jb-e8dQ6TZQHZ6Km1YlUGslLXKwICW6E5QMHwwJTLcIe9JLyWCbYojyHjnrLULfhuWTrbxgP79abOjwF4ZU2kLGlUNlEcSawSo8cn_ZiffPlKuZCc6JkIR13gn37u_sYpRDNKVUBiRD5yZxQ4SQ6wUmywo7QHRrWyTAMSw2NTi2aqQ7vQAlhtb1z0uuraNZP2rAbq93Xxk9_kAJ82XC9AwDtCjABI2xOr-oYf6qHHLCSfTLuQ62N2y4mEchZicYYIHgalcuTgT87vDIqwJwAvj9x2i0ZfQ391C6J4DtY9X2MkjpNuIieZehG1tfrYJ0cKyQt6TSLR724p-uQD9aC7itOsXFrK2B61-bL-hJ1N1FC4e4SZ8sebWWp43engm1UyZqtllHlCnEFO2PvPr6JbepCPZ1kCiAdRAFxPSA4O-7frRQvCE1MuY1AlPmwDCEQAvt-RnwfGPgnUiPnHW10Llf2SnchWQq7nmAtu990gulowaQtkj2iU1u-ICdqTLcI7QYmY8NzjUIOYt0ZVk0uAzjf5OyYeMCzXwkZuuMXgDBpTIdHi-cngZrisxukc2_ScG6QmNBvOKJ0VgdFLwRHDhfr6FH0hMgi8BAcDFB3nVKGkm7Q96og5mxF4T2qbpvmetANfSTYKyuQkhqB6J7iEuV_OsifH5_OATyKJk_lbd3bdxXScpYNnqi7KuwfcNaLn0WT99_ZDL3FDnXn43frQBexX3eXukXfckQSY2YOQKGm6AAD-aVPBMIclcEEbLqaovm4ipCRBOe1pMO6OVLsjqYrAVibL-VZiv8O2YrcGGAlUUiTAGS2cFoAEytPJjfP03B5LPkhaCVdD3tZipBPInBQf52zhl6F2BEcYB-R2U0W-XW1xj-SOpsXJDZSkjcQ1cHTPYQCYtzazQTdkPvZ-vKwGXtI5QBzbA0TgjUbOHg4UORRfhDz7SRt7ti6wl807h9qdw5NtOCvEcMp4MyWUE3-KpbMoyL9oyLZBI9NK2lBW6zGZ1j2YIIwtCC8SYKMvtnFdvuYl4AAf8XQs7wm6oJBtg1WI9fkYF6kQJQgcKQWfrHNTkd3HLxlcu4FPMkBJ9TaQxAKpS-NdECbCnMHjqKtkMN-lkxLJ4eChpERYV09oKGfYz_kPVL9wqhOh10UBHyazMakIfXKJx9WpstUnCMki-G4NjoAltd9c5ZzRwfptuYN9qYfhg0kxHFkpO8YR7c6L6bbDcM35VZ4FuISQHk2HUXIrJMM69a_7OOjjbGuslDzrDKk-lOMMgkKLpJK_RbsP5C-XdVzbq0-kmcuXBGXm3xRmjA54BB0FkUT125dNO3srtIRMrTw1UBTr0hMuC-MSzkKZgYWhNpTl4oI_NKSJYMpY0FnDe1b0A_Te4ysy6P9Oco2nbRzdUMkuJ52OgA3yjPbmCPLfa56L1YsPepsUh2ARvFqNFjqTa0an8lxGU7XNPwFKkpf4y8pnDoqHFPb1tOYuXC2fcV8P4wRzr7ihJkye6HFywKc0KXhsqDBn5IoNsNb6IcxtxOc1Ttl0BnuC5xYMjjrZLn2Jk4oOpw1R6-zlrrOt2khxdZQqMOjuIpCBtk0vtdMwfBMqrqqSblp8Cen1f1_Tul-uBEWoA4nvKtU-YmLKttye-BBuS8xwH8efIl4yt1OeiKT8odJOEd12AkS4IlyQtaVbVZKvSbHmf5CAy0uOc7BpnLzcHFsCxutEs45wZ8oJDo1gRtp7NRSZ2kgvDyRpRFqwNKEbQ1_KiHGMlX5LrKUOe-O5jPjA-xko90wb6R9PI6a4hXA66-U7L9C2L6rrWPNUi4z-nO6FyMwXz32_GRptue025yCzvOsejQkaILQHelhrFy_dRxAAdRO9fpIzbdwxWS2CPOmDWQOW-438B8PqKTQ6rDpG-vaNKwuec3L4-Mtz84zPR3umB9oZHqWQDkayJKezgyPwbenvM4e_P46IjkMO04iqHSxrOO4yZrY3thNq_2zkwuYrA56LrTl49ON4gpP_FqvqUpP3MYycN1bMYHIghkClEqoulTd5y00WPkVMPpJB4ZWyKg2a9y28VeUBL73BvVCh_5g10VWmR-z4LVE_DVKI023JvjHNil5JVxpy9Uoh663Lb6jSXS5mxevdCatoNBkJQh2yOOJsjhYF3nioQyVqEzmKL75pnq_P1vitXT_EefXI_GwLiflji93knUh9QorcLHiPlxEyreyZ0SXycsCxSlm91FfWd4w-ck2C6vQZ-amOvJ2jPyhMS5yzpr3nummyQaBCO9Nyk2Q9yoLcYh11w9LG-gplQyTSu5Q7LpEnW6oMT3uJMJOjQqK3UibZtZKgAVTKLn62ZODw1jkKDJsWoTvtK6XlmOcujeONCuwbd3Q5BZpSAIj4rE4iBRSH9_F9shtBAfBIFnced14ta1r5FEPmB4-Y0gGlR4RZQ9WrPxx68qkeY65ddRyIeou9zYzqG-XvE7i6N50NYpT4bXbCeZp2hdazXCsRPRp1IFPAemnMHoABDp9YVw1BrBZIb2RQ5_9WXDITficayTPvKZu7MKSB-NgrrjHnO7G2bIikZ95LVPM7Y0ETsPc96Gw7r3vSn7x3cAm8-1OBceJKcRxXerz8cfjICz-S_t8QSZPwTznnO5K51xCJcY5sAigZyGYD2GGRY2ZSi-XZ-iZQ_AXHoMLSrdoE12btue2l7mn_tCa62w9vaJ54MDefQQNblIuEjl74Xlb4N6UaoHiVCQKh6vrB06ZcPTRnq81dlaauRT5RBEalf7tneI8KRmi2MO6DDIzmzohrtXQ1U-lw9Y00nHrhgAudVOqU0nyGnY4lgm4iaMxYTmqNRKAYb1em6So5iXdJLx5C1sw3t20YRjcxh__XH34RvXgbL7jpSzYi8gd1LrThgF_wDMyX2cASQebal2xupIp83xG0yeHv8bJTutyxjgOhLinpnP1ZTA4XRNMGmo1pV0zXBNJTkQbq7cuVdkJzdnfP8uWPv7qGyUTtgQmEAqYh4BQRDe_4i54O7HLVJ7t00pNAnbT0TrqlSPtNuMxE3AfSquJ1GHO9pt6ebwQ6RNzItLNc8bC5cXQBVLnPap2LzxRakFrzGutmc0_A2qzQ_90tE0GFXOhvAmRbAYs8wpGbzFt66Z9u1q5UDvlY3MLlsN1_RMexl8JWMdacr2uerYeTASTfK9Cd2e-C_4GhxHdcXUaQX93jJ6kdRrKcTXeCy8koQm2fnPvh-4qfZxcsqHYPvbQ3yjDqUKqrqCp6b6l153rFj7vnSIzjP9cM3jgBAxCSdHHf6Is--FkkCo-uFhJapxHVsXXX4q8QSeQ6lMDathotn43oLCP4F9Ew3M3CVBgt1QEc8L489VB4sAEw8xbPJS7SrphWqswBrujkUDgjXtvWjXLqMLLRISRs_oI5d90yHzE7NvM7SVALi6FMSpq9MsKgoiQxRANKf7d3gde7A1WPCPYwoQjNf5tnIQITZSF7jbsYupfvlF2xVxk5AKB1Jk6ElcIOq8LPYoHH_Nt-8Dxy57mAF-jrVti6az8ySJm_PCqfGsX-BpqrkeDX3LPCaVauxU7HOdU1lTHOiWkXENIpPcwDqRhBgVDYMH31i_noc1NrK-HL05ncYkUi1kMhbZ0T5J_O5Gs0HmErO-qvKodPdWKe0UEdwejJo1Zzq37dxILDdvS6s0_KbS7YKJobgKFV_ooDB9x1FIP8mnfnwBlt9tA0PJw1i4V9dbbOqbEMhhfM-7DeUWZ2tyIHGaqg9YQhQYhw3mJmaHv7Hs98wHctreTbw4imeN0e6TVfmLx7Tw2mJrFnSZ7Fv-5EXhQv4cxGJeO82ZBp69AVvvCvqumS0EwHHF-B9fy3k2TjrB_LqwGz_ggSbeOqBsAb03qsgj9NwK0mQAXL8a5Roc7jQpgaw8WJBkcgp6kiPFA7rV0jqQxDdIFhORF5m5MB2vHTnjf6ZLCifdgmt_gs6sUMTVLtkWGhnzyhVXMWwtASCxyHojAi5HWquIVRIjpHxTkH7qBIY_qr4NJRZs5f25dEzowTA4qK4IrTI8giQH3DKF09yb69IQCjbJh6Q5TiYDUsKpsKOH_4my56xJHwW-Eb4G5slJD56C7ACWo6aFmStTir5A6Q953H_yaCHwBPxry5rJj0_sbrpTLU_6ljJBGd5EhZHaNlCDcku-yx32B-PL3ui3qY82JbldIhL1XDpWK_ZszQGp9gabePjwx9JLh3RjI3kHUfxjdWah2s5yN3v9j8OKYs8Uh4pC3JuTxqRPZtBv7wDaNauLsdpiJGpCDtq_Fako5jKVgjAuDnMCfQSzKfO1sKu-WKxUMOR3C8Agi-qjCky1y1Hd8FLnUD4KCsE-P1l3Zcd5E_wxe3aT2gvSraBEVEfgNShxaVe-xW0-ZTXs0ydpybSGUq4fRns0ETr4a9vKmtpPrc6WllKLlMD7lWwK8CjOxnBjOXSdAg1wzoHXzg8D8M8eVmoiX3rGRzggDepSiLOzPCKhs9kfjn63Er2KBcx6IWi0T6KdWiKQ1TT7YycaiOzLOKN-F6raDoeixY8Qn8b-jeJPGBbbqwBYI6u-SYjmo_Z79mIAEV3IC6FpVOzshYuqLZ-f3NC-XNMIwiJiG6waTEzo8PAuxetBKmtRi-HgQizcoVHcuAMK6rEBV2BL01eO2reYUuIwstJlJbCg51RTIr90Ljhc9MC2i3pNc7tGQLuaadnXbRQsRa4wDo5jdY6EimbcWpE0iF_6gaJdK22ZsMQcoLK2Cq9UOUrj0PL0aVkC2-lT0UE-ahJEnWhpSgt61_6WIY0OcCNPea6ChUJtsatW6X4yA1YAQ3I-yeWV_5d_ryfBAA7WdaooxS7O_rsc5EMug-yl9WGEtDHAAv6xLAx8aJM2tE4bJYP0WKxodwGbMxxgm8LSZx1Ot6ngschdn_6VjJI5-GXDDl_zUcU-0Z2CLnrkloBZmlxwX-2c42WPZccLxFqHbkvZ-GZiHv1qjK3kinA4x2uOOVtm04zczwvpN8xFwihSLPJP5eqwXswWfINJwaH0uTaLfy7nnDovybQmqPcXJ21aWxiSNZPGYoX6R7Z58cHQU-bP5RjD2IRPL8ayA-2hUGed_RhzqTgBFS1-ZLIr6fnBSctUf674DXb7IGJYjXiycvAE15WUDQgPMqtGIQ8q9OEzBTEiF9w8VdrgDQ_kj_fQtJajAMUsY9r-nl-k9XMoyuBKYp8s9O-1LZRlCesOnPH0QFZUSUybF8HWyHtyVyeC5CxGcbmZmkbC5Y4JN6T6DfAT3c0SLwafrAFEtRW6UoU5i6P38H5sQ6u_vkR9YoWDbLeZsVGasgPaCOv79gAIW6NSPXfsuljIppsbIzoEoLK6WVl_fAd170SuJjsJZ5u2SHRI9hRvyZ0261x_cOlrI2bjKPhvGdFmwWkn27MWRBBKJoFWeafhVKzx9iXwWQGtUXAtBwYdSYP3se5DqCl-t3UW3sqdCWD_UYhmQWwRpbAfyG5KIE2q3acyuRhazJUFyfb_07oLT4Cd3NhdPun2qxF15zwqehBIp-CZUZ0Bst0ufue80AVmUzL-mAanwuehaifTK_u-GlcohCrNJBM1aNkaKZLws320zNWZz77HXjHwxzrg2ENAjX9gm31nqD4wOPhl2c826wPDoshQA9xKGUjGxbfaAAo6gJ-w45pVsAPFiSBjpcTlsZXZgcwzdYWMIG1-0cKrgi_f6pJAOhKG-TFK4Ync01j2t4qNNBHNMxJoYMkq1WX4o74tk8PbXvYrMlGkF8aA6k9i1HkB4c3kN7AzMlhs8S5-Su6Q6BUQUM5HLGVU4tr5a7a4EBTy6TaOrwerTpLREiAuj3AyYElwxUi5Hkpo2iWePnnyfZ3JvTi2PLWcC8GUq2FvJhHjJ_6F7ZgL0Fcng6v_ApLPvD39t2hmg_r1OlYN_XsslWcmtVXD1EPG0t31D3EkwsDlB4yv9bJr9lOjmhyQrgVxTdnBdasYqiF549BwIkSZ6IJ3YDwg7CSgYR3XkM25nynWwYvPw9YbWH1wW9FQrLqAn4-EQijdY-FSrvl78yYAJJkhADG1DNHjxauPqVbTC4UZgb52mw7vhQPt8h_cxRINh2Pcl_oREV68EWta_3ZIlJm1HhS50NuyKiliADLaWPy3rtbZgJ1fofaF1Z51iHmV389yxeIdWWSSy-C0Owk9dYAPKJz3ceERm7S81nSMJmCy5y73XSmCmb50E2H4E8qPhRDHO22jXboxAkCMedjWMyMoi6quyy7kcFXH_-moQZGY7ztItAlRGngfqp_Ng0GY6HKLe_FZ5YKrKpUPEfytHJU_60mt99bZxkihmtz3_LwbwiDNbqhHQxqkdBTT_dnFkQ4vMH-4zvzKQMqAmH0k5Nh6p2a0E4ZArtWVKJ6iAlNrPIE8EWZDPYfQqjbIham3eO-YEghpveYZMV18uX8gFpz_ZOtzt8Cuh22ZwL-lUZse4r1DhLr0uiKtcZFrGLL1csWBfpFs2W16KxjSpniMEdPt4EEZxKUKkJEOjMup2OEh0cJyJAgQYlHhk86as-WNKfU5G-5OUEd9noqKRIthWfBasBUaeKr_lEflr2KPeZynvHGCLyer04XabSO0JbRx5eg5hmD2FCEcVf12HTXPv9ggAsmkSuZRFKzJ6LET_HRoHMN5jAJsJtbP2T_ME2tlrqWAqItdA4G8eQu7HRP5krNoYgNA1AurEwI3xvNx_6p0t5yIzgqptLS2Lc5Vp7ONplq7YWAFYF0vabjblFRb9gR4VXNouVI5FolaKHm6qf9bn00tk0viFcPskDNKXprT3S5NzbleoxVBfd4bIAG3ya46mTfjrBAAd2E51U1fSFN5uSlJ-J5sLEkraOm_4YqoFBOXrrNhSQsBiTC0qufHfZODDkhvDsWZYM0S5LzQLBfDgqMgahllfPqM-AV4X7Y7DvYb0Y21TvS2P6DdlECMvEiFtEhc7Hl0jZLb94wQJLMF05M_tm4RJuOHZMLT9HcEi6RNErBQatRtPrSfkxmeDUSS_FcTBxgiXhKYzMuiCfso6L2EdgBfsx1Bpm25nLKsx98tIqnxgHyh3Ve_ZIFW8F8cXImWmCTQGhnmavRbRulMCmMNWO0Fwd74xNp58l098W9ltkPafue6ydOocVigxMWmm_GPFXdx35W-oilQXm6YYP6pWs6-azu05acgqrlitMjxFIk5W_hpYcjx70IdRT99JNcmmtPMbC3EIHqo29UoPeX4mdC-f4vwDaPv7pxI4nLOsK_BuDR6uYd-S1TMMRLk2wT9sCd37h_RTHozFhHUC7piDD-7smaMzZ9T7083AmaFEX5vvDgV6AgH8mtTKJXqeJaPo8lIDWufn8y6_ez4-d6MPy_s9ibw3V68q_hvdo7aBdnbHhok3iBMiEYQLmzedQY9jO3l75b6IcYSBzn_2up7g-Ds5LfYJcm4Vtr6dxr_HhHi87k_5rKumIyPtyV3psS3Ch7vOwtfWCZqmdhmjSIZnCNswaZHGBr-7t3GKEIiOId6II4nGwfz-wBc3qfzFVx6zb1Cdlv6pK48aw88z8eq81ZvadPHmu6B5iaHPFFqAyQ9aY3kb0sIZPJOR75aSpbk2Kq3hiUsQhtOLnji5awexAkylRuKOS09JXjz17Y4DC4O_7rTMLIb1wD2z-Xa1Ogg4Mta5HV3pdw33xylcAEMJkuEOpEpeu7Elkt7K-ULCxqCf1a7sqvCV57EaRJRfHMMBauwA34iiTG7O8ooXV064a8cHNgaVD6OudctmKuKqscBAK4ZkbFnTpUmFWFBZlP3W_U-2DJAU3qwHhHrU-Z-mdaSeMyk8dXwwttC3qqIqvS7VbDCgP3VGWe9NNw6R0k0HjrZkpZsuLne9bRpjtUxDA6K8sHf_eRQ_6lysl5sL4cOdJnOSvNMbhdpVW_quD0VAUyYpxcawbcmNbn3TJ87xlme811TVy6VDkCIVxmZAqBk-7rs21AqmtqQZqh1jnvPZLkuMomvQUkFGJE1K6hJPzuYXZ4rS5uHFowmNBQpE_rcag_NBWNyr2M8J_W1EaQg2d9CiCR_MtN_ZuuXytIpsaZQtqfqiTW5hjjdGEiA1de2NnVdjSFAg_l7D4eMa63irb_FYOAY-1bicQOxBkC_F45mVd6IkBO_vWAfxQLcgOVL-UKALsjExG2GcVa2JWwjqb8VGJr2eIvvfaCOgYNIbwD1OD8iV5JZYBESc2QoKwVUGq4jylAz1CS0lUjlGJ0hV6I0TvXrhalJ0vXxFaVajIlhY4OVS_FAU8XjSIpOqRd0kDi6agyMyLrgvCJTozbSHgVHOXjF1rqUZNCAkFbTgQ1yKPbnFWV3SE8zS8UAvCxow7nzcerbIUMI4DqLi0akq-cKfRE1o6QxNqb8lP9daU1NCfunORf2XmBiwNz3PMkZdnXSfgjm6SlGpTwekveT352rAYD_iHT9P5YCxRSsQuYnAFOssoyjauaiH2a8Eu1n_u6GyODFzmsrY6OqpybtNQV7Rvfj8up6zG2g_3put0r9MSuSp_wvvMy0_2MLzcABnvT3OYvMZomKi3pcpkgwlGxpFWOj3xZCN3A6FPYWXB2lDhr1pcxpkJVhuVIyT6aN-FoOdx0L1d91jAR-D_5_Nlsn32zwJslZkdDR-F6aFvAlQxjggO_aWLTX6wowXfYH86ksrc53mCeujr1G0eEGDcC31Cs42-vjc6i6Im6rNuW-9fikL8SWAKyJbG_2bhBl_7hKnCi6m9uDyX59tSjRYamBVEJlD9dzjgRBx3daPw1R589yZOt7NxiW742RtTpqn9WLGaH-KphvJnZuHjTIRYNraf5yrkzPXEowiPPiSDsadOF4MeRlmDPxOw95Y5NzK5FeE6wPG_hFuKjWbipa52hmHvn_zbkVAhyKjMvIsbIeyuriFGXjQhcbjzsdFF12HwJP_vPAUA63YpwJPhrqGyAxnMVhf28QyV7Um6sZLY_H31zBCm5DlnWBDw5Dyt8yhA6YMGphb3uufp_v5XWuy7pJGW1Wib31bZCGbFmuXPiT4MCGB-maCWxq14JMEN4bBGzXhH3cXR_RIjXDKCEfbIgwH_WIhGwTxvBd-eInGmwkoFknAAgbxkeuVZK4NwA6cnTt5nvXHv_z8WN5XrTtR-1O48AFaHo1z3fTEP6r1MyyRNwPX8dkFqG9OHpaPEcScoRMgLykwX8WwJMxuRJWfbWTDKr3RN8P4IOBpVsQkjmRM-wtDGdY5vHGuCIGSaSfODsqmUf9430IxqZXxHXbVPxjbsbwrOeXBxeodFBwUNihg7sQvtxGP_GcwkC3DquOAfCfVH215GEywDXuFQX7hOtO0H-cuHzAKwPl7OoxdcSz89u2zmoOLA-1MDc6qhW89tx4kWJ95pWPRALdghh07jkBGw8jVlw8UjoU_LOQn8BBlXzjBZSO7cY41fKjfS-56_JoNsuaVRvZTl3rX13sMxfu4DrWTCnqYdyi054dev8QQGTGXFrrfyhc6xm5w4yYuqYEvtQHX8pq8wUN28REmiu1mX1yyAjNXgcwn_XRAKiY0mpLI4IhlIZeLmIO42o4UKqMXr-pLjp-JeAh5fj_MLtEDpqvJy_NHv58yNcx3bpXQkBj8jXvT_dd326OYezNzfGM6y_3BFxZoNwnKpY2mEotmNFuMS6c_uK6Q7Ze5Td_0uA9MD96-Gv9TVdzF75GWkk6jXswFeV9HRabUFrHPejMkkJEDjQc0S21h0NtqUoGQHfXc-3VJM78J6RMwxS0HVsOISns9GMrpxL4wzjMl6V-Hek9Hm3MDDycAxxKvJexjOTv7Z-HkegydWIXPaJJUliSVGeAkTgZleIqE7gRa8MoZTigCTEWDPo0-yCDzIPHaFoiNMA7RB3zO43E3vM7qcJrWZrJNaA9i8Wd89O7QWEBRTeRhOnOgnV8BY6VISD1itZegwRM-mU_AVc8AN_GTdAIrzT-whtAbLAUi2O7ndRm3qTDkLSPKwYjeZqAvzePZmuh4Ku5n2BPBM1aQQie1hawxlCGm6PwUxM99wBp6DSz5f9cl5XopvLULzkaV73hTWLsh-nqN-0iLy5muY5QyV5swcRbN5PT9Kz9eL8mEEc-Vb_tF1yg_bebqrIYPsGw-QzhXidBTfEjl-tQ91TiV9Vjh3IKZYXhgAUj3uHCniu5Q2nCD--HH-cTiGpenuGZsoGyIf9MPzmfCc1PMTXTZW5AbMJ98xVKdpTmtmDo8ucu0BhM-qKUHVu2RRj44YSqW-ZuW4QRFkFld8GR-lye1-BvRl1mZmIbtBCqw455fQZqlNuFCLFw0s8WKGNgtXgiGUsD_FsRmYME3jNuiVaUbyJts35akUV4WrQabJN4VZ0zE6VqDNKhxM5T2y1ffphCjxet_9irFtnzPfDzZC82oEFZ-A4wWnjkAF&amp;docUrl=http%3A//games.espn.go.com/frontpage/football&amp;loadStartTime=1449264129888"></object></div>
+</div>
+<!-- end mod-content -->
+</div>
+<!-- end mod-container -->
+</div>
+<!-- end top-stories -->
+</div>
+</ol>
+        <script>
+        
+            espn.core.init.tabs(jQuery('#top-stories').find('.mod-tabs .mod-header'));
+        
+        </script>
+        
+
+                        <div class="span-2"><div class="span-2">
+
+                                                <div class="ad-box" id="AdContainer">
+                                                
+
+<!-- begin ad tag (tile=6) -->
+<script language="JavaScript" type="text/javascript">
+var adSegments = espn.core.ad_segments();
+var adURI = "espn.us.com.games/footballfrontpage;pgn=frontpages;lang=en;gm=football;pos=PromoBox_Integrator;mnr=f;segments;swid=a;sz=300x100,1x1;tile=6;ord=9894842?";adURI = adURI.replace("segments;",adSegments);document.write('<script language="JavaScript" src="http://ad.Doubleclick.net/adj/' + adURI + '" type="text/javascript"><\/script>');
+</script><script language="JavaScript" src="http://ad.Doubleclick.net/adj/espn.us.com.games/footballfrontpage;pgn=frontpages;lang=en;gm=football;pos=PromoBox_Integrator;mnr=f;swid=a;sz=300x100,1x1;tile=6;ord=9894842?" type="text/javascript"></script><noscript>&lt;a href="http://ad.doubleclick.net/jump/espn.us.com.games/footballfrontpage;sz=300x100,1x1;" target="_blank"&gt;&lt;img src="http://ad.doubleclick.net/ad/espn.us.com.games/footballfrontpage;sz=300x100,1x1;" border="0" alt=""&gt;&lt;/a&gt;</noscript>
+<!-- End ad tag -->
+
+</div> <div class="mod-container mod-no-footer mod-open">   
+</div>
+</div>
+
+<div class="mod-container mod-no-footer mod-open">  
+    <div class="mod-content" style="background-image:url('http://games-ak.espn.go.com/s/frontpage10/FS10_karablogBG.jpg')">
+        <div class="col-full" style="margin-top:35px;"> 
+        <ul class="bulletlinks">
+        <li style="font-size:11px; padding:2px 2px 2px 10px;"><a href="http://insider.espn.go.com/blog/eric-karabell-football/insider/post?id=3833">Karabell: New No. 1 TE in fantasy flex ranks</a></li><li style="font-size:11px; padding:2px 2px 2px 10px;"><a href="http://insider.espn.go.com/blog/eric-karabell-football/insider/post?id=3827">Hard to trust Saints, even after Week 13</a></li><li style="font-size:11px; padding:2px 2px 2px 10px;"><a href="http://insider.espn.go.com/blog/eric-karabell-football/insider/post?id=3819">Gronk, Bryant slide in end-of-season ranks</a></li><li style="font-size:11px; padding:2px 2px 2px 10px;"><a href="http://insider.espn.go.com/blog/eric-karabell-football/insider/post?id=3812">Four downs: Chiefs can swing fantasy playoffs</a></li>
+        </ul>
+        </div>
+    </div>
+</div><!-- begin single accordion -->
+<div class="mod-container mod-no-footer">
+<div class="mod-header">
+
+</p><div class="col-full">
+
+
+<ul class="bulletlinks" style="font-size:11px;">
+
+
+</ul>
+</div><p></p>
+</div>
+<a class="mod-accordion-trigger ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" href="#" role="tab" aria-expanded="false" aria-selected="false" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-e"></span><span class="showTitle">Wednesday</span></a>
+<div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" role="tabpanel" style="display: none;">
+<p>
+</p><div class="col-full">
+
+
+<p><!--EDIT BELOW--></p>
+
+
+<ul class="bulletlinks" style="font-size:11px;">
+</div><p></p>
+</div>
+<a class="mod-accordion-trigger ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" href="#" role="tab" aria-expanded="false" aria-selected="false" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-e"></span><span class="showTitle">Tuesday</span></a>
+<div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" role="tabpanel" style="display: none;">
+<p>
+</p><div class="col-full">
+
+
+<p><!--EDIT BELOW--></p>
+
+
+
+<ul class="bulletlinks" style="font-size:11px;">
+
+
+
+
+
+
+<!-- end single accordion -->
+<script>espn.core.init.accordion(jQuery('#accordion5454892'));</script>
+
+            <script language="Javascript" type="text/javascript">
+                (function($){
+                    /*var $accordion = $( "#accordion5454892.mod-accordion, #accordion5454892 .mod-sub-accordion" ),
+                        $first = $accordion.find('span.logo a.podcast').first();*/
+
+                    var $accordion = $( "div#accordion5454892 div.mod-sub-accordion, #accordion5454892.mod-accordion" ),
+                        $first = $accordion.find('div.active').find('span.logo object, span.logo a.podcast');
+
+                    $accordion.accordion({
+                        changestart: function(event, ui) {
+                            $content = ui.newContent.find('span.logo a.podcast');
+                            if($content.length > 0) {
+                                url = $content.attr('href');
+                                var id = $content.attr('id');
+                                $content.attr('id', 'pod-'+id);
+                                id = $content.attr('id');
+                                getEmbedSWF(id, url);
+                            }
+                        }
+                    });
+
+                    getEmbedSWF = function(id, podcastUrl) {
+                        if (swfobject.hasFlashPlayerVersion("8.0.00")) {
+                            var flashvars = { innerCircleTint: "DDDDDD", innerCircleTintPercent: "70", soundLink: podcastUrl };
+                            var params = { scale: "noorder", salign: "lt", wmode: "transparent", allowscriptaccess: "Always" };
+                            var attributes = { id: id };
+                            swfobject.embedSWF("http://assets.espn.go.com/swf/espnradio/09/audio_player_circular_v2.swf", id, "86", "70", "8", false, flashvars, params, attributes);
+                         } else {
+                            var a = document.createElement('audio'),
+                                aId = 'audio' + Math.ceil(Math.random() * 1e10);
+                            $("a#pod-"+id).attr('id', 'pod-'+aId);
+                            $('#pod-'+aId).live('click', function(e) {
+                                if(!!(a.canPlayType && a.canPlayType('audio/mpeg;').replace(/no/, ''))) {
+                                    e.preventDefault();
+                                    $(this).replaceWith('<audio src="' + podcastUrl + '" controls style="width: 250px;"></audio>');
+                                }
+                            });
+                        }
+                    }
+
+                    //hack for first accordion tab
+                    if($first.length > 0) {
+                        getEmbedSWF($first.attr('id'), $first.attr('href'));
+                    }
+                })(jQuery);
+            </script>
+        <div class="ad-box" id="AdContainer">
+
+<!-- begin ad tag (tile=4) -->
+<script language="JavaScript" type="text/javascript">
+var adSegments = espn.core.ad_segments();
+var adURI = "espn.us.com.games/footballfrontpage;pgn=frontpages;lang=en;gm=football;pos=Promo_Marketing3;mnr=f;segments;swid=a;sz=300x100,1x1;tile=4;ord=9894842?";adURI = adURI.replace("segments;",adSegments);document.write('<script language="JavaScript" src="http://ad.Doubleclick.net/adj/' + adURI + '" type="text/javascript"><\/script>');
+</script><script language="JavaScript" src="http://ad.Doubleclick.net/adj/espn.us.com.games/footballfrontpage;pgn=frontpages;lang=en;gm=football;pos=Promo_Marketing3;mnr=f;swid=a;sz=300x100,1x1;tile=4;ord=9894842?" type="text/javascript"></script><noscript>&lt;a href="http://ad.doubleclick.net/jump/espn.us.com.games/footballfrontpage;sz=300x100,1x1;" target="_blank"&gt;&lt;img src="http://ad.doubleclick.net/ad/espn.us.com.games/footballfrontpage;sz=300x100,1x1;" border="0" alt=""&gt;&lt;/a&gt;</noscript>
+<!-- End ad tag -->
+
+</div><div class="bg-opaque mod-outbrain mod-no-border">
+<div class="mod-content">
+<div class="col-full">
+</div>
+</div>
+</div>
+</div><!-- begin single accordion -->
+<div class="mod-container">
+<div class="mod-header">
+<span class="logo">
+</div>
+</div>
+<div class="mod-footer">
+<p><a class="small" href="http://espnradio.espn.go.com/espnradio/podcast/index">More Podcasts »</a></p>
+</div>
+</div>
+<!-- end single accordion -->
+<script>espn.core.init.accordion(jQuery('#accordion5452932'));</script>
+
+            <script language="Javascript" type="text/javascript">
+                (function($){
+                    /*var $accordion = $( "#accordion5452932.mod-accordion, #accordion5452932 .mod-sub-accordion" ),
+                        $first = $accordion.find('span.logo a.podcast').first();*/
+
+                    var $accordion = $( "div#accordion5452932 div.mod-sub-accordion, #accordion5452932.mod-accordion" ),
+                        $first = $accordion.find('div.active').find('span.logo object, span.logo a.podcast');
+
+                    $accordion.accordion({
+                        changestart: function(event, ui) {
+                            $content = ui.newContent.find('span.logo a.podcast');
+                            if($content.length > 0) {
+                                url = $content.attr('href');
+                                var id = $content.attr('id');
+                                $content.attr('id', 'pod-'+id);
+                                id = $content.attr('id');
+                                getEmbedSWF(id, url);
+                            }
+                        }
+                    });
+
+                    getEmbedSWF = function(id, podcastUrl) {
+                        if (swfobject.hasFlashPlayerVersion("8.0.00")) {
+                            var flashvars = { innerCircleTint: "DDDDDD", innerCircleTintPercent: "70", soundLink: podcastUrl };
+                            var params = { scale: "noorder", salign: "lt", wmode: "transparent", allowscriptaccess: "Always" };
+                            var attributes = { id: id };
+                            swfobject.embedSWF("http://assets.espn.go.com/swf/espnradio/09/audio_player_circular_v2.swf", id, "86", "70", "8", false, flashvars, params, attributes);
+                         } else {
+                            var a = document.createElement('audio'),
+                                aId = 'audio' + Math.ceil(Math.random() * 1e10);
+                            $("a#pod-"+id).attr('id', 'pod-'+aId);
+                            $('#pod-'+aId).live('click', function(e) {
+                                if(!!(a.canPlayType && a.canPlayType('audio/mpeg;').replace(/no/, ''))) {
+                                    e.preventDefault();
+                                    $(this).replaceWith('<audio src="' + podcastUrl + '" controls style="width: 250px;"></audio>');
+                                }
+                            });
+                        }
+                    }
+
+                    //hack for first accordion tab
+                    if($first.length > 0) {
+                        getEmbedSWF($first.attr('id'), $first.attr('href'));
+                    }
+                })(jQuery);
+            </script>
+        
+
+<!-- Fantasy Columnists -->
+<div class="mod-container mod-open-list" style="padding-bottom:10px;">
+<div class="mod-header">
+<h4>FANTASY FOOTBALL COLUMNISTS</h4>
+</div>
+<div class="mod-content">
+<ul>
+
+</div></div>
+
+                </div>
+                <!-- begin right of ts -->
+                                <div class="span-2 last">
+                                    
+                                    <div class="span-2">
+                                        <!-- begin InContent ad -->
+                                            <div class="ad-box" id="AdContainer">
+                                            
+
+<!-- begin ad tag (tile=5) -->
+<script language="JavaScript" type="text/javascript">
+var adSegments = espn.core.ad_segments();
+var adURI = "espn.us.com.games/footballfrontpage;pgn=frontpages;lang=en;gm=football;pos=InContent;mnr=f;segments;swid=a;dcopt=ist;sz=300x250,1x1;tile=5;ord=9894842?";adURI = adURI.replace("segments;",adSegments);document.write('<script language="JavaScript" src="http://ad.Doubleclick.net/adj/' + adURI + '" type="text/javascript"><\/script>');
+</script><script language="JavaScript" src="http://ad.Doubleclick.net/adj/espn.us.com.games/footballfrontpage;pgn=frontpages;lang=en;gm=football;pos=InContent;mnr=f;swid=a;dcopt=ist;sz=300x250,1x1;tile=5;ord=9894842?" type="text/javascript"></script><noscript>&lt;a href="http://ad.doubleclick.net/jump/espn.us.com.games/footballfrontpage;sz=300x250,1x1;" target="_blank"&gt;&lt;img src="http://ad.doubleclick.net/ad/espn.us.com.games/footballfrontpage;sz=300x250,1x1;" border="0" alt=""&gt;&lt;/a&gt;</noscript>
+<!-- End ad tag -->
+
+</var>
+</script>
+                                        
+                                                    
+<style type="text/css">
+ul.my-teams { margin-bottom: 10px; }
+
+li.user-entry { line-height: 122%; border-top: 1px solid #d9d9d9; padding: 5px 10px; }
+
+li.user-entry div { background: transparent; margin: 0; }
+li.user-entry div.left { float: left; }
+li.user-entry div.right { float: right; }
+li.user-entry div.img { float: left; margin: 4px 4px 0 0; }
+
+li.editlist div { text-align: right; }
+li.user-entry .clubhouse-link { font-weight: bold; }
+
+li.season-header {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #4b4b4b;
+    font-weight: bold;
+    padding: 0 0 0 8px;
+    margin: 0;
+    background: transparent;
+    line-height: 22px;
+}
+
+li.editlist {
+    font-size: 11px;
+    padding: 10px;
+    line-height: 18px;
+    background: transparent;
+    text-align: right;
+    border-top: 1px solid #d9d9d9;
+}
+
+.prizeEligibleIcon { background:#008A41;color:#fff;font-weight:bold;border:1px solid #80D3A7;font-size:7px;display:inline;margin:0 6px 0 4px;vertical-align:top; cursor:default; }
+.prizeEligibleIconIE { vertical-align:middle; }
+.insiderLeagueIcon { background:#f09237;color:#fff;font-weight:bold;border:1px solid #c46900;font-size:7px;display:inline;margin:0 6px 0 4px;vertical-align:top; cursor:default; }
+.champLeagueIcon { background:#bd0000;color:#fff;font-weight:bold;border:1px solid #8a0000;font-size:7px;display:inline;margin:0 6px 0 4px;vertical-align:top; cursor:default; }
+.espnLeagueIcon { background:#bd0000;color:#fff;font-weight:bold;border:1px solid #8a0000;font-size:7px;display:inline;margin:0 0 0 4px;vertical-align:top; cursor:default; }
+
+p.fantasycastContainer { align: center; }
+a.fantasycastbtn {
+    display: block;
+    margin: 4px 0;
+    width: 114px;
+    height: 27px;
+    background: transparent url(http://g.espncdn.com/lm-static/ffl15/images/fantasycastBtns.png) top left no-repeat;
+    background-size: 114px 62px;
+}
+
+</style>
+                 </div>
+                                        <script id="accordionInitScript1278432243491">
+                        espn.core.init.accordion(jQuery('#accordionInitScript1278432243491').siblings().find('.mod-accordion') );
+                    </script>
+                                    </div>
+                                    <!-- end insider mod -->
+                <div class="mod-container mod-open-list mod-no-footer">
+    <div class="mod-header">
+        <h4>FREE GAMES TO JOIN</h4>
+    </div>
+    <div class="mod-content">
+
+<ul>
+<!-- active season game below -->
+<li class="alt">
+<a href="http://streak.espn.go.com" name="&amp;lpos=fp_fantasy&amp;lid=fantasypromo_streak_fantasy_index"><img width="134" height="75" alt="Streak" src="http://g.espncdn.com/banners/08/img/sfc08_134x75.jpg" border="0" style="display: none !important;"></a>
+<h5><a href="http://streak.espn.go.com" name="&amp;lpos=fp_fantasy&amp;lid=fantasypromo_streak_fantasy_index">Streak For The Cash</a></h5>  
+<p>Build the longest win streak of the month and win cash!</p></li>
+<li class="alt" style="background-color:#ffffff;">
+<a href="http://games.espn.go.com/college-bowl-mania/"><img width="134" height="75" alt="Bowl Mania" src="http://g.espncdn.com/s/bowlmania/15/134x75.png" border="0"></a>
+<h5><a href="http://games.espn.go.com/college-bowl-mania/">Capital One Bowl Mania</a></h5>  
+<p>Pick the winner of all 41 bowl games and win $1,000,000 cash!</p></li>
+<li class="alt">
+<a href="http://games.espn.go.com/nfl-pigskin-pickem/"><img width="134" height="75" alt="Pigskin Pick'em" src="http://g.espncdn.com/banners/12/img/PP12_134x75.jpg" border="0" style="display: none !important;"></a>
+<h5><a href="http://games.espn.go.com/nfl-pigskin-pickem/">Pigskin Pick'em</a></h5>  
+<p>Pick the winner of each NFL game, straight up or against the spread.</p>
+</li>
+<li class="alt" style="background-color:#ffffff;">
+<a href="http://games.espn.go.com/college-football-pickem/en/"><img width="134" height="75" alt="College Pick 'em" src="http://g.espncdn.com/banners/13/img/CP13_134x75.jpg" border="0" style="display: none !important;"></a>
+<h5><a href="http://games.espn.go.com/college-football-pickem/en/">College Pick 'em</a></h5>  
+<p>Be confident in your college football picks each week. </p> 
+</li>
+
+
+<!-- out of season games below -->
+
+<!--<li class="alt" style="background-color:#ffffff;">
+<a href="http://games.espn.go.com/second-chance-bracket/2015/en/bracket"><img width="134" height="75" alt="Second Chance" src="http://games-ak.espn.go.com/banners/15/img/TCM215_134x75.jpg" border="0"></a>
+<h5><a href="http://games.espn.go.com/second-chance-bracket/2015/en/bracket">TC Second Chance</a></h5>   
+<p>Is your bracket already busted? Now you can redeem yourself.</p>
+</li>
+<li class="alt" style="background-color:#ffffff;">
+<a href="http://games.espn.go.com/nfl-eliminator-challenge/"><img width="134" height="75" alt="Eliminator" src="http://g.espncdn.com/banners/12/img/EC12_134x75.jpg" border="0"></a>
+<h5><a href="http://games.espn.go.com/nfl-eliminator-challenge/">Eliminator</a></h5>  
+<p>Every game is sudden death. Pick one winner each week.</p>
+</li>
+<li class="alt">
+<a href="http://games.espn.go.com/tournament-challenge-bracket/2015/en/"><img width="134" height="75" alt="Tournament Challenge" src="http://games-ak.espn.go.com/banners/12/img/TCM12_134x75.jpg" border="0"></a>
+<h5><a href="http://games.espn.go.com/tournament-challenge-bracket/2015/en/">Tournament Chall.</a></h5>  
+<p>How are your brackets holding up? Check now!</p>
+    </li>
+<li class="alt" style="background-color:#ffffff;">
+<a href="http://games.espn.go.com/tournament-challenge-bracket-women/2015/en/"><img width="134" height="75" alt="Women's Tournament Challenge" src="http://games-ak.espn.go.com/banners/12/img/TCW12_134x75.jpg" border="0"></a>
+<h5><a href="http://games.espn.go.com/tournament-challenge-bracket-women/2015/en/">Women's Tournament</a></h5>   
+<p>Who do you think will take home the Women's National Title?</p>
+</li>-->
+
+
+<!--<li class="alt" style="background-color:#ffffff;">
+<a href="http://games.espn.go.com/flb/welcome"><img width="134" height="75" alt="ESPN Fantasy Baseball" src="http://games-ak.espn.go.com/banners/13/img/FLB13_134x75.jpg" border="0"></a>
+<h5><a href="http://games.espn.go.com/flb/welcome">Fantasy Baseball</a></h5>   
+<p>Every fan should play! Create or join a free fantasy baseball league.</p>
+</li>-->
+
+
+<!--<li class="alt" style="background-color:#ffffff;">
+<a href="http://games.espn.go.com/baseball-challenge/" name="&amp;lpos=fp_fantasy&amp;lid=fantasypromo_bbc_fantasy_index"><img width="134" height="75" alt="Baseball Challenge" src="http://g.espncdn.com/banners/14/img/BBC14_134x75.jpg" border="0"></a>
+<h5><a href="http://games.espn.go.com/baseball-challenge/" name="&amp;lpos=fp_fantasy&amp;lid=fantasypromo_bbc_fantasy_index">Baseball Challenge</a></h5>  
+<p>Build the best fantasy roster you can, but stay under the salary cap!</p>
+
+
+<li class="alt">
+<a href="http://games.espn.go.com/college-football-challenge/en/"><img width="134" height="75" alt="College Football Challenge" src="http://g.espncdn.com/banners/12/img/CFC12_134x75.jpg" border="0"></a>
+<h5><a href="http://games.espn.go.com/college-football-challenge/en/">College FB Challenge</a></h5>  
+<p>All the conferences. All the players. Create the best roster and win.</p>
+</li>-->
+
+<!--<li class="alt" style="background-color:#ffffff;">
+<a href="http://games.espn.go.com/nfl-gridiron-playoff-challenge/2014/en/"><img width="134" height="75" alt="Gridiron Playoff" src="http://g.espncdn.com/banners/12/img/GPC12_134x75.jpg" border="0"></a>
+<h5><a href="http://games.espn.go.com/nfl-gridiron-playoff-challenge/2014/en/">Gridiron Playoff Challenge</a></h5>  
+<p>Build your roster of top performers throughout the playoffs.</p>
+</li>-->
+<!--<li class="alt">
+<a href="http://games.espn.go.com/champions-league-pickem/en/" name="&amp;lpos=fp_fantasy&amp;lid=fantasypromo_champions_fantasy_index"><img width="134" height="75" alt="Champions League" src="http://g.espncdn.com/banners/12/img/CLP12_134x75.jpg" border="0"></a>
+<h5><a href="http://games.espn.go.com/champions-league-pickem/en/" name="&amp;lpos=fp_fantasy&amp;lid=fantasypromo_champions_fantasy_index">Champions League</a></h5>  
+<p>Pick the winners during the tournament of Europe's best club teams and win big.</p>
+</li>
+
+<li class="alt" style="background-color:#ffffff;">
+<a href="http://games.espn.go.com/nfl-pigskin-pickem/"><img width="134" height="75" alt="Pigskin Pick'em" src="http://g.espncdn.com/banners/12/img/PP12_134x75.jpg" border="0"></a>
+<h5><a href="http://games.espn.go.com/nfl-pigskin-pickem/">Pigskin Pick'em</a></h5>  
+<p>Pick the winner of each NFL game, straight up or against the spread.</p>
+</li>
+
+<li class="alt" style="background-color:#ffffff;">
+<a href="http://games.espn.go.com/premier-fantasy/en/" name="&amp;lpos=fp_fantasy&amp;lid=fantasypromo_premier_fantasy_index"><img width="134" height="75" alt="Premier Fantasy" src="http://g.espncdn.com/banners/13/img/PF13_134x75.jpg" border="0"></a>
+<h5><a href="http://games.espn.go.com/premier-fantasy/en/" name="&amp;lpos=fp_fantasy&amp;lid=fantasypromo_premier_fantasy_index">Premier Fantasy</a></h5>  
+<p>Build a roster of Premier League stars, but stay under the cap!</p>
+</li>
+
+<li class="alt" style="background-color:#ffffff;">
+<a href="http://games.espn.go.com/nfl-gridiron-challenge/"><img width="134" height="75" alt="Gridiron Challenge" src="http://g.espncdn.com/banners/12/img/GC12_134x75.jpg" border="0"></a>
+<h5><a href="http://games.espn.go.com/nfl-gridiron-challenge/">Gridiron Challenge</a></h5>  
+<p>Build your own team of NFL superstars and compete to win.</p>
+</li>
+-->
+
+<!--<li class="alt" style="background-color:#ffffff;">
+<a href="http://games.espn.go.com/best-ball-pga-majors/2014/en/" name="&amp;lpos=fp_fantasy&amp;lid=fantasypromo_bestball_fantasy_index"><img width="134" height="75" alt="Best Ball Challenge" src="http://g.espncdn.com/banners/12/img/BBMJ12_134x75.jpg" border="0"></a>
+<h5><a href="http://games.espn.go.com/best-ball-pga-majors/2014/en/" name="&amp;lpos=fp_fantasy&amp;lid=fantasypromo_bestball_fantasy_index">Best Ball Majors</a></h5>  
+<p>Pick a winning foursome for each of golf's biggest events!</p>
+    </li>-->
+<!--
+<li class="alt" style="background-color:#ffffff;">
+<a href="http://games.espn.go.com/trivia/en/frontpage" name="&amp;lpos=fp_fantasy&amp;lid=fantasypromo_trivia_fantasy_index"><img width="134" height="75" alt="Trivia" src="http://a.espncdn.com/photo/2010/0909/fantasy_trivia1_134.jpg" border="0"></a>
+<h5><a href="http://games.espn.go.com/trivia/en/frontpage" name="&amp;lpos=fp_fantasy&amp;lid=fantasypromo_trivia_fantasy_index">ESPN Trivia</a></h5>   
+<p>Test your sports IQ and compete against other fans. </p>
+</li> 
+-->
+    </ul>
+    </div>
+    
+</div> <div class="ad-box">
+<iframe scrolling="no" frameborder="0" allowtransparency="true" style="border: medium none; overflow: hidden; width: 300px; height: 285px; background:white;" src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fespnfantasy&amp;width=300&amp;colorscheme=light&amp;connections=8&amp;stream=false&amp;header=true&amp;height=285">
+</iframe>
+</div><div class="mod-container mod-no-footer mod-open">
+
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+       </div>
+    </div>
+
+</div>
+
+
+               
+    
+
+        <div class="img_container" style="margin-right:720px;">
+        
+        </div>
+
+         
+</body>
+
+
+</html>

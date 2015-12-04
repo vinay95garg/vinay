@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<?php
+    require '../slim_eg/start.php'; 
+    require '../slim_files/start.php'; 
+    require '../slim_files/start1.php'; 
+
+?>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Welcome</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/sb-admin.css" rel="stylesheet">
+    <link href="css/plugins/morris.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/morris/raphael.min.js"></script>
+    <script src="js/plugins/morris/morris.min.js"></script>
+    <script src="js/plugins/morris/morris-data.js"></script>
+
+
+<script type="text/javascript" src="final_selection.js"></script>
+
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+          <!-- CSS goes in the document HEAD or added to your external stylesheet -->
+
+
+
+<style>
+
+
+
+
+
+
+media="screen"
+div.last {
+    margin-right: 0;
+}
+footballmedia="screen"
+div.span-1, div.span-2, div.span-3, div.span-4, div.span-5, div.span-6 {
+    float: left;
+    margin-right: 6px;
+    position: relative;
+}
+footballmedia="screen"
+.span-4 {
+    width: 614px;
+}
+footballmedia="screen"
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+user agent stylesheetdiv {
+    display: block;
+}
+Inherited from div.span-4
+footballmedia="screen"
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+Inherited from div.span-4
+footballmedia="screen"
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+Inherited from div#content.container
+footballmedia="screen"
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+Inherited from div#content-wrapper
+footballmedia="screen"
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+Inherited from div#subheader
+footballmedia="screen"
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+Inherited from div.bg-elements
+footballmedia="screen"
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+Inherited from body.trans-fantasy.scoreboard-header.newbg.page-context-top.logged-out
+footballmedia="screen"
+body {
+    line-height: 1;
+    font: 13px/1.385 helvetica,arial,clean,sans-serif;
+    color: #000;
+    background: #f2f2f2 url(http://a2.espncdn.com/prod/assets/bg_espn_generic_optimized.jpg) 50% 0 no-repeat;
+    margin-bottom: 34px;
+}
+footballmedia="screen"
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+Inherited from html.js.no-touch.svg.wf-espnicons-n4-active
+footballmedia="screen"
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    background: url(m.jpg);
+    background-attachment: fixed;
+     background-repeat: repeat-y;
+    font-family: 'Open Sans', sans-serif;
+    color: #4e4e4e;
+    line-height: 22px;
+}
+
+
+h1{
+  color: #396;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 40px 0px 20px;
+}
+
+
+</style>
+
+    </head>
+
+<body onload="formation1()">
+
+    <div id="wrapper">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            
+<!--Header-->
+          
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only"></span>
+                    
+                </button>
+                <a class="navbar-brand" href="index.html">Welcome</a>
+            </div>
+            
+                
+
+<!---Username-->
+
+
+
+
+              <ul class="nav navbar-right top-nav">
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> vishal soni<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href=""><i class="fa fa-fw fa-user"></i> Profile</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa fa-fw fa-gear"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href=""><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+<!---Menus Sidebar-->
+
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li >
+                        
+                    <a href="C:\Users\Eagle\Desktop\minor2\FFL\index.html" ><span class="fa fa-home fa-2">Home</a>
+                    </li>
+                    <li class="">
+                        <a href="index.html"> <span class="fa fa-briefcase fa-2">Pick A Team</a>
+                    </li>
+                    <li class="active">
+                        <a href="playing_game.html"><span class="fa fa-futbol-o fa-2">Playing Game</a>
+                    </li>
+                    <li>
+                        <a href="Match_day.html"><span class="fa fa-clock-o fa-2">Match Day</a>
+                    </li>
+                    <li>
+                        <a href="News.html"><span class="fa fa-film fa-2">News & Features</a>
+                    </li>
+                    <li>
+                        <a href=""><span class="fa fa-line-chart fa-2">Team Progress</a>
+                    </li>
+
+                </ul>
+           </nav>
+
+<!------>
+<div id="page-wrapper">
+
+
+
+
+
+
+</div>
+
+
+
+
+
+            <div class="container-fluid" >
+            <div class="row">
+            <div class="col-lg-12">
+
+
+
+
+
+            <div id="top-stories" class="span-4 last">
+<!-- begin mod-container -->
+<div class="mod-container mod-tabs mod-no-footer ui-tabs ui-widget ui-widget-content ui-corner-all">
+<!-- begin mod-header -->
+<div class="mod-header">
+<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#mod-tab-content-top-stories" name="&amp;lpos=fantasyindex&amp;lid=top+stories">TOP STORIES</a></li>
+<li class="ui-state-default ui-corner-top"><a href="#ui-tabs-1" name="&amp;lpos=fantasyindex&amp;lid=top+videos"><img src="http://assets.espn.go.com/icons/sportscenter.png" width="17" height="11" border="0" alt="SC"> SPORTSCENTER VIDEOS</a></li>
+</ul>
+</div>
+<!-- end mod-header -->
+<!-- begin mod-content -->
+<div class="mod-content">
+<!-- begin mod-tab-content-top-stories -->
+<div id="mod-tab-content-top-stories" class="mod-tab-content ui-tabs-panel ui-widget-content ui-corner-bottom">
+<div class="top-story-content single">
+<!-- nbtest /photo/2015/1122/r29533_576x324_16-9.jpg -->
+<div class="top-story-image">
+<img src="http://assets.espn.go.com/photo/2015/1122/r29533_576x324_16-9.jpg" width="576" height="324" border="0" alt="Carson Palmer">
+</div>
+<div class="top-story-headline">
+<div class="transparent-background"></div>
+<h2>Week 12 Rankings</h2>
+<p>Week 12 rankings are live! Use our experts' position-by-position lists to make your lineup decisions.  <a href="http://espn.go.com/fantasy/football/story/_/page/15ranksWeek12QB/fantasy-football-week-12-rankings-quarterbacks">QB »</a><a href="http://espn.go.com/fantasy/football/story/_/page/15ranksWeek12RB/fantasy-football-week-12-rankings-running-backs">RB »</a><a href="http://espn.go.com/fantasy/football/story/_/page/15ranksWeek12WR/fantasy-football-week-12-rankings-wide-receivers">WR »</a><a href="http://espn.go.com/fantasy/football/story/_/page/15ranksWeek12TE/fantasy-football-week-12-rankings-tight-ends">TE »</a><a href="http://espn.go.com/fantasy/football/story/_/page/15ranksWeek12DST/fantasy-football-week-12-rankings-defenses-dst-def">D/ST »</a><a href="http://espn.go.com/fantasy/football/story/_/page/idpranks15week12/top-defensive-linemen-linebackers-defensive-backs">IDP »</a><a href="http://espn.go.com/fantasy/football/story/_/page/BerryFlexWeek12/matthew-berry-fantasy-football-rankings-week-12-flex-quarterback-defense-kicker">Berry's flex »</a><!--<a href="...">Karabell's flex</a><img src="http://assets.espn.go.com/i/in.gif"> &nbsp; --><a href="http://espn.go.com/fantasy/football/story/_/page/runningback2015/fantasy-football-running-back-depth-chart-featuring-starters-backups-sneaky-pickups">RB Depth Chart »</a><a href="http://insider.espn.go.com/insider/fantasy/football/rosteradvisor/index">Roster Advisor</a><img src="http://assets.espn.go.com/i/in.gif"></p>
+
+
+
+
+
+
+
+<!--img src="http://assets.espn.go.com/icons/in.gif" width="11" height="11" border="0" alt="Insider" /-->
+<!--img src="http://assets.espn.go.com/icons/video.png" width="16" height="8" border="0" alt="Video" /-->
+<!--img src="http://assets.espn.go.com/icons/audio.png" width="10" height="9" border="0" alt="Listen" /--><cite>Christian Petersen/Getty Images</cite>
+</div>
+
+			<script>
+			espn.mem.video(14221673,{playerType:'index09', playRelatedExternally: 'false', thumbnailID: 14200443, thumbnailURL: 'http://assets.espn.go.com/photo/2015/1122/r29533_576x324_16-9.jpg'},false);
+			</script>
+			</div>
+<div class="mod-mem-carousel" id="tscar-1448802353949">
+<ul>
+<li class="active"><div><a href="/frontpage/football?topId=14161149">
+<div class="vid-icon"></div>
+<img src="http://assets.espn.go.com/photo/2015/1122/r29533_110x62_16-9.jpg" width="110" height="62" alt="Carson Palmer"><h3>Week 12 Rankings <span>Fantasy staff</span></h3></a></div></li>
+<li><div><a href="/frontpage/football?topId=14225334">
+<div class="vid-icon"></div>
+<img src="http://assets.espn.go.com/photo/2015/1125/r30479_110x62_16-9.jpg" width="110" height="62" alt="Brian Hoyer"><h3>Matthew Berry <span>Love/Hate Wk 12</span></h3></a></div></li>
+<li><div><a href="/frontpage/football?topId=14222389">
+<div class="vid-icon"></div>
+<img src="http://assets.espn.go.com/photo/2015/1124/r30186_110x62_16-9.jpg" width="110" height="62" alt="T.J. Yeldon"><h3>Week 12 DFS <span>Matchups, tips</span></h3></a></div></li>
+<li><div><a href="/frontpage/football?topId=14213129"><img src="http://assets.espn.go.com/photo/2015/1123/gettyimages-498326702ESPN_110x62.jpg" width="110" height="62" alt="tony-romo"><h3>32 Team Coverage <span>Clay, NFL Nation</span></h3></a></div></li>
+<li><div><a href="/frontpage/football?topId=13879712">
+<div class="vid-icon"></div>
+<img src="http://assets.espn.go.com/photo/2014/1208/nfl_u_lacy01jr_B_110x62.jpg" width="110" height="62" alt="Eddie Lacy"><h3>Season Ranks <span>Karablog</span></h3></a></div></li>
+</ul>
+</div>
+
+		<script>
+		espn.mem.init(jQuery('#tscar-1448802353949'))
+		</script>
+		</div><div id="ui-tabs-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide"></div>
+<!-- end mod-tab-content-top-stories -->
+<div class="top-story-content single videoplayer videoplayer-index09 videoplayer-show">
+<object type="application/x-shockwave-flash" width="576" height="324" id="videoPlayer" class="OoyalaVideoPlayer" data="http://player.ooyala.com/player_v2.swf">
+<param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"><param name="bgcolor" value="#000000"><param name="wmode" value="opaque"><param name="flashvars" value="me=videoPlayer&amp;embedCode=J3NGI0eTqDdpaU2nyYnU39LcMwrXnfeJ&amp;width=576&amp;height=324&amp;pcode=1kNG061cgaoolOncv54OAO1ceO-I&amp;externalId=espn%3A14221673&amp;callback=espn.video.handleEvents&amp;adSetCode=91cDU6NuXTGKz3OdjOxFdAgJVtQcKJnI&amp;hasModuleParams=1&amp;playerBrandingId=a28f1994885a41098953d166c34cf81c&amp;video_pcode=1kNG061cgaoolOncv54OAO1ceO-I&amp;contactServer=player.ooyala.com/Q2HGKJ-PryQsG7CT&amp;text=ic5hW7v1cNPLApQmEysx4OaSrwT56LXPwPJnTO8Hc8z87NDUC1FqICn5ayCk-wjt4l_L5Z9ADKzhcPvijWhUm_8fcdqMcbbSqzen6hYBmID4o49b3D8TEkJpj8pxCX4Rx5RCrAowlQbzxu1KPe07lPHKXoOLxU8F2Sf1offvFxYF8RIwVTwj0dl0JnzRIMBwdt4UdcLLEiwaFo16DLRdDxl_eGx9xJ6GHydfW63Pyui29yz1odPCvcTIYzfVwgZg1Jo7g1VlSB1PTOeeYtm1zgZzQSehd7QWqoXeqDy4fcs1cPF0o3dzDA4KsZkIuuxwBmsJCrNOEYwQXn1uAqE7FGZX3a50_MYVUG0YAClKN6aqmWJhykT7C87QkXqWyCdWSqzg4VImHoFj5MuybKRSorsSymzs1C5mIB1fKuz24VWDm2xWTBZIJYSv7QDJu0YNsYWvQrkKI6-eYZKba1fvYcHjJbWno2-yjwdfONE-VWHeBifphhzPvYNCxfWlWQ-32rzsOg8P291j5ILc2qEILqt_nDKID5axRTBWWJ2fIP82abNepIQlWx3fgBreuPNg_dlAYRsJIK86yZCeS3tbRwT8_eNR8vUj368yLVMXc0nKg731QsjnN8Q104YWXLnj1eGGYGC2yka2sbDar3wzlcu81boz7h824gR9IsQqX6SKj55qqFsdx4vapqBIhj8yqgYTeqAfJ1rA5Z4WZYFqU56DEJjRVx2Lw9gddsmOy-DUVJ8Rn-YAKoioVHpMF96Vyn22zwwY8hjZ7TvJc-xmM84I60DeSWKWr5ntOgH-1q4GNwuXXyPpUA6jKkLctTBNXxcf1GdklzDLYoFBcsec4Q-kI8N57cUWPrvJvSYcrNMtf3ch5GQNTQLMIpIWkSU9iQlKkCww14Q_Ud18dQZ7mmzdLgSqrqYkci0mywZ_DqaI2yVKEGMSz1wqSemQuhQPMjUHUh59KU91hXQrAG-z3f4M81-FeMPhIWCDWp1skF1nm0Im6MbftYtHgO17Sg_Ow_5XnpXJVvfd1O3ZnP1pczuWTHE9O8vfmj2Wnb1HleHXIqLibfFDMKnqhePDgmaxg3YB7xGHYhcJB7LKVFmZ_wxadrpBWGP7DSOzgk-f0Taje70bahTvI2fo-YmJqaz13-knE5pMH_UVWfj4ZQOGTl8-zRLHu1GeZg5qdegJQO_dAeC7ZQajgPCZmAojdT42YKqXSYoy2627eQBIg4qOub4uL-nscUptMfGfGAdTuUgrLFsz8xd-FFfNOkj_E2G9_jYjDtFcovwqErNFEXiUKh4o2DA4MfRTOwyFION6xVlbSaBOZlt282hifM2qBrlTLn7xaxBlLaXYETjh7dqO027xcWABzEDaV-DqXTJFWnl2yVZ0r6szUpuPwGCpel_neX_gP-ga4mGIL5zwQgYvUeolhREa9fVNY0ZWf7aeo82lhr7HemdcnuiiQn3LUyyEoIRcTR-ulMRgERDLgOqkbxRPJ0S975y-T7bzHa1YdTt2cZ_BLJyfqPPDg9W70mX420CTLCEap7BHqnhmR42_oCJBLv5zuU-lkv5NXyusgRzxyIplu7xiu98J8fAoOxmdB4n0DKYPlxzxxqJmvIlyyjinFiKiQjCagarAdeyYCyOgwYe0mzMbHAVtZE_iuGRTzPeBtmwl1NoznXTHBjVl6YKFTALrOzRfVw_FFS6aRwARq1v33c7JyL8F5P2uDrXx0Fwfl6SMzAtXU2Ax1z74wsG8kl-8uV-gR6oFmHwYdeCx4nISBawvMhpgJxH27w786dmJfinGUqZlj620wme7bjqn8W44rSoipWeGuqWuPgdb3Jj_hVu4Zp8Ce6hQ6CBcukR7-gBtkEGnpD4dUJp3oP6T5ncoWM8hJEwoD8AMR3qHrUU57U52aLNJuC6cdk9plUie9XOveZTL3Rjg-WG2IcRAWtaJHx3l2qYwY_FS0hRDIoDyW5PyOZXHbRjDnQbHZ7tTZNSxwn2MsHHfLJ4TCtznh4vljjoITpJKyIsbYENfR-iJiTb5eropSwMMJfBSVaRUHGFj0xpOSXqgzNh5T1LH8T4LNPKDifYn8yUhdPz722KaCypJu606SUwnBQ4SY_etZEeKk3KHjRm_H4ZqmXOqpg-EOncui6vvujSq2xgDIRm3oqadnl8Te2GERr3kkgzJvJMXVOwqHUE8MpeZm-1TbyT49jbjirgkMUtWvZCUFkL7Z1mDq90ceoBviabD0ysRrP0Q9pU1k9uOGhXktNMST2NXU1ppYzWdBNDrroalcH9pWOW_BrW7qnCjZJe3eDt__ZmMIrnNddLMHayjPT7r9TDNpxDmv31LB2AOD57nTQBC3YHTmjQpKfTxdSci6tPXBPJjEy1M0radpaShQpJRRF8YnwnbL4cLsddlnE_xLpFeY1ZxatoYrUAmdJ5U292peftF7u4hT7PpuGJpngR2hzoyA22L3P6Gq7SfCfVLNwKaFUdG0vbh_jR5jmf-oVSTnLPGioF7S7aAhX9g2dWpg9uH83gsfG0XKEhs2TtLBitnB7NOx_IWYQ-nHFb9WhIVvFuoqfUc1lVYqNgabCHJccpMmaGPPf9m3g6h6ad2hD-ILpdVX5mLmfP1bExKaAzS6PFR6KcpRzXBbmNX0tlCt8cVAQRBycNyytODkY3Z0qX4A5Rk9zJJtAU3jfYu0gpJNwuRb76CRORxTIZJdgqC96rbNIyxDHJh6txgnUU5WUOMeuPZxQBYl6qKCYdrexrqrdoJD5GMnZlO-AS2MOA1c5R6P6ofLm4kbY5AhBHV--38ZghK94JGYxRutVWUm6tyDzE7Y5Lh_OcE-COhSvhE6ZZ5sO5rHp-nhnaxD4ThdDMXj5I0cFNvpdZm7nu47ua9G8TWY6uGryS0BDmNZgYS7BUGkZkg4xXQ5Gi5BiFgwBcEet-PhaPNiEZcoLFht7OtoBHColqiFjxZ-5Irhipj86vvYATzQVKKTaqcwG0cFp7nuPWo_6DEr2y-YWj-LeZEpQbc0Atn4xl8FUoUjYx9EpTxq3R2C6-HcLkurwsyViPF5YHy9ZOpVK8GUuNoInLbNQjSd8xawt3mt3JEe5X49SP-jAprK-28uWnAfjgH_Csjd05EQ38n3fgN_9G94yHfEmszsXYENV7gHegyQ7H9XCDSuVMzEDO9jo-iW-aTHXwZImbxG_YKgrMhys2hphCVPy0eE0Mri-bO1fHAE4Fl5krTdRFfxn3fA6k6CE9BMDCZuHHkGNsa7bZRAUZsOjUo9hALBJDru3MRvkhG5tMS0oLBs6ZTP7q7fGj6Vs1vrKc0JNB2300-i_h9YUDVvzC3uZpqXS0xyIQeeWGUcPtr0FY7bYpbjpmjQeodN11fJ6gf69soBaFP0Cc-bD7i08a34E73_lZig7texZ8pmPkoWvUxaI10cZlemra0NZTGC3aBoYvFFCna8-i8U4_PoDrlnqFukWudpEdf9bnnIGcnOA0MBWvTYe_nN7cEOfyXPZj6ZK0TbUbSh47Nch_Gxj7STGjyhUW4WDu9k5g3t9AglK5NvZkBxHIf4-4j7zw6M5m3GwbI4MM8HMpA3KAwY_mstA5JrGs_Z2C037SnOtuHoVzSI7-x1WWGh8L4Yx04sHMBJq8iYKC8XdURuxq-ZqVBezMJPYSZfvwWmBv_Z12H7TiFHksRfMpI5OSuAViEPo513ZNDQIbkaWNXofhtaTt4W8YHf1yQ5Rap84kHx_d5fRHD6NXKzmVIxuSqr9MCXaSC4TUB1_QN_SEz_OkIWDvR-8WwC0d6J3FofnjLfNcO7MrKuZU65B95fcjCXJl4-xzSFoG4vI0PYpVR1QDYLvUVVJjsO-ioP1g9F0gqfJKJHpGsRZ3KzTCY9qDeJ--N-KB8KpFhr1FiX1cf9112if72SWqoSa7FUhjkW9OTHRXQnedWhrbUudg9cOvtrCUAzedvNH0Q269jtAL67nm0J8PdwlcAzqG_t9fWYt5KO3wKRtoprbGmtMPv84M8IXNpq7EprBt-YtFOntT2xek_ZTY7QAR6eCnL4y_uNAHmb5GXxrTS7Ay03MTHwLV-x6UHPWduIylRNnSsyu_O8eF3BQMMtynfwWSii4lzFx_QLzNXO773kbW8nDh0usWkOiUxuDP_HHrbf20SyolTms5h0UhlUUQ36Q5NOzCSSOys_epIQdD6cE88_81Ia76ObMBuaI_HFJpz7UTpFr8mT3mEk9N_Pds2XN9RR2nSF_U_66vjM5WIPUWMIGCoNx7wBT1UFIBYhC6BtIn-Gu7AYwTHmxLOvw45gFlxzjIG4vW5S3VxdtOe1yWbymoeTTbwQTEDo4fgMOerDjbKBy9JoAAPCbuoE9AVsq6PrDkkQPffsbM-kPpy5e6BzNdB9JqkzHg6C6qa_7VQd0hZhJnwmpcv4SEBscTx700SBmP75giZdGlZH-WnSk_DgHksbWRHwok6Rj7tdNHcliept-XyOcvP9Q7C5ctN1llo1CzU2o8y0zIsRqmJtoLuEez_qPEL31Mp5Xj6Y4Ky_pblBgDcM4TKCdN8JIp4c5FByiG23ry-SUL8fe6mcJ0s12Lx9-0Cl4fVeWqhHGStll3w6E11Go56TIN_i_g1LaZ3iNALRJ1KM1G5cN81MrInIy4vz1uGc9a5Oa_ucMEMu-FcoszaPbgklGeGzBQ-zk13SxlfQHnOACkf3vF7_y6ARGNqzbZSvRuA_5UEIRZWoiZvmRPRTkVARRLLL8OfapSAxyB5clX0cZaSlwH6fg59nBmhdO0Chu0l0Oq1jB-ewdJHfVIAd-1sEND657QTx35-f6b2RYFoiJWHwdjlqpsHGET6skKzXye7Q7V6kE2xkKUsUplYcbDeAeZ4vZzrBjAu1rT7VohEbnVHYsLg-i_QD-sc_j9U60iP1Fu3vOIrZvYJQN_3Shls0IIRotVKlkVYdXEDQc981oigrpk5sOfNv91qG6rb8ZSchbF1AileWLlcJfI7eKYnui-uqRnyQ6hLpvRhZKIYxebFvEKbhHRPRloyGpzEJ6seYKvFG4UsHgDKRdxSAMCPbQcGdrqNhOJXS-z4-nG_hYBxFPH3pHINCz1cRh-RgtXFa6m9P_OAylqOuCvS0AePdPtxCU3CXxoOmq8omN3ezFXbiUqrtXLM2mUFG3hJvCFqQGkiKqhNf_Egy_zWycqho0JGiEYaVlf4468rQVyZlsyci9HUkonkWdvz13yTScpTi-fZvjFh7M4hp_XaDcYfpNneDM8CKKHsg05QxxAYF5Zh-8p96Bz-id4r8P8lNm-Qo8v5Qpgdmj25PluveM_7nsEj8u8H0P3dHe5mbh4loOIb2XJSf4rsNB4ayG4xtecMquLe5A_kJqKpPiNECmh3_oZrsLIMltjxdNFgIn-rwlcwfW6ekqiD3tZFKDGJysehDnKcEXBgAya4huts-HUZWAai8DmLcFvAO1iuaIf01qN_8WenJC2GzqvmpNr2FgD4lzgk4zaxlslKHOGXybw52MBpfxw5teNHolg7T3UiJ-kxcurNEZzYG4fqKOWjJGqZuBsVj84AeVkTDXhJ6AoO22E23SPZKEEAIOjt_pHDOhpXfW_63d2NyjduavM7oUsJmh1_dQaQoHtU0yoocG0gkmGfyJ-5Jd5OJFtg4bzVE7ZsejBD9PX887J4LSL0De60lqtqy7wseGuey1NlnsqHp-UCRUbGHw-CKP-A8FfdEy80cmB66OVhFGDOg69ByJOzpxgRzJsc7hwuvrOnBoHhTno4hqxSlExm5if2fDjjT1J0QhtdpFR6JrNWOAVwi9rMrObSC_1mxUfEFNcan6raK6PE1G1uCDaAUyVC6qoloCjDZm2Kn5FYSbvGj6qOO6u6OZpVU1c9xNON7r4hPGEzOA6K4ZgkbgSazR5DrGcAoCmRRKeuIMqd8_g4I-xha0wivQGUYbY37XlaQyaz-8RQZyjDkhWcrTJDmTMdvFBCSUPqD6WoOu2No5WuzsS96B7kN-TxrUt1FIxnUjAgw4Q1hBA4_qqqbwMHGu-wl9R25OX_jRDQbFoDBinM5DFAbSdLTaHTPFgmuKDAQvejbVWIBuERWTWoqUwL-_I5EGFd5QmwJnNAWRFQiq9K1mz2W6KPYLPpPSjEaTbIdrEn2EHRE871D69RZpKtCR7t8UgDRIOktJ-ylp4vLFYYInw4903JyrLz3_1-sYWkwagdUpgUeqhrL0H6KRQHK1TokPptU3e7YimOqmECRbFfnvWfQf5PcjKZUWipeiOltjjGumc9JforoBywsTli7svUC-TQ-lt9cALhW4aAvazHeA4VEoZMD9mjuIY-q_PMABTIk4Dn1Yf83SiPKbzG4nY7kRPXZ_amFIuauspwpxpVtIpChcuepoi01RUcnGuI-cz_2Bdug0RjrR00sQRIJFwg47M6Q_R30OmiR9WTx-KRQt5oi5qWxMn9pLBHkopOT1QcwTtk25wRPKEgPKelR60if3KrbfCzMRoJoCe3c1DLaGtjHW4Qmz9QU_EfwzgW9Cwu_c62-oBKdoD4pOaB_88jCyAu98gyiqPvKYLjw_z40_X7QYpjSnVoHDFqSxxZXDV8EoWqK60ifvRsCuo_05y20tW9j986qAWWGb84WBT2cSeeIpdkJdTsVgEo-BfdMFo-36ALKZKaGra-dve_lbUMTKGAKlMlDnfXuroqfapMglRxzd4x9mxOzdjUvLQ-hQemGE7-4hEoYgn9e04VgKo1-QrYyt_rqSW7FEOKE4imPHKcQJQw-SU5WJ8NRzxJxF47B4KTVMipwBwoMHZhGz654chQIsRJjAdnm6JXJ6-UPRMYPKuNIKSOlgikLJ1H6osAqGTnkAtgib8KV9xbGohNSC6UdCwhF882FeOz4MySpp7hTTHHEBFT2f2qpMLzHYATaNq5cBN7XmZgADxXHkRVjc8UE0dIZ82dQUoTT4FgKsjrmfIXTFzV8km9U_nyfX49budEfR-Zrgd4ymf2_K7GLluh69jup9nF4Xv3WmmOv3Je_3raaKhZER-Kxdb1r5hOsY9ckzN5HCCG5Jd8HyrbYi16EPYXeOitemgJcM35jtAPcbagbwsm8BK6UZMbFK5-WI3fz19xg608ntbgMpawxB5n2pjtfeEk2dg1CoWFJaxFFEvBo8Ka1a9ZrqMES186l7k2yVE2pjLUmPMtoHf7yVFcM-1QJ5IwvWiUYAQ_KXG_U2qcYOluU2wn7keh2bot0S_Vr_hv-Urr__TPMO-VL32o5sPWAwSr2JGnvcyM-P_JNAJT9JAVkk9RZgkfGKhoCLxIlrkaeIK77tpKGayv5UmIsvCKAKa51jeKOrs2CY3o-kN-1KRJozLVy33ELIY3ILyfYFQSPvVFgg2JOTnTu5wkzqopIrcqSUvTQxJBB-ZmS4h7fuxdkI1da-naYs71YyHhF9CfiwGjG4s7qVsE1e1OaiGee6pzv7bfyJnFDzAFgWVHqA6N38WofKhHTRQe_QvkdU7aGVe0niq8-UkWbChHxAG2QXMNPPzE2daAp7pNbzILqXgnXS_ahevDXgXr4NIGz-hKEnksDKw7wV4Auej6VMpigaaH8wMe42H1-mZ726LTfC68HCMfOFBVG2hWAoAqCQ5H7vwo8DGgTSR8URJdx0Q5eF-_FltldHqNabyegyXxbWHx23Iws3frncuNCPwhr79TkIlafDrN7-cJxXFPVdQUbOCtrXjWYKZclsFuAWd1bM1tDsAfZdAwQM7Y2xAg27yeg0wiyt-G6Yjp1jN-haskuz5L3PZnnhLbb_qQGrRqe1YaaQAuJq8D-Tb5GfIPjDQSbaWRvTnWrI_VU4cNJIL4KHj7lO1WNGsY4tfE3E6StgZ4jHLoo72JSntu8AFqCKkwaMP5m2bgAQ0wHXglKVoh6wn7f3JYAptnNwZUChpcbgnJJ2rXJ49oP-0teXIjwTJhIweJNMp4WKqYvNRg_8W55pGud35rjHMHs0MqBbtKF0FGVwWusQkLKb5dQ3ezqIRFKxJU1aXjjIDarqzuIFGXebrGC203CKzBqc6ycAOJZeKsZsIw5TZ_sW91J4i6dhewBrY5F3VOmNuxHwiWbSCLCdvm83jJfuVE40T_u5cpd088XZ175cFdjWVl5QRfiukptXL3PzCw8dTZXVhsi23xgdZoS81Ytej45XFQEYxiIzY8ez0fAjEYRsTNt5MceEz5n2dOwFZPzI4_GfhnQiM5mf03Uddpd0b6uHNt-E5XsklQf-N50wuDjYc3QV-TwGKPqqSvV24xsZAgEz9SHC_ti8NYoA4zq3Gu3FKblx8nHQMKCndgC1N2mvALx2cHpRSys-XrdBMLVy3k45b8d73qoDjXi6ar_YqsGvOMyHT3LGuSO-u2lUf3QNfHS9kx6ZTa5nNsSwjv2pTCQwDt4uyXUTE1oIkQ2nvhuCdr27jkTOetl8xuKrF9rCYtkh9BTbq1fQsSC221yxD3bQXt1WXynLqDbpbjgibluDHQQYsVyQtg7H2SI2H_ggfeWV_36XEXppgNBArLtjN6ozbkcbNUfbmD1moz_1TS4X9Fdt8hR5DJDJo2rwKJnjaaQcFemXIRDh3SvpbHhHzMWmIiBGUZjd5BmKUqhnuSwxg1Lp7XyuWlMkr5wg5N1ox5ip3u2v5l0ZSqCksFIsk31cdIe6sU8t-LYHcq7GFB2d-_gfiSK89yQdHmP54d-y7z86VhHJSgEDNR6utvGbAwaWjeTWxc4liq2wRoO0FOTuEGYjKbFsM-st-VN5SyqGUNjQHTQwrVHQtUdGVS01frqXEU6jE2lPM_MiBtedsl1GHXbHlAl0GP-f7M8XjLJdLMxDMz11hchqxJ8f1p9PR7Sumu9sex21MTSXbidRA0oD1LGZNGlIHPKzLj2LWG8Cope3wRxcEYcv4MS8jj4hxexsx9jUdrQIEahTkumXue7kgAdqdxULqBN-36G1rYOChtUOi8ogOzGHVaN2yZ3Fl-jQlqKBwwD-fXnsfoF56pDkgod4SfkoRvdBAHxlKCC-uvA4i5Gg-MGaBQyaDPpaY0SqrqSOaiSzBrZ2LBkygwGIiqrQJJVjrD-wKs08GTIf172r1TIbLTSAiGxAvlv3GNEdqZaXrJV3A_i4pyzju2aYdfQnve8vibqQsooRoM0aZKJ4oDwt3-KrRYBr-vIblY0DmA9PEVtX1qsaZBZbsgKGAzD4mOrHHGXcEYerDhQ8X_Ldkb-k_qWzIzwR6mO2nlOdE3_qOKJ_6Tg5GtL8nfdUW6PVMgPv8Pr4nR6Q4F2hErn4aHhBT4shEn-TMCNGhFJ1LID0d9HmEjsLaaU0KMY9lKrxiAiMDhuP1sUfLcvCttipLbGAx9Qav35Ya_vBPlP_Evm7fHvbZYcduX2zgscSlYy9p1JxFx-K5LdGh6hbKDW9oVLmi-TPuzs_6Ath7VUfGFobMvrR9jih3j00dqngJ33YOy2zvs25AAGxBuN-OxwJI78sv2g0tfFfWnvX86xKdssNddX9UmOIA5EyqIae59Zs8ALQegnlQOYWL4UEljTJTEhMrpTZvejofBYN85zLpRgMVUSUP2Fd8ZnA64orlH_WGvD2z21A-bPIbDHruRBYCin61B_gTlHuo-Zm5ADRQUTBh5Zhi_IcC91SIZDVAl_aoGBXU97V1MWa4q_0c2cO7HsiFU3fQV8cj4Wg26-czZLR4bccnJFja-MnC-FuOivECeLh_E7ZRIS1qdb2XEAzuIMsLhVYtD6O5seLI3ZEOCPf9kml_00k_rqwOjAiaD-8HDkm9LzSD1kL9DKFKgWS-2rlt25OtaXweRqI0grfzlrQ15xGx7-uU_L4OVoz4vf0U3P2oSwR-Pz2BDiDyX7v801-M6JLq9rYauvGSy4LOq5URJIlQUatP2tZijSvKwSS3SV2YAqujNJnj7pXV62umNmCwlyr-GGb0um9zvGY0UX-LMt9gTjdgIDfR7vZ4PlfzesJxEz64tygxmz0XRXh9BPqaJRiMfURwY_Swed-PX5cxh_lEYUV2yVzAu6YfTj_CJ2jgeyMogSh_TfVetHkPulMTYeVGyQV8HIkX2jAZT0ZtRlmzRrMgjkZmmReiE5tssDPT0HJn-vp_oAsIWR344u1qZkc7KIXgYRWfiPFJYSuvkIkGrSj8ZJCY5qDdoWO9a9bd4syq-NER3iagB8aH7MhZ_qLOhhGuBplOT0iCmI_MmZJv_qyaiI0vWSIbjI86_4vRKccpfF9qKD7f5tRwX-quxai5mZehM3XAl7LubnxNHjB_LxqAb4UoMgzmHBzPCD9UbZH88GurvxQLjdVBEES4MHXSiWgbcDepk8Un62HMp5QqoQsH2P1YvHtUFSfIBzI41vh4USXEewK2T9-qSt-zfx1022r7uoH3FpjFR2A**&amp;docUrl=http%3A//games.espn.go.com/frontpage/football&amp;loadStartTime=1448840241433"></object></div>
+</div>
+<!-- end mod-content -->
+</div>
+<!-- end mod-container -->
+</div>
+       </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="top-stories" class="span-4 last">
+<!-- begin mod-container -->
+<div class="mod-container mod-tabs mod-no-footer ui-tabs ui-widget ui-widget-content ui-corner-all">
+<!-- begin mod-header -->
+<div class="mod-header">
+<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+<li class="ui-state-default ui-corner-top"><a href="#mod-tab-content-top-stories" name="&amp;lpos=fantasyindex&amp;lid=top+stories">TOP STORIES</a></li>
+<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#ui-tabs-1" name="&amp;lpos=fantasyindex&amp;lid=top+videos"><img src="http://assets.espn.go.com/icons/sportscenter.png" width="17" height="11" border="0" alt="SC"> SPORTSCENTER VIDEOS</a></li>
+</ul>
+</div>
+<!-- end mod-header -->
+<!-- begin mod-content -->
+<div class="mod-content">
+<!-- begin mod-tab-content-top-stories -->
+<div id="mod-tab-content-top-stories" class="mod-tab-content ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+<div class="top-story-content single">
+<!-- nbtest /photo/2015/1125/r30479_576x324_16-9.jpg -->
+<div class="top-story-image">
+<img src="http://assets.espn.go.com/photo/2015/1125/r30479_576x324_16-9.jpg" width="576" height="324" border="0" alt="Brian Hoyer">
+</div>
+<div class="top-story-headline">
+<div class="transparent-background"></div>
+<h2>Thanks For The Matchups!</h2>
+<p>In a season of injuries and first-round busts, fantasy owners can be thankful for matchups against the Eagles or the Saints. But first, those about pool noodles ... <a href="http://espn.go.com/fantasy/football/story/_/page/TMR151125/matthew-berry-fantasy-football-picks-sleepers-busts-week-12">Love/Hate Week 12 »</a><a href="http://espn.go.com/fantasy/football/story/_/page/BerryFlexWeek12/matthew-berry-fantasy-football-rankings-week-12-flex-quarterback-defense-kicker">Berry's Top 150 »</a></p>
+<!--img src="http://assets.espn.go.com/icons/in.gif" width="11" height="11" border="0" alt="Insider" /-->
+<!--img src="http://assets.espn.go.com/icons/video.png" width="16" height="8" border="0" alt="Video" /-->
+<!--img src="http://assets.espn.go.com/icons/audio.png" width="10" height="9" border="0" alt="Listen" /--><cite>AP Photo/Gary Landers</cite>
+</div>
+
+			
+			</div>
+
+
+
+<div class="mod-mem-carousel" id="tscar-1448802353949">
+<ul>
+<li class=""><div><a href="/frontpage/football?topId=14161149">
+<div class="vid-icon"></div>
+<img src="http://assets.espn.go.com/photo/2015/1122/r29533_110x62_16-9.jpg" width="110" height="62" alt="Carson Palmer"><h3>Week 12 Rankings <span>Fantasy staff</span></h3></a></div></li>
+<li class="active"><div><a href="/frontpage/football?topId=14225334">
+<div class="vid-icon"></div>
+<img src="http://assets.espn.go.com/photo/2015/1125/r30479_110x62_16-9.jpg" width="110" height="62" alt="Brian Hoyer"><h3>Matthew Berry <span>Love/Hate Wk 12</span></h3></a></div></li>
+<li class=""><div><a href="/frontpage/football?topId=14222389">
+<div class="vid-icon"></div>
+<img src="http://assets.espn.go.com/photo/2015/1124/r30186_110x62_16-9.jpg" width="110" height="62" alt="T.J. Yeldon"><h3>Week 12 DFS <span>Matchups, tips</span></h3></a></div></li>
+<li class=""><div><a href="/frontpage/football?topId=14213129"><img src="http://assets.espn.go.com/photo/2015/1123/gettyimages-498326702ESPN_110x62.jpg" width="110" height="62" alt="tony-romo"><h3>32 Team Coverage <span>Clay, NFL Nation</span></h3></a></div></li>
+<li class=""><div><a href="/frontpage/football?topId=13879712">
+<div class="vid-icon"></div>
+<img src="http://assets.espn.go.com/photo/2014/1208/nfl_u_lacy01jr_B_110x62.jpg" width="110" height="62" alt="Eddie Lacy"><h3>Season Ranks <span>Karablog</span></h3></a></div></li>
+</ul>
+</div>
+
+		<script>
+		espn.mem.init(jQuery('#tscar-1448802353949'))
+		</script>
+		</div><div id="ui-tabs-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom"><!-- begin mod-tab-content-top-videos -->
+<div id="mod-tab-content-top-videos" class="mod-tab-content ui-tabs-panel sc-videos">
+<!-- begin tsVidSingle -->
+<!-- begin tsVidSingle -->
+<div class="top-story-content single">
+<div class="top-story-image">
+<img src="http://assets.espn.go.com/media/motion/2015/1128/dm_151128_lsu_texas_am/dm_151128_lsu_texas_am.jpg" width="576" height="324" border="0" alt="Video">
+</div>
+<div class="top-story-headline">
+<div class="transparent-background"></div>
+<h2>Miles, LSU beat Texas A&amp;M</h2><p>Amid speculation about coach Les Miles' job security, Leonard Fournette rushes for 159 yards and a touchdown in LSU's 19-7 win over Texas A&amp;M.</p></div>
+</div>
+
+		
+		<!-- end tsVidSingle -->
+
+
+		
+		<!-- end tsVidSingle -->
+<div class="mod-mem-carousel" id="vidmod-1448802892893">
+<ul>
+<li class=""><div><a href="/frontpage/football?mId=14246982"><div class="vid-icon"></div><img src="http://assets.espn.go.com/media/motion/2015/1129/dm_151128_ncf_hotn_notredame_stanford344/dm_151128_ncf_hotn_notredame_stanford344_thumdnail_wbig.jpg" width="110" height="62" alt="Video thumbnail"><h3>Late Stanford field goal sinks Notre Dame<span>11/29 2:04 AM ET</span></h3></a></div></li>
+<li><div><a href="/frontpage/football?mId=14247358"><div class="vid-icon"></div><img src="http://assets.espn.go.com/media/motion/2015/1129/dm_151129_les_miles/dm_151129_les_miles_thumdnail_wbig.jpg" width="110" height="62" alt="Video thumbnail"><h3>Les Miles on a big day in Baton Rouge<span>11/29 1:09 AM ET</span></h3></a></div></li>
+<li class="active"><div><a href="/frontpage/football?mId=14246983"><div class="vid-icon"></div><img src="http://assets.espn.go.com/media/motion/2015/1128/dm_151128_lsu_texas_am/dm_151128_lsu_texas_am_thumdnail_wbig.jpg" width="110" height="62" alt="Video thumbnail"><h3>Miles, LSU beat Texas A&amp;M<span>11/29 1:08 AM ET</span></h3></a></div></li>
+<li class=""><div><a href="/frontpage/football?mId=14245215"><div class="vid-icon"></div><img src="http://assets.espn.go.com/media/motion/2015/1128/dm_151128_ncf_psu_msu/dm_151128_ncf_psu_msu_thumdnail_wbig.jpg" width="110" height="62" alt="Video thumbnail"><h3>Michigan State wins, earns spot in Big Ten title game<span>11/28 8:08 PM ET</span></h3></a></div></li>
+<li class=""><div><a href="/frontpage/football?mId=14245542"><div class="vid-icon"></div><img src="http://assets.espn.go.com/media/motion/2015/1128/dm_151128_derrick_henry_sot/dm_151128_derrick_henry_sot_thumdnail_wbig.jpg" width="110" height="62" alt="Video thumbnail"><h3>Derrick Henry says it's all about the team<span>11/28 8:01 PM ET</span></h3></a></div></li>
+</ul>
+</div>
+
+					
+					</div>
+<!-- end mod-tab-content-top-videos -->
+</div>
+<!-- end mod-tab-content-top-stories -->
+<div class="top-story-content single videoplayer videoplayer-index09 videoplayer-show"><object type="application/x-shockwave-flash" width="576" height="324" id="videoPlayer" class="OoyalaVideoPlayer" data="http://player.ooyala.com/player_v2.swf"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"><param name="bgcolor" value="#000000"><param name="wmode" value="opaque"><param name="flashvars" value="me=videoPlayer&amp;embedCode=J3NGI0eTqDdpaU2nyYnU39LcMwrXnfeJ&amp;width=576&amp;height=324&amp;pcode=1kNG061cgaoolOncv54OAO1ceO-I&amp;externalId=espn%3A14221673&amp;callback=espn.video.handleEvents&amp;adSetCode=91cDU6NuXTGKz3OdjOxFdAgJVtQcKJnI&amp;hasModuleParams=1&amp;playerBrandingId=a28f1994885a41098953d166c34cf81c&amp;video_pcode=1kNG061cgaoolOncv54OAO1ceO-I&amp;contactServer=player.ooyala.com/Q2HGKJ-PryQsG7CT&amp;text=ic5hW7v1cNPLApQmEysx4OaSrwT56LXPwPJnTO8Hc8z87NDUC1FqICn5ayCk-wjt4l_L5Z9ADKzhcPvijWhUm_8fcdqMcbbSqzen6hYBmID4o49b3D8TEkJpj8pxCX4Rx5RCrAowlQbzxu1KPe07lPHKXoOLxU8F2Sf1offvFxYF8RIwVTwj0dl0JnzRIMBwdt4UdcLLEiwaFo16DLRdDxl_eGx9xJ6GHydfW63Pyui29yz1odPCvcTIYzfVwgZg1Jo7g1VlSB1PTOeeYtm1zgZzQSehd7QWqoXeqDy4fcs1cPF0o3dzDA4KsZkIuuxwBmsJCrNOEYwQXn1uAqE7FGZX3a50_MYVUG0YAClKN6aqmWJhykT7C87QkXqWyCdWSqzg4VImHoFj5MuybKRSorsSymzs1C5mIB1fKuz24VWDm2xWTBZIJYSv7QDJu0YNsYWvQrkKI6-eYZKba1fvYcHjJbWno2-yjwdfONE-VWHeBifphhzPvYNCxfWlWQ-32rzsOg8P291j5ILc2qEILqt_nDKID5axRTBWWJ2fIP82abNepIQlWx3fgBreuPNg_dlAYRsJIK86yZCeS3tbRwT8_eNR8vUj368yLVMXc0nKg731QsjnN8Q104YWXLnj1eGGYGC2yka2sbDar3wzlcu81boz7h824gR9IsQqX6SKj55qqFsdx4vapqBIhj8yqgYTeqAfJ1rA5Z4WZYFqU56DEJjRVx2Lw9gddsmOy-DUVJ8Rn-YAKoioVHpMF96Vyn22zwwY8hjZ7TvJc-xmM84I60DeSWKWr5ntOgH-1q4GNwuXXyPpUA6jKkLctTBNXxcf1GdklzDLYoFBcsec4Q-kI8N57cUWPrvJvSYcrNMtf3ch5GQNTQLMIpIWkSU9iQlKkCww14Q_Ud18dQZ7mmzdLgSqrqYkci0mywZ_DqaI2yVKEGMSz1wqSemQuhQPMjUHUh59KU91hXQrAG-z3f4M81-FeMPhIWCDWp1skF1nm0Im6MbftYtHgO17Sg_Ow_5XnpXJVvfd1O3ZnP1pczuWTHE9O8vfmj2Wnb1HleHXIqLibfFDMKnqhePDgmaxg3YB7xGHYhcJB7LKVFmZ_wxadrpBWGP7DSOzgk-f0Taje70bahTvI2fo-YmJqaz13-knE5pMH_UVWfj4ZQOGTl8-zRLHu1GeZg5qdegJQO_dAeC7ZQajgPCZmAojdT42YKqXSYoy2627eQBIg4qOub4uL-nscUptMfGfGAdTuUgrLFsz8xd-FFfNOkj_E2G9_jYjDtFcovwqErNFEXiUKh4o2DA4MfRTOwyFION6xVlbSaBOZlt282hifM2qBrlTLn7xaxBlLaXYETjh7dqO027xcWABzEDaV-DqXTJFWnl2yVZ0r6szUpuPwGCpel_neX_gP-ga4mGIL5zwQgYvUeolhREa9fVNY0ZWf7aeo82lhr7HemdcnuiiQn3LUyyEoIRcTR-ulMRgERDLgOqkbxRPJ0S975y-T7bzHa1YdTt2cZ_BLJyfqPPDg9W70mX420CTLCEap7BHqnhmR42_oCJBLv5zuU-lkv5NXyusgRzxyIplu7xiu98J8fAoOxmdB4n0DKYPlxzxxqJmvIlyyjinFiKiQjCagarAdeyYCyOgwYe0mzMbHAVtZE_iuGRTzPeBtmwl1NoznXTHBjVl6YKFTALrOzRfVw_FFS6aRwARq1v33c7JyL8F5P2uDrXx0Fwfl6SMzAtXU2Ax1z74wsG8kl-8uV-gR6oFmHwYdeCx4nISBawvMhpgJxH27w786dmJfinGUqZlj620wme7bjqn8W44rSoipWeGuqWuPgdb3Jj_hVu4Zp8Ce6hQ6CBcukR7-gBtkEGnpD4dUJp3oP6T5ncoWM8hJEwoD8AMR3qHrUU57U52aLNJuC6cdk9plUie9XOveZTL3Rjg-WG2IcRAWtaJHx3l2qYwY_FS0hRDIoDyW5PyOZXHbRjDnQbHZ7tTZNSxwn2MsHHfLJ4TCtznh4vljjoITpJKyIsbYENfR-iJiTb5eropSwMMJfBSVaRUHGFj0xpOSXqgzNh5T1LH8T4LNPKDifYn8yUhdPz722KaCypJu606SUwnBQ4SY_etZEeKk3KHjRm_H4ZqmXOqpg-EOncui6vvujSq2xgDIRm3oqadnl8Te2GERr3kkgzJvJMXVOwqHUE8MpeZm-1TbyT49jbjirgkMUtWvZCUFkL7Z1mDq90ceoBviabD0ysRrP0Q9pU1k9uOGhXktNMST2NXU1ppYzWdBNDrroalcH9pWOW_BrW7qnCjZJe3eDt__ZmMIrnNddLMHayjPT7r9TDNpxDmv31LB2AOD57nTQBC3YHTmjQpKfTxdSci6tPXBPJjEy1M0radpaShQpJRRF8YnwnbL4cLsddlnE_xLpFeY1ZxatoYrUAmdJ5U292peftF7u4hT7PpuGJpngR2hzoyA22L3P6Gq7SfCfVLNwKaFUdG0vbh_jR5jmf-oVSTnLPGioF7S7aAhX9g2dWpg9uH83gsfG0XKEhs2TtLBitnB7NOx_IWYQ-nHFb9WhIVvFuoqfUc1lVYqNgabCHJccpMmaGPPf9m3g6h6ad2hD-ILpdVX5mLmfP1bExKaAzS6PFR6KcpRzXBbmNX0tlCt8cVAQRBycNyytODkY3Z0qX4A5Rk9zJJtAU3jfYu0gpJNwuRb76CRORxTIZJdgqC96rbNIyxDHJh6txgnUU5WUOMeuPZxQBYl6qKCYdrexrqrdoJD5GMnZlO-AS2MOA1c5R6P6ofLm4kbY5AhBHV--38ZghK94JGYxRutVWUm6tyDzE7Y5Lh_OcE-COhSvhE6ZZ5sO5rHp-nhnaxD4ThdDMXj5I0cFNvpdZm7nu47ua9G8TWY6uGryS0BDmNZgYS7BUGkZkg4xXQ5Gi5BiFgwBcEet-PhaPNiEZcoLFht7OtoBHColqiFjxZ-5Irhipj86vvYATzQVKKTaqcwG0cFp7nuPWo_6DEr2y-YWj-LeZEpQbc0Atn4xl8FUoUjYx9EpTxq3R2C6-HcLkurwsyViPF5YHy9ZOpVK8GUuNoInLbNQjSd8xawt3mt3JEe5X49SP-jAprK-28uWnAfjgH_Csjd05EQ38n3fgN_9G94yHfEmszsXYENV7gHegyQ7H9XCDSuVMzEDO9jo-iW-aTHXwZImbxG_YKgrMhys2hphCVPy0eE0Mri-bO1fHAE4Fl5krTdRFfxn3fA6k6CE9BMDCZuHHkGNsa7bZRAUZsOjUo9hALBJDru3MRvkhG5tMS0oLBs6ZTP7q7fGj6Vs1vrKc0JNB2300-i_h9YUDVvzC3uZpqXS0xyIQeeWGUcPtr0FY7bYpbjpmjQeodN11fJ6gf69soBaFP0Cc-bD7i08a34E73_lZig7texZ8pmPkoWvUxaI10cZlemra0NZTGC3aBoYvFFCna8-i8U4_PoDrlnqFukWudpEdf9bnnIGcnOA0MBWvTYe_nN7cEOfyXPZj6ZK0TbUbSh47Nch_Gxj7STGjyhUW4WDu9k5g3t9AglK5NvZkBxHIf4-4j7zw6M5m3GwbI4MM8HMpA3KAwY_mstA5JrGs_Z2C037SnOtuHoVzSI7-x1WWGh8L4Yx04sHMBJq8iYKC8XdURuxq-ZqVBezMJPYSZfvwWmBv_Z12H7TiFHksRfMpI5OSuAViEPo513ZNDQIbkaWNXofhtaTt4W8YHf1yQ5Rap84kHx_d5fRHD6NXKzmVIxuSqr9MCXaSC4TUB1_QN_SEz_OkIWDvR-8WwC0d6J3FofnjLfNcO7MrKuZU65B95fcjCXJl4-xzSFoG4vI0PYpVR1QDYLvUVVJjsO-ioP1g9F0gqfJKJHpGsRZ3KzTCY9qDeJ--N-KB8KpFhr1FiX1cf9112if72SWqoSa7FUhjkW9OTHRXQnedWhrbUudg9cOvtrCUAzedvNH0Q269jtAL67nm0J8PdwlcAzqG_t9fWYt5KO3wKRtoprbGmtMPv84M8IXNpq7EprBt-YtFOntT2xek_ZTY7QAR6eCnL4y_uNAHmb5GXxrTS7Ay03MTHwLV-x6UHPWduIylRNnSsyu_O8eF3BQMMtynfwWSii4lzFx_QLzNXO773kbW8nDh0usWkOiUxuDP_HHrbf20SyolTms5h0UhlUUQ36Q5NOzCSSOys_epIQdD6cE88_81Ia76ObMBuaI_HFJpz7UTpFr8mT3mEk9N_Pds2XN9RR2nSF_U_66vjM5WIPUWMIGCoNx7wBT1UFIBYhC6BtIn-Gu7AYwTHmxLOvw45gFlxzjIG4vW5S3VxdtOe1yWbymoeTTbwQTEDo4fgMOerDjbKBy9JoAAPCbuoE9AVsq6PrDkkQPffsbM-kPpy5e6BzNdB9JqkzHg6C6qa_7VQd0hZhJnwmpcv4SEBscTx700SBmP75giZdGlZH-WnSk_DgHksbWRHwok6Rj7tdNHcliept-XyOcvP9Q7C5ctN1llo1CzU2o8y0zIsRqmJtoLuEez_qPEL31Mp5Xj6Y4Ky_pblBgDcM4TKCdN8JIp4c5FByiG23ry-SUL8fe6mcJ0s12Lx9-0Cl4fVeWqhHGStll3w6E11Go56TIN_i_g1LaZ3iNALRJ1KM1G5cN81MrInIy4vz1uGc9a5Oa_ucMEMu-FcoszaPbgklGeGzBQ-zk13SxlfQHnOACkf3vF7_y6ARGNqzbZSvRuA_5UEIRZWoiZvmRPRTkVARRLLL8OfapSAxyB5clX0cZaSlwH6fg59nBmhdO0Chu0l0Oq1jB-ewdJHfVIAd-1sEND657QTx35-f6b2RYFoiJWHwdjlqpsHGET6skKzXye7Q7V6kE2xkKUsUplYcbDeAeZ4vZzrBjAu1rT7VohEbnVHYsLg-i_QD-sc_j9U60iP1Fu3vOIrZvYJQN_3Shls0IIRotVKlkVYdXEDQc981oigrpk5sOfNv91qG6rb8ZSchbF1AileWLlcJfI7eKYnui-uqRnyQ6hLpvRhZKIYxebFvEKbhHRPRloyGpzEJ6seYKvFG4UsHgDKRdxSAMCPbQcGdrqNhOJXS-z4-nG_hYBxFPH3pHINCz1cRh-RgtXFa6m9P_OAylqOuCvS0AePdPtxCU3CXxoOmq8omN3ezFXbiUqrtXLM2mUFG3hJvCFqQGkiKqhNf_Egy_zWycqho0JGiEYaVlf4468rQVyZlsyci9HUkonkWdvz13yTScpTi-fZvjFh7M4hp_XaDcYfpNneDM8CKKHsg05QxxAYF5Zh-8p96Bz-id4r8P8lNm-Qo8v5Qpgdmj25PluveM_7nsEj8u8H0P3dHe5mbh4loOIb2XJSf4rsNB4ayG4xtecMquLe5A_kJqKpPiNECmh3_oZrsLIMltjxdNFgIn-rwlcwfW6ekqiD3tZFKDGJysehDnKcEXBgAya4huts-HUZWAai8DmLcFvAO1iuaIf01qN_8WenJC2GzqvmpNr2FgD4lzgk4zaxlslKHOGXybw52MBpfxw5teNHolg7T3UiJ-kxcurNEZzYG4fqKOWjJGqZuBsVj84AeVkTDXhJ6AoO22E23SPZKEEAIOjt_pHDOhpXfW_63d2NyjduavM7oUsJmh1_dQaQoHtU0yoocG0gkmGfyJ-5Jd5OJFtg4bzVE7ZsejBD9PX887J4LSL0De60lqtqy7wseGuey1NlnsqHp-UCRUbGHw-CKP-A8FfdEy80cmB66OVhFGDOg69ByJOzpxgRzJsc7hwuvrOnBoHhTno4hqxSlExm5if2fDjjT1J0QhtdpFR6JrNWOAVwi9rMrObSC_1mxUfEFNcan6raK6PE1G1uCDaAUyVC6qoloCjDZm2Kn5FYSbvGj6qOO6u6OZpVU1c9xNON7r4hPGEzOA6K4ZgkbgSazR5DrGcAoCmRRKeuIMqd8_g4I-xha0wivQGUYbY37XlaQyaz-8RQZyjDkhWcrTJDmTMdvFBCSUPqD6WoOu2No5WuzsS96B7kN-TxrUt1FIxnUjAgw4Q1hBA4_qqqbwMHGu-wl9R25OX_jRDQbFoDBinM5DFAbSdLTaHTPFgmuKDAQvejbVWIBuERWTWoqUwL-_I5EGFd5QmwJnNAWRFQiq9K1mz2W6KPYLPpPSjEaTbIdrEn2EHRE871D69RZpKtCR7t8UgDRIOktJ-ylp4vLFYYInw4903JyrLz3_1-sYWkwagdUpgUeqhrL0H6KRQHK1TokPptU3e7YimOqmECRbFfnvWfQf5PcjKZUWipeiOltjjGumc9JforoBywsTli7svUC-TQ-lt9cALhW4aAvazHeA4VEoZMD9mjuIY-q_PMABTIk4Dn1Yf83SiPKbzG4nY7kRPXZ_amFIuauspwpxpVtIpChcuepoi01RUcnGuI-cz_2Bdug0RjrR00sQRIJFwg47M6Q_R30OmiR9WTx-KRQt5oi5qWxMn9pLBHkopOT1QcwTtk25wRPKEgPKelR60if3KrbfCzMRoJoCe3c1DLaGtjHW4Qmz9QU_EfwzgW9Cwu_c62-oBKdoD4pOaB_88jCyAu98gyiqPvKYLjw_z40_X7QYpjSnVoHDFqSxxZXDV8EoWqK60ifvRsCuo_05y20tW9j986qAWWGb84WBT2cSeeIpdkJdTsVgEo-BfdMFo-36ALKZKaGra-dve_lbUMTKGAKlMlDnfXuroqfapMglRxzd4x9mxOzdjUvLQ-hQemGE7-4hEoYgn9e04VgKo1-QrYyt_rqSW7FEOKE4imPHKcQJQw-SU5WJ8NRzxJxF47B4KTVMipwBwoMHZhGz654chQIsRJjAdnm6JXJ6-UPRMYPKuNIKSOlgikLJ1H6osAqGTnkAtgib8KV9xbGohNSC6UdCwhF882FeOz4MySpp7hTTHHEBFT2f2qpMLzHYATaNq5cBN7XmZgADxXHkRVjc8UE0dIZ82dQUoTT4FgKsjrmfIXTFzV8km9U_nyfX49budEfR-Zrgd4ymf2_K7GLluh69jup9nF4Xv3WmmOv3Je_3raaKhZER-Kxdb1r5hOsY9ckzN5HCCG5Jd8HyrbYi16EPYXeOitemgJcM35jtAPcbagbwsm8BK6UZMbFK5-WI3fz19xg608ntbgMpawxB5n2pjtfeEk2dg1CoWFJaxFFEvBo8Ka1a9ZrqMES186l7k2yVE2pjLUmPMtoHf7yVFcM-1QJ5IwvWiUYAQ_KXG_U2qcYOluU2wn7keh2bot0S_Vr_hv-Urr__TPMO-VL32o5sPWAwSr2JGnvcyM-P_JNAJT9JAVkk9RZgkfGKhoCLxIlrkaeIK77tpKGayv5UmIsvCKAKa51jeKOrs2CY3o-kN-1KRJozLVy33ELIY3ILyfYFQSPvVFgg2JOTnTu5wkzqopIrcqSUvTQxJBB-ZmS4h7fuxdkI1da-naYs71YyHhF9CfiwGjG4s7qVsE1e1OaiGee6pzv7bfyJnFDzAFgWVHqA6N38WofKhHTRQe_QvkdU7aGVe0niq8-UkWbChHxAG2QXMNPPzE2daAp7pNbzILqXgnXS_ahevDXgXr4NIGz-hKEnksDKw7wV4Auej6VMpigaaH8wMe42H1-mZ726LTfC68HCMfOFBVG2hWAoAqCQ5H7vwo8DGgTSR8URJdx0Q5eF-_FltldHqNabyegyXxbWHx23Iws3frncuNCPwhr79TkIlafDrN7-cJxXFPVdQUbOCtrXjWYKZclsFuAWd1bM1tDsAfZdAwQM7Y2xAg27yeg0wiyt-G6Yjp1jN-haskuz5L3PZnnhLbb_qQGrRqe1YaaQAuJq8D-Tb5GfIPjDQSbaWRvTnWrI_VU4cNJIL4KHj7lO1WNGsY4tfE3E6StgZ4jHLoo72JSntu8AFqCKkwaMP5m2bgAQ0wHXglKVoh6wn7f3JYAptnNwZUChpcbgnJJ2rXJ49oP-0teXIjwTJhIweJNMp4WKqYvNRg_8W55pGud35rjHMHs0MqBbtKF0FGVwWusQkLKb5dQ3ezqIRFKxJU1aXjjIDarqzuIFGXebrGC203CKzBqc6ycAOJZeKsZsIw5TZ_sW91J4i6dhewBrY5F3VOmNuxHwiWbSCLCdvm83jJfuVE40T_u5cpd088XZ175cFdjWVl5QRfiukptXL3PzCw8dTZXVhsi23xgdZoS81Ytej45XFQEYxiIzY8ez0fAjEYRsTNt5MceEz5n2dOwFZPzI4_GfhnQiM5mf03Uddpd0b6uHNt-E5XsklQf-N50wuDjYc3QV-TwGKPqqSvV24xsZAgEz9SHC_ti8NYoA4zq3Gu3FKblx8nHQMKCndgC1N2mvALx2cHpRSys-XrdBMLVy3k45b8d73qoDjXi6ar_YqsGvOMyHT3LGuSO-u2lUf3QNfHS9kx6ZTa5nNsSwjv2pTCQwDt4uyXUTE1oIkQ2nvhuCdr27jkTOetl8xuKrF9rCYtkh9BTbq1fQsSC221yxD3bQXt1WXynLqDbpbjgibluDHQQYsVyQtg7H2SI2H_ggfeWV_36XEXppgNBArLtjN6ozbkcbNUfbmD1moz_1TS4X9Fdt8hR5DJDJo2rwKJnjaaQcFemXIRDh3SvpbHhHzMWmIiBGUZjd5BmKUqhnuSwxg1Lp7XyuWlMkr5wg5N1ox5ip3u2v5l0ZSqCksFIsk31cdIe6sU8t-LYHcq7GFB2d-_gfiSK89yQdHmP54d-y7z86VhHJSgEDNR6utvGbAwaWjeTWxc4liq2wRoO0FOTuEGYjKbFsM-st-VN5SyqGUNjQHTQwrVHQtUdGVS01frqXEU6jE2lPM_MiBtedsl1GHXbHlAl0GP-f7M8XjLJdLMxDMz11hchqxJ8f1p9PR7Sumu9sex21MTSXbidRA0oD1LGZNGlIHPKzLj2LWG8Cope3wRxcEYcv4MS8jj4hxexsx9jUdrQIEahTkumXue7kgAdqdxULqBN-36G1rYOChtUOi8ogOzGHVaN2yZ3Fl-jQlqKBwwD-fXnsfoF56pDkgod4SfkoRvdBAHxlKCC-uvA4i5Gg-MGaBQyaDPpaY0SqrqSOaiSzBrZ2LBkygwGIiqrQJJVjrD-wKs08GTIf172r1TIbLTSAiGxAvlv3GNEdqZaXrJV3A_i4pyzju2aYdfQnve8vibqQsooRoM0aZKJ4oDwt3-KrRYBr-vIblY0DmA9PEVtX1qsaZBZbsgKGAzD4mOrHHGXcEYerDhQ8X_Ldkb-k_qWzIzwR6mO2nlOdE3_qOKJ_6Tg5GtL8nfdUW6PVMgPv8Pr4nR6Q4F2hErn4aHhBT4shEn-TMCNGhFJ1LID0d9HmEjsLaaU0KMY9lKrxiAiMDhuP1sUfLcvCttipLbGAx9Qav35Ya_vBPlP_Evm7fHvbZYcduX2zgscSlYy9p1JxFx-K5LdGh6hbKDW9oVLmi-TPuzs_6Ath7VUfGFobMvrR9jih3j00dqngJ33YOy2zvs25AAGxBuN-OxwJI78sv2g0tfFfWnvX86xKdssNddX9UmOIA5EyqIae59Zs8ALQegnlQOYWL4UEljTJTEhMrpTZvejofBYN85zLpRgMVUSUP2Fd8ZnA64orlH_WGvD2z21A-bPIbDHruRBYCin61B_gTlHuo-Zm5ADRQUTBh5Zhi_IcC91SIZDVAl_aoGBXU97V1MWa4q_0c2cO7HsiFU3fQV8cj4Wg26-czZLR4bccnJFja-MnC-FuOivECeLh_E7ZRIS1qdb2XEAzuIMsLhVYtD6O5seLI3ZEOCPf9kml_00k_rqwOjAiaD-8HDkm9LzSD1kL9DKFKgWS-2rlt25OtaXweRqI0grfzlrQ15xGx7-uU_L4OVoz4vf0U3P2oSwR-Pz2BDiDyX7v801-M6JLq9rYauvGSy4LOq5URJIlQUatP2tZijSvKwSS3SV2YAqujNJnj7pXV62umNmCwlyr-GGb0um9zvGY0UX-LMt9gTjdgIDfR7vZ4PlfzesJxEz64tygxmz0XRXh9BPqaJRiMfURwY_Swed-PX5cxh_lEYUV2yVzAu6YfTj_CJ2jgeyMogSh_TfVetHkPulMTYeVGyQV8HIkX2jAZT0ZtRlmzRrMgjkZmmReiE5tssDPT0HJn-vp_oAsIWR344u1qZkc7KIXgYRWfiPFJYSuvkIkGrSj8ZJCY5qDdoWO9a9bd4syq-NER3iagB8aH7MhZ_qLOhhGuBplOT0iCmI_MmZJv_qyaiI0vWSIbjI86_4vRKccpfF9qKD7f5tRwX-quxai5mZehM3XAl7LubnxNHjB_LxqAb4UoMgzmHBzPCD9UbZH88GurvxQLjdVBEES4MHXSiWgbcDepk8Un62HMp5QqoQsH2P1YvHtUFSfIBzI41vh4USXEewK2T9-qSt-zfx1022r7uoH3FpjFR2A**&amp;docUrl=http%3A//games.espn.go.com/frontpage/football&amp;loadStartTime=1448840241433"></object></div>
+</div>
+<!-- end mod-content -->
+</div>
+<!-- end mod-container -->
+</div>
+</div>
+
+
+               
+    
+
+        <div class="img_container" style="margin-right:720px;">
+        
+        </div>
+
+         
+</body>
+
+
+</html>

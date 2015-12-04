@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<?php
+    require '../slim_eg/start.php'; 
+?>
+
+
+ <?php
+
+  session_start();
+?>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Welcome</title>
+    <script src="jquery1.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/sb-admin.css" rel="stylesheet">
+    <link href="css/plugins/morris.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="style3.css"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+   
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="style3.css">
+      <!-- Resource style -->
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
+<script src="main3.js"></script>
+    <title>Match Schedule</title>
+    <script src="jquery.js"></script>
+    <script src="clock.js"></script>
+
+    
+
+    <style>
+body{
+    text-align: center;
+    background: #00ECB9;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+h1{
+  color: #396;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 40px 0px 20px;
+}
+
+#clockdiv{
+    font-family: sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+}
+
+#clockdiv > div{
+    padding: 10px;
+    border-radius: 3px;
+    background: #00BF96;
+    display: inline-block;
+}
+
+#clockdiv div > span{
+    padding: 15px;
+    border-radius: 3px;
+    background: #00816A;
+    display: inline-block;
+}
+
+.smalltext{
+    padding-top: 5px;
+    font-size: 16px;
+}
+</style>
+<script>
+
+var json2;
+$(document).ready(function()
+{
+    
+      
+    function getTimeRemaining(endtime){
+       // console.log("hello");
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor( (t/1000) % 60 );
+  var minutes = Math.floor( (t/1000/60) % 60 );
+  var hours = Math.floor( (t/(1000*60*60)) % 24 );
+  var days = Math.floor( t/(1000*60*60*24) );
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+
+
+
+function initializeClock(id, endtime){
+  var clock = document.getElementById(id);
+  var daysSpan = clock.querySelector('.days');
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock(){
+    var t = getTimeRemaining(endtime);
+
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if(t.total<=0){
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  var timeinterval = setInterval(updateClock,1000);
+}
+
+var deadline = 'December 5 2015 00:00:50 ';
+//var deadline[] =;
+//var deadline= json2["date"][0];
+//console.log(deadline);
+initializeClock('clockdiv', deadline);
+
+
+
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+<body style="background-color:rgba(95, 55, 36, 0.63);">
+
+    <div id="wrapper">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            
+<!--Header-->
+          
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only"></span>
+                    
+                </button>
+                <a class="navbar-brand" href="index.html">Welcome</a>
+            </div>
+            
+                
+
+<!---Username-->
+
+
+
+
+              <ul class="nav navbar-right top-nav">
+                <li class="dropdown">
+                              <a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php
+        //echo "heklo";
+            echo $_SESSION['UserName'];
+        ?><b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href=""><i class="fa fa-fw fa-user"></i> Profile</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa fa-fw fa-gear"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href=""><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+<!---Menus Sidebar-->
+
+
+           <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav ">
+                    <li >
+                        
+                    <a href="../Minor2/FFL/index.html" ><span class="fa fa-home fa-2">Home</a>
+                    </li>
+                    <li >
+                        <a href="index.html"> <span class="fa fa-briefcase fa-2">Pick A Team</a>
+                    </li>
+                    <li>
+                        <a href="playing_game.html"><span class="fa fa-futbol-o fa-2">Playing Game</a>
+                    </li>
+                    <li class="active">
+                        <a href="Match_day.html"><span class="fa fa-clock-o fa-2">Match Day</a>
+                    </li>
+                    <li>
+                        <a href="News.html"><span class="fa fa-film fa-2">News & Features</a>
+                    </li>
+                   
+                    <li><a type="submit" id="multiplayer_submit" onclick="parent.location='chMult/pages/UserLogin.php'" value="Multiplayer game">Multiplayer</a></li>
+
+                </ul>
+           </nav>
+
+</span>
+<div>
+
+<div id="clockdiv">
+  <div>
+    <span class="days"></span>
+    <div class="smalltext">Days</div>
+  </div>
+  <div>
+    <span class="hours"></span>
+    <div class="smalltext">Hours</div>
+  </div>
+  <div>
+    <span class="minutes"></span>
+    <div class="smalltext">Minutes</div>
+  </div>
+  <div>
+    <span class="seconds"></span>
+    <div class="smalltext">Seconds</div>
+  </div>
+</div>
+
+        
+    
+    
+    
+
+    <section id="cd-timeline" class="cd-container">
+        <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-picture">
+            <img src="img/cd-icon-location.svg" alt="Picture">
+        </div> 
+        <div class="cd-timeline-content">
+
+                <h3 id="club1"></h3>
+                <h2>Vs.</h2>
+                <h3 id="club2"></h3>
+                <span class="cd-date" id="schedule">Jan 14</span>
+        </div> 
+    </div>
+
+        
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-movie">
+                <img src="img/cd-icon-location.svg " alt="Movie">
+            </div> 
+            <div class="cd-timeline-content">
+                    <h3 id="1club1"></h3>
+                     <h2>Vs.</h2>
+                    <h3 id="1club2"></h3>
+                <span class="cd-date" id="1schedule">Jan 14</span>
+            </div>
+        </div>
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-picture">
+            <img src="img/cd-icon-location.svg" alt="Picture">
+            </div> <!-- cd-timeline-img -->
+
+            <div class="cd-timeline-content">
+                <h3 id="2club1"></h3>
+                 <h2>Vs.</h2>
+                    <h3 id="2club2"></h3>
+
+                <span class="cd-date" id="2schedule">Jan 14</span>
+
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- cd-timeline-block -->
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-location">
+                <img src="img/cd-icon-location.svg" alt="Location">
+            </div> <!-- cd-timeline-img -->
+
+            <div class="cd-timeline-content">
+                                          <h3 id="3club1"></h3>
+                                           <h2>Vs.</h2>
+                    <h3 id="3club2"></h3>
+
+                <span class="cd-date" id="3schedule">Jan 14</span>
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- cd-timeline-block -->
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-movie">
+                <img src="img/cd-icon-location.svg" alt="Location">
+            </div> <!-- cd-timeline-img -->
+
+            <div class="cd-timeline-content">
+                                          <h3 id="4club1"></h3>
+                                           <h2>Vs.</h2>
+                    <h3 id="4club2"></h3>
+
+                <span class="cd-date" id="4schedule">Jan 14</span>
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- cd-timeline-block -->
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-picture">
+                <img src="img/cd-icon-location.svg" alt="Movie">
+            </div> <!-- cd-timeline-img -->
+
+            <div class="cd-timeline-content">
+                       
+                <h3 id="5club1"></h3>
+                 <h2>Vs.</h2>
+                    <h3 id="5club2"></h3>
+
+                <span class="cd-date" id="5schedule">Jan 14</span>
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- cd-timeline-block -->
+
+    </section> <!-- cd-timeline -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+            <div class="container-fluid" >
+            <div class="row">
+            <div class="col-lg-12">
+       </div>
+    </div>
+
+</div>
+
+
+               
+    
+</body>
+
+
+</html>

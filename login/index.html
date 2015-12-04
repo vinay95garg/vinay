@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<?php
+	require '../slim_eg/start.php'; 
+?>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Welcome</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/sb-admin.css" rel="stylesheet">
+    <link href="css/plugins/morris.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/morris/raphael.min.js"></script>
+    <script src="js/plugins/morris/morris.min.js"></script>
+    <script src="js/plugins/morris/morris-data.js"></script>
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+
+ <script>
+ $(document).ready(function() {
+    $.ajax({
+           type: "GET",
+            url: "/login/slim_files/start4.php",
+            success:   
+            function(data) {
+                    //console.log(data);
+                    var arr6=JSON.parse(data);
+                    console.log(counter);
+
+
+           <ul class="nav navbar-right top-nav">
+                <li class="dropdown">
+                          <a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> arr6<b class="caret"></b></a>
+                        <li>
+                            <a href=""><i class="fa fa-fw fa-user"></i> Profile</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa fa-fw fa-gear"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href=""><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+
+
+}
+})
+}
+
+</script>
+
+
+
+
+<script> 
+
+
+
+
+
+function myfunctiongk()
+{
+    $('#search-box').val(''); 
+
+      //  document.getElementById("myForm").reset();
+}
+
+function myfunctiondf()
+{
+    $('#search-box1').val(''); 
+
+      //  document.getElementById("myForm").reset();
+}
+
+
+function myfunctionmf()
+{
+    $('#search-box2').val(''); 
+
+      //  document.getElementById("myForm").reset();
+}
+
+
+
+function myfunctionat()
+{
+    $('#search-box3').val(''); 
+
+      //  document.getElementById("myForm").reset();
+}
+</script>
+<script> 
+
+
+
+
+
+
+
+function search() {
+    var searchText = document.getElementById("search-box").value;
+    var Table = document.getElementById('gktable');
+    var ColCount;
+    for (var rowIndex = 0; rowIndex < Table.rows.length; rowIndex++) {
+        var rowData = '';
+        if (rowIndex == 0) {
+           ColCount = Table.rows.item(rowIndex).cells.length;
+           continue; 
+        }
+        for (var colIndex = 0; colIndex < ColCount; colIndex++) {
+            rowData += Table.rows.item(rowIndex).cells.item(colIndex).textContent;
+        }
+        if (rowData.indexOf(searchText) == -1)
+            Table.rows.item(rowIndex).style.display = 'none';
+        else
+            Table.rows.item(rowIndex).style.display = 'table-row';
+    }
+}
+
+
+
+function search1() {
+    var searchText = document.getElementById("search-box1").value;
+    var Table = document.getElementById('defendertable');
+ var ColCount;
+    for (var rowIndex = 0; rowIndex < Table.rows.length; rowIndex++) {
+        var rowData = '';
+        if (rowIndex == 0) {
+           ColCount = Table.rows.item(rowIndex).cells.length;
+           continue; 
+        }
+        for (var colIndex = 0; colIndex < ColCount; colIndex++) {
+            rowData += Table.rows.item(rowIndex).cells.item(colIndex).textContent;
+        }
+        if (rowData.indexOf(searchText) == -1)
+            Table.rows.item(rowIndex).style.display = 'none';
+        else
+            Table.rows.item(rowIndex).style.display = 'table-row';
+    }
+}
+
+
+
+function search2() {
+    var searchText = document.getElementById("search-box2").value;
+    var Table = document.getElementById('midfieldertable');
+     var ColCount;
+    for (var rowIndex = 0; rowIndex < Table.rows.length; rowIndex++) {
+        var rowData = '';
+        if (rowIndex == 0) {
+           ColCount = Table.rows.item(rowIndex).cells.length;
+           continue; 
+        }
+        for (var colIndex = 0; colIndex < ColCount; colIndex++) {
+            rowData += Table.rows.item(rowIndex).cells.item(colIndex).textContent;
+        }
+        if (rowData.indexOf(searchText) == -1)
+            Table.rows.item(rowIndex).style.display = 'none';
+        else
+            Table.rows.item(rowIndex).style.display = 'table-row';
+    }
+}
+
+
+
+
+
+
+
+function search3() {
+    var searchText = document.getElementById("search-box3").value;
+    var Table = document.getElementById('attackertable');
+     var ColCount;
+    for (var rowIndex = 0; rowIndex < Table.rows.length; rowIndex++) {
+        var rowData = '';
+        if (rowIndex == 0) {
+           ColCount = Table.rows.item(rowIndex).cells.length;
+           continue; 
+        }
+        for (var colIndex = 0; colIndex < ColCount; colIndex++) {
+            rowData += Table.rows.item(rowIndex).cells.item(colIndex).textContent;
+        }
+        if (rowData.indexOf(searchText) == -1)
+            Table.rows.item(rowIndex).style.display = 'none';
+        else
+            Table.rows.item(rowIndex).style.display = 'table-row';
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+<script type="text/javascript">
+
+
+
+
+
+$(document).ready(function(){
+    $("#Goal-keeper").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+
+
+
+$(document).ready(function(){
+    $("#Defenders").click(function(){
+        $("#panel1").slideToggle("slow");
+    });
+});
+
+$(document).ready(function(){
+    $("#Midfielders").click(function(){
+        $("#panel2").slideToggle("slow");
+    });
+});
+
+$(document).ready(function(){
+    $("#Attackers").click(function(){
+        $("#panel3").slideToggle("slow");
+    });
+});
+
+</script>
+
+
+
+
+
+<script type="text/javascript" src="team_selection.js">
+var gkcount=0;
+var dfcount=0;
+var mfcount=0;
+var atcount=0;
+var arr,arr1,arr2,arr3;
+var gk_count=0;var df_count=0;var mf_count=0;var at_count=0;
+$(document).ready(function() {
+
+  $("#Goal-keeper").click (function() {
+        var data;
+
+     if(gkcount%2==0){
+
+        $.ajax({
+            type: "GET",
+            url: "/login/slim_files/dash_home.php/1",
+            data:data,
+            success: 
+                function(data) {
+                    console.log(data);
+                     arr=JSON.parse(data);
+                    var len=arr["players_name"].length;
+                    console.log(len);
+                    for(var k=0;k<len;k++){
+                        console.log("hello");
+                        var id=document.getElementById("gktable");
+                        var row=id.insertRow(k+1);
+                        row.className="gk"+(k+1);
+                        row.setAttribute("data_id",k+1);
+
+
+                        row.onclick=(function(){
+                                
+                                if(gk_count<2){
+                                    
+                                    var rowno=this.getAttribute("data_id");
+                                    var rowid=document.getElementById("select15").rows;
+                                    //console.log(rowid[gk_count+1].cells[0]);
+                                    rowid[gk_count+1].cells[0].innerHTML=arr["players_name"][rowno-1];
+                                    rowid[gk_count+1].cells[1].innerHTML=arr["club_id"][rowno-1];
+                                    rowid[gk_count+1].cells[2].innerHTML=arr["rating"][rowno-1];
+                                    rowid[gk_count+1].cells[3].innerHTML=arr["player_cost"][rowno-1];
+                                    rowid[gk_count+1].setAttribute("data_id",rowno);
+                                    rowid[gk_count+1].onclick=(function(){
+                                        var teamno=this.getAttribute("data_id");
+                                        
+                                       var gk_url="C:/xampp/htdocs/login/club players/"+arr["club_id"][teamno-1]+"/"+arr["img_url"][teamno-1];
+                                        
+                                      var gk_id=document.getElementById("gk");
+                                      console.log(gk_id);
+                                       
+                                     
+
+
+                                    });
+
+
+
+                                    gk_count++;
+                                }
+                        });
+
+
+                        var cell1=row.insertCell(0);
+                        cell1.innerHTML=arr["players_name"][k];
+                        var cell2=row.insertCell(1);
+                        cell2.innerHTML=arr["club_id"][k];
+                        var cell3=row.insertCell(2);
+                        cell3.innerHTML=arr["rating"][k];
+                        var cell4=row.insertCell(3);
+                        cell4.innerHTML=arr["player_cost"][k];
+                       
+                    }
+                    
+                },
+            error: 
+                function(err) {
+                    console.log(err);
+                }
+            }); 
+        }  
+        else{
+
+            var nrows=document.getElementById("gktable").rows.length;
+            for(var i=1;i<nrows;i++){
+                var id=document.getElementById("gktable");
+                id.deleteRow(1);
+            }
+
+
+        }
+        gkcount++;
+    });
+
+$("#Defenders").click (function() {
+        var data;
+     if(dfcount%2==0){
+
+        $.ajax({
+            type: "GET",
+            url: "/login/slim_files/dash_home.php/2",
+            data:data,
+            success: 
+                function(data) {
+                    console.log(data);
+                     arr1=JSON.parse(data);
+                    var len=arr1["players_name"].length;
+                    //console.log(len);
+                    for(var k=0;k<len;k++){
+                        console.log("hello");
+                        var id=document.getElementById("defendertable");
+                        var row=id.insertRow(k+1);
+                        row.className="df"+(k+1);
+                        row.setAttribute("data_id",k+1);
+
+
+                        row.onclick=(function(){
+                                
+                                if(df_count<5){
+                                    
+                                    var rowno=this.getAttribute("data_id");
+                                    var rowid=document.getElementById("select15").rows;
+                                   //console.log(rowid[gk_count+1].cells[0]);
+                                    rowid[df_count+3].cells[0].innerHTML=arr1["players_name"][rowno-1];
+                                    rowid[df_count+3].cells[1].innerHTML=arr1["club_id"][rowno-1];
+                                    rowid[df_count+3].cells[2].innerHTML=arr1["rating"][rowno-1];
+                                    rowid[df_count+3].cells[3].innerHTML=arr1["player_cost"][rowno-1];
+                                    df_count++;
+                                }
+                        });
+
+                        var cell1=row.insertCell(0);
+                        cell1.innerHTML=arr1["players_name"][k];
+                        var cell2=row.insertCell(1);
+                        cell2.innerHTML=arr1["club_id"][k];
+                        var cell3=row.insertCell(2);
+                        cell3.innerHTML=arr1["rating"][k];
+                        var cell4=row.insertCell(3);
+                        cell4.innerHTML=arr1["player_cost"][k];
+                    }
+                    
+                },
+            error: 
+                function(err) {
+                    console.log(err);
+                }
+            }); 
+        }  
+        else{
+
+            var nrows=document.getElementById("defendertable").rows.length;
+            for(var i=1;i<nrows;i++){
+                var id=document.getElementById("defendertable");
+                id.deleteRow(1);
+            }
+
+
+        }
+        dfcount++;
+    });
+
+
+    $("#Midfielders").click (function() {
+        var data;
+     if(mfcount%2==0){
+
+        $.ajax({
+            type: "GET",
+            url: "/login/slim_files/dash_home.php/3",
+            data:data,
+            success: 
+                function(data) {
+                    console.log(data);
+                     arr2=JSON.parse(data);
+                    var len=arr2["players_name"].length;
+                    console.log(len);
+                    for(var k=0;k<len;k++){
+                        console.log("hello");
+                        var id=document.getElementById("midfieldertable");
+                        var row=id.insertRow(k+1);
+                         row.className="mf"+(k+1);
+                        row.setAttribute("data_id",k+1);
+
+
+                        row.onclick=(function(){
+                                
+                                if(mf_count<5){
+                                    
+                                    var rowno=this.getAttribute("data_id");
+                                    var rowid=document.getElementById("select15").rows;
+                                   //console.log(rowid[gk_count+1].cells[0]);
+                                    rowid[mf_count+8].cells[0].innerHTML=arr2["players_name"][rowno-1];
+                                    rowid[mf_count+8].cells[1].innerHTML=arr2["club_id"][rowno-1];
+                                    rowid[mf_count+8].cells[2].innerHTML=arr2["rating"][rowno-1];
+                                    rowid[mf_count+8].cells[3].innerHTML=arr2["player_cost"][rowno-1];
+                                    mf_count++;
+                                }
+                        });
+
+                        var cell1=row.insertCell(0);
+                        cell1.innerHTML=arr2["players_name"][k];
+                        var cell2=row.insertCell(1);
+                        cell2.innerHTML=arr2["club_id"][k];
+                        var cell3=row.insertCell(2);
+                        cell3.innerHTML=arr2["rating"][k];
+                        var cell4=row.insertCell(3);
+                        cell4.innerHTML=arr2["player_cost"][k];
+                    }
+                    
+                },
+            error: 
+                function(err) {
+                    console.log(err);
+                }
+            }); 
+        }  
+        else{
+
+            var nrows=document.getElementById("midfieldertable").rows.length;
+            for(var i=1;i<nrows;i++){
+                var id=document.getElementById("midfieldertable");
+                id.deleteRow(1);
+            }
+
+
+        }
+        mfcount++;
+    });
+
+
+    $("#Attackers").click (function() {
+        var data;
+     if(atcount%2==0){
+
+        $.ajax({
+            type: "GET",
+            url: "/login/slim_files/dash_home.php/4",
+            data:data,
+            success: 
+                function(data) {
+                    console.log(data);
+                     arr3=JSON.parse(data);
+                    var len=arr3["players_name"].length;
+                    console.log(len);
+                    for(var k=0;k<len;k++){
+                        console.log("hello");
+                        var id=document.getElementById("attackertable");
+                        var row=id.insertRow(k+1);
+                         row.className="at"+(k+1);
+                        row.setAttribute("data_id",k+1);
+
+
+                        row.onclick=(function(){
+                                
+                                if(at_count<3){
+                                    
+                                    var rowno=this.getAttribute("data_id");
+                                    var rowid=document.getElementById("select15").rows;
+                                   //console.log(rowid[gk_count+1].cells[0]);
+                                    rowid[at_count+13].cells[0].innerHTML=arr3["players_name"][rowno-1];
+                                    rowid[at_count+13].cells[1].innerHTML=arr3["club_id"][rowno-1];
+                                    rowid[at_count+13].cells[2].innerHTML=arr3["rating"][rowno-1];
+                                    rowid[at_count+13].cells[3].innerHTML=arr3["player_cost"][rowno-1];
+                                    at_count++;
+                                }
+                        });
+
+                        var cell1=row.insertCell(0);
+                        cell1.innerHTML=arr3["players_name"][k];
+                        var cell2=row.insertCell(1);
+                        cell2.innerHTML=arr3["club_id"][k];
+                        var cell3=row.insertCell(2);
+                        cell3.innerHTML=arr3["rating"][k];
+                        var cell4=row.insertCell(3);
+                        cell4.innerHTML=arr3["player_cost"][k];
+                    }
+                    
+                },
+            error: 
+                function(err) {
+                    console.log(err);
+                }
+            }); 
+        }  
+        else{
+
+            var nrows=document.getElementById("attackertable").rows.length;
+            for(var i=1;i<nrows;i++){
+                var id=document.getElementById("attackertable");
+                id.deleteRow(1);
+            }
+
+
+        }
+        atcount++;
+    });
+    
+   
+
+
+
+});
+
+
+
+    function del_gk(obj){
+        console.log("hello");
+      // var id=obj.parent().parent().index;
+      var id=obj.parentNode.parentNode;
+      var gk_del_ind=id.rowIndex;
+       //console.log(id.rowIndex);
+       gk_curr_index[gk_del_ind-1]=0;
+       id.cells[0].innerHTML=" ";
+       id.cells[1].innerHTML=" ";
+       id.cells[2].innerHTML=" ";
+       id.cells[3].innerHTML=" ";
+              gk_count--;
+       console.log(gk_curr_index);
+
+    }
+
+    function del_df(obj){
+        console.log("hello");
+      // var id=obj.parent().parent().index;
+      var id=obj.parentNode.parentNode;
+      var df_del_ind=id.rowIndex;
+       //console.log(id.rowIndex);
+       def_curr_index[df_del_ind-3]=0;
+       id.cells[0].innerHTML=" ";
+       id.cells[1].innerHTML=" ";
+       id.cells[2].innerHTML=" ";
+       id.cells[3].innerHTML=" ";
+              df_count--;
+       //console.log(gk_curr_index);
+
+    }
+
+
+
+    function del_mf(obj){
+        console.log("hello");
+      // var id=obj.parent().parent().index;
+      var id=obj.parentNode.parentNode;
+      var mf_del_ind=id.rowIndex;
+       //console.log(id.rowIndex);
+       mf_curr_index[mf_del_ind-8]=0;
+       id.cells[0].innerHTML=" ";
+       id.cells[1].innerHTML=" ";
+       id.cells[2].innerHTML=" ";
+       id.cells[3].innerHTML=" ";
+              mf_count--;
+       //console.log(gk_curr_index);
+
+    }
+
+
+    function del_at(obj){
+        console.log("hello");
+      // var id=obj.parent().parent().index;
+      var id=obj.parentNode.parentNode;
+      var at_del_ind=id.rowIndex;
+       //console.log(id.rowIndex);
+       at_curr_index[at_del_ind-13]=0;
+       id.cells[0].innerHTML=" ";
+       id.cells[1].innerHTML=" ";
+       id.cells[2].innerHTML=" ";
+       id.cells[3].innerHTML=" ";
+              at_count--;
+       //console.log(gk_curr_index);
+
+    }
+
+    
+   
+ 
+</script>
+
+    
+<style type="text/css">
+.panel-footer
+{cursor:pointer;
+}
+#select15 td
+{
+color: white; 
+}
+.table2
+{
+
+margin-left: 980px;
+margin-top: -445px;
+height:1100px;
+width: 340px;
+text-align: center;
+}
+
+body {
+    background: url(m.jpg);
+    background-attachment: fixed;
+     background-repeat: repeat-y;
+    font-family: 'Open Sans', sans-serif;
+    color: #4e4e4e;
+    line-height: 22px;
+}
+
+
+#panel,#panel1,#panel2,#panel3,#select15 {
+	margin:0px;
+	padding:0px;
+	width:100%;
+	border:1px solid rgba(126, 154, 94, 0.52);
+	
+	}
+
+#panel tr:hover td{
+	background-color:grey;
+		
+
+}
+
+#select15 tr:hover td
+{
+background-color:#332727;
+}
+
+#select15 td
+{
+height: 20px;
+width: 100px;
+}
+#panel1 tr:hover td
+{
+	background-color:grey;
+		
+
+}
+#panel2 tr:hover td{
+	background-color:grey;
+		
+
+}
+#panel3 tr:hover td{
+	background-color:grey;
+		
+
+}
+#panel td,#select15 th,#select15 td,.table2 th,#panel1 td,#panel2 td,#panel3 td,#panel th,#panel1 th,#panel2 th,#panel3 th{
+	vertical-align:middle;
+	
+	background-color:rgba(48, 48, 51, 0.69);
+
+	border:2px solid rgba(122, 197, 36, 0.12);
+	border-width:0px 1px 1px 0px;
+	text-align:center;
+	padding:7px;
+	font-size:12px;
+	font-family:Arial;
+	font-weight:normal;
+	color: rgba(18, 19, 18, 0.77);
+}
+#select15 th
+{
+color: rgba(64, 144, 169, 0.78);
+font-size: 16px;
+}
+#select15 td
+{
+	color: white;
+background-color:rgba(18, 19, 18, 0.17) ;
+
+}
+#panel th,#panel1 th,#panel2 th,#panel3 th,.table2 th,#select15
+{
+font-size: 18px;
+background-color: rgba(36, 39, 36, 0.83);
+}
+
+table
+{
+border: 2px solid grey;
+}
+.search-box
+{   position: relative;
+    color: grey;
+    background-color: rgba(36, 39, 36, 0.83);
+    border: solid 1px #c3c3c3;
+}
+.t1,.t2,.t3,.t4{
+    color:blue;
+    text-align: center;
+}
+
+.panel-footer
+{
+    position: absolute;
+    background-color: #948989;
+
+    z-index: 5;
+    
+} 
+#panel,#panel1,#panel2,#panel3, #Goal-keeper,#Midfielders,#Attackers,#Defenders {
+    padding: 5px;
+    text-align: center;
+    background-color: rgba(166, 193, 199, 0.73);
+    border: solid 1px #251818;
+}
+
+
+
+#panel ,#panel1,#panel2,#panel3{
+    height: 220px;
+
+    padding: 4px;
+    padding-right: 9px;
+    display: none;
+    vertical-align: sub;
+    overflow: scroll;
+}
+
+.gk1{
+
+}
+
+
+
+</style>
+
+<!------------ Formation change ------------>
+
+<script type="text/javascript">
+function formation1()
+    {
+
+        var element = document.createElement('link');
+        element.href = '1.css';
+        element.rel = 'stylesheet';
+        element.type = 'text/css';
+
+        document.body.appendChild(element); 
+        var id=document.getElementById("f1");
+        f1.style.backgroundImage="url('l.png')";
+        var id=document.getElementById("f2");
+        f2.style.backgroundImage="url('kk.png')"
+        var id=document.getElementById("f3");
+        f3.style.backgroundImage="url('kkk.png')"
+    }
+
+function formation2()
+    {
+
+        var element = document.createElement('link');
+        element.href = '2.css';
+        element.rel = 'stylesheet';
+        element.type = 'text/css';
+
+        document.body.appendChild(element);    
+        var id=document.getElementById("f1");
+        f1.style.backgroundImage="url('k.png')";
+        var id=document.getElementById("f2");
+        f2.style.backgroundImage="url('ll.png')"
+        var id=document.getElementById("f3");
+        f3.style.backgroundImage="url('kkk.png')"
+    }
+
+function formation3()
+    {
+
+    
+        var element = document.createElement('link');
+        element.href = '3.css';
+        element.rel = 'stylesheet';
+        element.type = 'text/css';
+
+        document.body.appendChild(element);        
+        var id=document.getElementById("f1");
+        f1.style.backgroundImage="url('k.png')";
+        var id=document.getElementById("f2");
+        f2.style.backgroundImage="url('kk.png')"
+        var id=document.getElementById("f3");
+        f3.style.backgroundImage="url('lll.png')"
+
+    }
+
+    </script>
+    </head>
+
+<body onload="formation1()">
+
+    <div id="wrapper">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            
+      
+            <div class="navbar-header">
+                
+                <a class="navbar-brand" href="index.html">Welcome</a>
+            </div>
+            
+                
+
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav ">
+                    <li >
+                        
+                    <a href="../Minor2/FFL/index.html" ><span class="fa fa-home fa-2">Home</a>
+                    </li>
+                    <li class="active">
+                        <a href="index.html"> <span class="fa fa-briefcase fa-2">Pick A Team</a>
+                    </li>
+                    <li>
+                        <a href="playing_game.html"><span class="fa fa-futbol-o fa-2">Playing Game</a>
+                    </li>
+                    <li>
+                        <a href="Match_day.html"><span class="fa fa-clock-o fa-2">Match Day</a>
+                    </li>
+                    <li>
+                        <a href="News.html"><span class="fa fa-film fa-2">News & Features</a>
+                    </li>
+                   
+                    <li><a  id="multiplayer_submit" href="chMult/pages/UserLogin.php" value="Multiplayer game">Multiplayer</a></li>
+
+                </ul>
+           </nav>
+
+<!------>
+<div id="page-wrapper">
+           
+            <h2 class="page-header" style="font-family: cursive;">
+            Team Players
+                            <small >(Pick your team here)</small>
+                        </h2>
+
+                        <ol class="breadcrumb">
+                            <li class="active" >
+                                <i style="color:red" id="budget" > <span class="glyphicon glyphicon-usd" aria-hidden="true" ></span>110</i>
+                                Amount left
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+<!------>
+
+                
+<div class="row">
+<div class="col-lg-3 col-md-6">
+<div class="panel-heading" style="background-image:url('goalkeepers3.png');  background-repeat: repeat-y;  margin-bottom: 5px;">
+</div>
+
+<div class="panel-footer" style="margin-left: 50px;cursor:pointer;">
+    <div id="Goal-keeper" style="font-family: cursive; font-size:120%;color:#734748;">Goal-Keepers</div>
+        <div id="panel">
+            <table cellspacing="2" cellpadding="1" id="gktable" width="100%">
+            <tbody>
+
+            <div>
+                    <span class="fa fa-search">
+                    <input id="search-box" type="text"  onkeyup="search()" class="search-form" autocomplete="off" placeholder="Search your player">
+                    <button class="fa fa-times-circle-o fa-2" onclick="myfunctiongk()"></button>                                   
+                </div>
+
+                <tr>
+                    <th class="t1">Name</th>
+                    <th class="t2">Team</th>
+                    <th class="t3">pts</th>
+                    <th class="t4">rate</th>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+                   
+<div class="row">
+<div class="col-lg-3 col-md-6">
+<div class="panel-heading" style="background-image:url('defenders1.png'); background-repeat: repeat-y; margin-bottom: 5px;">
+</div>
+
+<div class="panel-footer" style="margin-left: 50px;">
+
+
+     <div id="Defenders" style="font-family: cursive; font-size:120%; color:#734748;">Defenders</div>
+        <div id="panel1">
+            <table cellspacing="2" cellpadding="1" id="defendertable" width="100%">
+            <tbody>
+                <div>
+            <span class="fa fa-search">
+            <input type="text" id="search-box1" onkeyup="search1()" class="search-form" autocomplete="off" placeholder="Search your player">
+            <button class="fa fa-times-circle-o fa-2" onclick="myfunctiondf()"></button>                                    
+        </div>
+                <tr>
+                     <th class="t1">Name</th>
+                    <th class="t2">Team</th>
+                    <th class="t3">pts</th>
+                    <th class="t4">rate</th>
+                    </tr>
+            </tbody>
+            </table>
+        </div>
+    
+    </div>
+
+</div>
+               
+<div class="row">
+<div class="col-lg-3 col-md-6">
+<div class="panel-heading" style="background-image:url('midfielders1.png'); background-repeat: repeat-y;margin-bottom: 5px;">
+</div>
+
+<div class="panel-footer" style="margin-left: 50px;">
+     <div id="Midfielders" style="font-family: cursive; font-size:120%;color:#734748;">Midfielders</div>
+        <div id="panel2">
+            <table cellspacing="2" cellpadding="1" id="midfieldertable" width="100%">
+            <tbody>
+             <div>
+        <span class="fa fa-search">
+        
+            <input type="text" id="search-box2" onkeyup="search2()" class="search-form" autocomplete="off" placeholder="Search your player">
+            <button class="fa fa-times-circle-o fa-2" id="kk"  onclick="myfunctionmf()"></button>
+                                             
+        </div>
+
+                <tr>
+                    <th class="t1">Name</th>
+                    <th class="t2">Team</th>
+                    <th class="t3">pts</th>
+                    <th class="t4">rate</th>
+                    </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+                
+<div class="row">
+<div class="col-lg-3 col-md-6">
+<div class="panel-heading" style="background-image:url('attackers1.png'); background-repeat: repeat-y;margin-bottom: 5px;">
+</div>
+
+<div class="panel-footer" style="margin-left: 50px;">
+     <div id="Attackers" style="font-family: cursive; font-size:120%;color:#734748;">Attackers</div>
+        <div id="panel3">
+            <table cellspacing="2" cellpadding="1" id="attackertable" width="100%">
+            <tbody>
+                       <div class="search-box">
+<span class="fa fa-search">
+<input type="text"  id="search-box3" onkeyup="search3()" class="search-form" autocomplete="off" placeholder="Search your player">
+<button class="fa fa-times-circle-o fa-2" onclick="myfunctionat()"></button>                                                                       
+</div>
+                <tr>
+                    <th class="t1">Name</th>
+                    <th class="t2">Team</th>
+                    <th class="t3">pts</th>
+                    <th class="t4">rate</th>
+                    </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+
+
+               
+ <!--   
+
+<div class="img_container" style="color:grey;font-size:14px;z-index:-1;">
+            
+                <div    class="circular1"><img src=""  class="jersey" id="pl0"><p style="background-color:rgba(0,0,0,0.8);">Player1</p></div>
+                <div  class="circular2"><img src=""   class="jersey" id="pl1"><p style="background-color:rgba(0,0,0,0.8);">Player2</p></div>
+                <div  class="circular3"><img src=""   class="jersey" id="pl2"><p style="background-color:rgba(0,0,0,0.8);">Player3</p></div>
+                <div class="circular4"><img src=""   class="jersey" id="pl3"><p style="background-color:rgba(0,0,0,0.8);">Player4</p></div>
+                <div  class="circular5"><img src=""   class="jersey" id="pl4"><p style="background-color:rgba(0,0,0,0.8);">Player5</p></div>
+                <div  class="circular6"><img src=""   class="jersey" id="pl5"><p style="background-color:rgba(0,0,0,0.8);">Player6</p></div>
+                <div class="circular7"><img src=""   class="jersey" id="pl6"><p style="background-color:rgba(0,0,0,0.8);">Player7</p></div>
+                <div   class="circular8"><img src=""   class="jersey" id="pl7"><p style="background-color:rgba(0,0,0,0.8);">Player8</p></div>
+                <div   class="circular9"><img src=""  class="jersey" id="pl8"><p style="background-color:rgba(0,0,0,0.8);">Player9</p></div>
+                <div  class="circular10"><img src="" class="jersey" id="pl9"><p style="background-color:rgba(0,0,0,0.8);">Player10</p></div>
+                <div  class="circular11"><img src="" class="jersey" id="pl10"><p style="background-color:rgba(0,0,0,0.8);">Player11</p></div>
+         
+
+
+
+-->
+
+
+
+   <div class="img_container">
+            
+               <div class="circular1"><img src=""   class="jersey" id="pl0"><p style="background-color:rgba(0,0,0,0.8);">Player1 </p></div>
+                <div class="circular2" ><img src="" class="jersey" id="pl1"><p style="background-color:rgba(0,0,0,0.8);">Player2 </p></div>
+                <div class="circular3" ><img src="" class="jersey" id="pl2" ><p style="background-color:rgba(0,0,0,0.8);">Player3 </p></div>
+                <div class="circular4" ><img src="" class="jersey" id= "pl3"><p style="background-color:rgba(0,0,0,0.8);">Player4 </p></div>
+                <div class="circular5"><img src=""  class="jersey" id= "pl4"><p style="background-color:rgba(0,0,0,0.8);">Player5 </p></div>
+                <div class="circular6" ><img src="" class="jersey" id= "pl5"><p style="background-color:rgba(0,0,0,0.8);">Player6 </p></div>
+                <div class="circular7"><img src=""  class="jersey" id= "pl6"><p style="background-color:rgba(0,0,0,0.8);">Player7 </p></div>
+                <div class="circular8"><img src=""  class="jersey" id= "pl7"><p style="background-color:rgba(0,0,0,0.8);">Player8 </p></div>
+                <div class="circular9"><img src=""  class="jersey" id= "pl8"><p style="background-color:rgba(0,0,0,0.8);">Player9 </p></div>
+                <div class="circular10"><img src="" class="jersey"id= "pl9"><p style="background-color:rgba(0,0,0,0.8);">Player10 </p></div>
+                <div class="circular11"><img src="" class="jersey" id= "pl10"><p style="background-color:rgba(0,0,0,0.8);">Player11 </p></div>
+
+
+                <img src="pitch.png">                       
+                
+    		<div class="don">
+              <div class="pitch1" id="f1" onclick="formation1()"></div>
+                <div class="pitch2" id="f2" onclick="formation2()"></div>
+                <div class="pitch3" id="f3" onclick="formation3()"></div>
+        </div>
+    
+        
+        </div>
+     
+
+
+
+
+
+
+<div class="table2"  style="left:-70px;top:-40px;position:relative;">
+
+
+<table class="imagetable" cellspacing="2" cellpadding="1" id="select15">
+<tr>
+	<th>Name</th><th>Club</th><th>Rating</th><th>Price</th><th>Select</th><th>Remove</th>
+</tr>
+<tr >
+	<td style="color: #EF5151;"></td><td style="color: #EF5151;"></td><td style="color: #EF5151;"></td><td style="color: #EF5151;"></td><td style="color: #EF5151;"><span class="glyphicon glyphicon-ok" onclick="ins_gk(this)"><td style="color: #EF5151;"><span class="glyphicon glyphicon-remove" onclick="del_gk(this)"></span></td>
+</tr>
+<tr style="color: #EF5151;">
+    <td style="color: #EF5151;"></td><td style="color: #EF5151;"></td><td style="color: #EF5151;"></td><td style="color: #EF5151;"></td><td style="color: #EF5151;"><span class="glyphicon glyphicon-ok" onclick="ins_gk(this)"><td style="color: #EF5151;"><span class="glyphicon glyphicon-remove" id="2" onclick="del_gk(this)"></span></td>
+</tr>
+<tr>
+	<td style="color: #5F5FA5;"></td><td style="color: #5F5FA5;"></td><td style="color: #5F5FA5;"></td><td style="color: #5F5FA5;"></td><td style="color: #5F5FA5;"><span class="glyphicon glyphicon-ok" onclick="ins_df(this)"><td style="color: #5F5FA5;"><span class="glyphicon glyphicon-remove" id="cancel1" onclick="del_df(this)"></span></td>
+</tr>
+<tr>
+    <td style="color: #5F5FA5;"></td><td style="color: #5F5FA5;"></td><td style="color: #5F5FA5;"></td><td style="color: #5F5FA5;"></td><td style="color: #5F5FA5;"><span class="glyphicon glyphicon-ok" onclick="ins_df(this)"><td style="color: #5F5FA5;"><span class="glyphicon glyphicon-remove" id="cancel1" onclick="del_df(this)"></span></td>
+</tr>
+<tr>
+    <td style="color: #5F5FA5;"></td><td style="color: #5F5FA5;"></td><td style="color: #5F5FA5;"></td><td style="color: #5F5FA5;"></td><td style="color: #5F5FA5;"><span class="glyphicon glyphicon-ok" onclick="ins_df(this)"><td style="color: #5F5FA5;"><span class="glyphicon glyphicon-remove" id="cancel1" onclick="del_df(this)"></span></td>
+</tr>
+<tr>
+    <td style="color: #5F5FA5;"></td><td style="color: #5F5FA5;"></td><td style="color: #5F5FA5;"></td><td style="color: #5F5FA5;"></td><td style="color: #5F5FA5;"><span class="glyphicon glyphicon-ok" onclick="ins_df(this)"><td style="color: #5F5FA5;"><span class="glyphicon glyphicon-remove" id="cancel1" onclick="del_df(this)"></span></td>
+</tr>
+<tr>
+    <td style="color: #5F5FA5;"></td><td style="color: #5F5FA5;"></td><td style="color: #5F5FA5;"></td><td style="color: #5F5FA5;"></td><td style="color: #5F5FA5;"><span class="glyphicon glyphicon-ok" onclick="ins_df(this)"><td style="color: #5F5FA5;"><span class="glyphicon glyphicon-remove" id="cancel1" onclick="del_df(this)"></span></td>
+</tr>
+
+<tr>
+	<td style="color:grey;"></td><td style="color:grey;"></td><td style="color:grey;"></td><td style="color:grey;"></td><td style="color:grey;"><span class="glyphicon glyphicon-ok" onclick="ins_mf(this)"><td style="color:grey;"><span class="glyphicon glyphicon-remove" id="cancel1" onclick="del_mf(this)"></span></td>
+</tr>
+<tr>
+    <td style="color:grey;"></td><td style="color:grey;"></td><td style="color:grey;"></td><td style="color:grey;"></td><td style="color:grey;"><span class="glyphicon glyphicon-ok" onclick="ins_mf(this)"><td style="color:grey;"><span class="glyphicon glyphicon-remove" id="cancel1" onclick="del_mf(this)"></span></td>
+</tr>
+<tr>
+    <td style="color:grey;"></td><td style="color:grey;"></td><td style="color:grey;"></td><td style="color:grey;"></td><td style="color:grey;"><span class="glyphicon glyphicon-ok" onclick="ins_mf(this)"><td style="color:grey;"><span class="glyphicon glyphicon-remove" id="cancel1" onclick="del_mf(this)"></span></td>
+</tr>
+<tr>
+    <td style="color:grey;"></td><td style="color:grey;"></td><td style="color:grey;"></td><td style="color:grey;"></td><td style="color:grey;"><span class="glyphicon glyphicon-ok" onclick="ins_mf(this)"><td style="color:grey;"><span class="glyphicon glyphicon-remove" id="cancel1" onclick="del_mf(this)"></span></td>
+</tr>
+<tr>
+    <td style="color:grey;"></td><td style="color:grey;"></td><td style="color:grey;"></td><td style="color:grey;"></td><td style="color:grey;"><span class="glyphicon glyphicon-ok" onclick="ins_mf(this)"><td style="color:grey;"><span class="glyphicon glyphicon-remove" id="cancel1" onclick="del_mf(this)"></span></td>
+</tr>
+
+<tr>
+	<td style="color: #943A91;"></td><td style="color: #943A91;"></td><td style="color: #943A91;"></td><td style="color: #943A91;"></td><td style="color: #943A91;"><span class="glyphicon glyphicon-ok" onclick="ins_at(this)"><td style="color: #943A91;"><span class="glyphicon glyphicon-remove" id="cancel1" onclick="del_at(this)"></span></td>
+</tr>
+<tr>
+    <td style="color: #943A91;"></td><td style="color: #943A91;"></td><td style="color: #943A91;"></td><td style="color: #943A91;"></td><td style="color: #943A91;"><span class="glyphicon glyphicon-ok" onclick="ins_at(this)"><td style="color: #943A91;"><span class="glyphicon glyphicon-remove" id="cancel1" onclick="del_at(this)"></span></td>
+</tr>
+<tr>
+    <td style="color: #943A91;"></td><td style="color: #943A91;"></td><td style="color: #943A91;"></td><td style="color: #943A91;"></td><td style="color: #943A91;"><span class="glyphicon glyphicon-ok" onclick="ins_at(this)"><td style="color: #943A91;"><span class="glyphicon glyphicon-remove" id="cancel1" onclick="del_at(this)"></span></td>
+</tr>
+</table>
+<button class="btn" onclick="final_submit()">SAVE MY TEAM</button>
+</div>
+              
+<div style="margin-left:120px;margin-top:-650px;z-index:3; color: #5F5FA5;
+    text-shadow: 0px -1px 4px grey,0px -1px 2px red;
+    font-family: cursive; font-size:300%;" >
+       <i>Team Formation:</i>
+     </div>
+    <div style="margin-left:700px; margin-top:-25px;z-index:3;color: #5F5FA5; font-family: cursive;">
+        <h3><u><b>Color Code:</u></b></h3>
+        <li style="color: #EF5151; font-size:18px;">GoalKeepers</li>
+        <li style="color: #5F5FA5;font-size:18px;">Defenders</li>
+ <li style="color: grey;font-size:18px;">Midfielders</li>   
+<li style="color: #943A91;font-size:18px;">Attackers</li>   
+ </div>
+
+    
+</div> <div class="ad-box" style="padding-left:200px;padding-top:200px;">
+<iframe scrolling="no" frameborder="0" allowtransparency="true" style="border: medium none; overflow: hidden; width: 300px; height: 285px; background:white;" src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fespnfantasy&amp;width=300&amp;colorscheme=light&amp;connections=8&amp;stream=false&amp;header=true&amp;height=285">
+</iframe>
+</div><div class="mod-container mod-no-footer mod-open">
+    
+</body>
+
+
+</html>

@@ -1,0 +1,157 @@
+
+.panel-body{
+
+    background-color: ;
+    height: 600px;
+    width:300px;
+}
+
+
+ .img_container
+ { 
+    position:relative;
+    display:inline-block;
+    text-align:center;
+    
+     margin-top: 170px;
+    margin-left: 55px;
+
+
+}
+    
+.don{
+position: relative;
+margin-right: 300px;
+}
+    
+.circular1
+{
+    position: absolute;
+    bottom: 435px;
+    right: 360px;
+    width: 100px;
+    height: 110px;
+  
+}    
+
+.circular2 {
+    position: absolute;
+    bottom: 305px;
+    right: 200px;
+    width: 100px;
+    height: 110px;
+   
+}
+.circular3 {
+    position: absolute;
+    bottom: 305px;
+    right: 360px;
+    width: 100px;
+    height: 110px;
+  
+}
+.circular4 {
+    position: absolute;
+    bottom: 305px;
+    right: 520px;
+    width: 110px;
+    width: 100px;
+    height: 110px;
+  
+}
+
+.circular5 {
+    position: absolute;
+    bottom: 175px;
+    right: 120px;
+    width: 100px;
+    height: 110px;
+   
+}
+.circular6 {
+    position: absolute;
+    bottom: 175px;
+    right: 280px;
+    width: 100px;
+    height: 110px;
+  
+}
+.circular7 {
+    position: absolute;
+    bottom: 175px;
+    right: 440px;
+    width: 110px;
+    width: 100px;
+    height: 110px;
+  
+}
+.circular8 {
+    position: absolute;
+    bottom: 175px;
+    right: 600px;
+    width: 100px;
+    height: 110px;
+  
+}
+
+.circular9 {
+    position: absolute;
+     bottom: 45px;
+    right: 200px;
+    width: 100px;
+    height: 110px;
+  
+}
+
+.circular10 {
+    position: absolute;
+     bottom: 45px;
+    right: 360px;
+    width: 100px;
+    height: 110px;
+  
+ 
+}
+.circular11 {
+    position: absolute;
+     bottom: 45px;
+    right: 520px;
+    width: 100px;
+    height: 110px;
+    
+     
+}
+.jersey{
+ width: 100px;
+    height: 108px;
+    }   
+    .pitch1
+    {
+    margin-top: 40px;
+    right: 50px;
+    position: absolute;
+    height: 110px;
+    width: 140px;
+    background-color: rgba(0,0,0,0);
+    }
+    
+
+    .pitch2
+    {
+    margin-top: 40px;
+    right: 205px;
+    position: absolute;
+    height: 110px;
+    width: 140px; 
+    background-color: rgba(0,0,0,0);
+    }
+   
+    .pitch3
+    {
+    margin-top: 40px;
+    right: 360px;
+    position: absolute;
+    height: 110px;
+    width: 140px;
+    background-color: rgba(0,0,0,0);
+    }
