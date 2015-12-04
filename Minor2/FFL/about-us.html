@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>About Us</title>
+	
+	<!-- core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+	
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+
+<body>
+
+<script type="text/javascript">
+    $( document ).ready(function( $ ) {
+        $( '#example1' ).sliderPro({
+            width: 1040,
+            height: 500,
+            arrows: true,
+            buttons: false,
+            waitForLayers: true,
+            thumbnailWidth: 200,
+            thumbnailHeight: 100,
+            thumbnailPointer: true,
+            autoplay: true,
+            autoScaleLayers: false,
+            breakpoints: {
+                500: {
+                    thumbnailWidth: 120,
+                    thumbnailHeight: 50
+                }
+            }
+        });
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+  $(document).ready(function(){
+    $(".scroll").click(function(event){
+        //prevent the default action for the click event
+        event.preventDefault();
+
+        //get the full url - like mysitecom/index.htm#home
+        var full_url = this.href;
+
+        //split the url by # and get the anchor target name - home in mysitecom/index.htm#home
+        var parts = full_url.split("#");
+        var trgt = parts[1];
+
+        //get the top offset of the target anchor
+        var target_offset = $("#"+trgt).offset();
+        var target_top = target_offset.top;
+
+        //goto that anchor by setting the body scroll top to anchor top
+        $('html, body').animate({scrollTop:target_top}, 1500, 'easeInSine');
+    });
+});
+
+
+</script>
+
+
+
+<script type="text/javascript">
+    
+        function post_to_api(email, password, first_name, last_name, method) {
+        $.ajax({
+            type: "POST",
+            url: "api/signup",
+            data: {
+                'email':email,
+                'password':password,
+                'first_name':first_name,
+                'last_name':last_name,
+                'method':method,
+            },
+            success: function(result) {
+                if(result) {
+                    console.log(result);
+                    // result = JSON.parse(result);
+                    // console.log(result['status']);
+                    // console.log(result.message);
+                } else {
+                    console.log('Problem with ajax'); //1423273901281785
+                }
+            }
+        });
+    }
+
+    function submit() {
+        var email      = $('#email').val();
+        var password   = $('#password').val();
+        var first_name = $('#first_name').val();
+        var last_name  = $('#last_name').val();
+        var method     = 'normal';
+        post_to_api(email, password, first_name, last_name, method);
+    }
+
+
+    // Facebook
+    function statusChangeCallback_b(response) {
+        console.log('statusChangeCallback');
+        
+        if (response.status === 'connected') {
+            console.log('Below');
+            FB.api('/me', function(response) {
+                console.log(response)
+                console.log('Successful login for: ' + response.name);
+                // Generate a complicated password and put this in a different func
+                var method = 'facebook';
+                window.location.replace("http://localhost/login/index.html");
+                
+                // post_to_api(response.email, '123456', response.first_name, response.last_name, method)
+            });
+        } else if (response.status === 'not_authorized') {
+            console.log('log into app')
+        } else {
+            console.log('log into facebook')
+        }
+    }
+
+    function statusChangeCallback(response) {
+        console.log('statusChangeCallback');
+        
+        if (response.status === 'connected') {
+            console.log('Below');
+            FB.api('/me', function(response) {
+                console.log(response);
+            });
+        } else if (response.status === 'not_authorized') {
+            console.log('log into app')
+        } else {
+            console.log('log into facebook')
+        }
+    }
+
+    // This function is called when someone finishes with the Login
+    // Button.  See the onlogin handler attached to it in the sample
+    // code below.
+    function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+            //button
+            statusChangeCallback_b(response);
+        });
+    }
+
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '487363794774065',
+            cookie     : true,  // enable cookies to allow the server to access 
+                            // the session
+            xfbml      : true,  // parse social plugins on this page
+            version    : 'v2.1' // use version 2.1
+        });
+
+        FB.getLoginStatus(function(response) {
+            console.log(response.name);
+            statusChangeCallback(response);
+        });
+
+    };
+
+    // Load the SDK asynchronously
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+
+</script>
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+
+<style>
+
+
+
+
+  .bootstrap-demo{margin:30px;}
+</style>
+<style type="text/css">
+
+#flip1:hover #flip2 {
+  transform: rotateY(360deg);
+  
+
+ transform-style: preserve-3d;
+  transition: all 0.5s linear;
+}
+
+
+</style>
+
+<body class="homepage">
+
+
+<header id="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-4">
+                        <div class="top-number"><p><i class="fa fa-phone-square"></i>+917838516299</p></div>
+                    </div>
+                    <div class="col-sm-6 col-xs-8">
+                       
+                       <div class="social">
+                           <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" id="fb">
+</fb:login-button>
+
+                            <button id="submit" onClick="location.href='../../login/index.php'" >Login</button>
+
+
+
+                                
+                                
+                            </ul>
+                           
+                           </div>
+                       </div>
+                    </div>
+                </div>
+            </div><!--/.container-->
+        </div><!--/.top-bar-->
+
+
+   <!---------->
+
+        <nav class="navbar navbar-inverse" role="banner">
+            
+                
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li > <a href="index.html">Home</a></li>
+                        <li class="active"><a href="about-us.html">About Us</a></li>
+                        <li><a href="terms.html">Terms</a></li>
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teams<i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                               
+                                <li><a href="Chelsea.html">Chelsea</a></li>
+                                <li><a href="Arsenal.html">Arsenal</a></li>
+                                <li><a href="M.C.F.C.html">M.C.F.C</a></li>
+                                <li><a href="Sunderland.html">Sunderland</a></li>
+                                <li><a href="Everton.html">Everton</a></li>
+                                <li><a href="Manchester.html">Manchester</a></li>
+                                <li><a href="Liverpool.html">Liverpool</a></li>
+                                <li><a href="Newcastle.html">Newcastle</a></li>
+                                <li><a href="Southampton.html">Southampton</a></li>
+                                <li><a href="West Ham.html">West Ham</a></li>
+                                <li><a href="Stoke City.html">Stoke City</a></li>
+                        </ul>
+                        </li>
+                      
+                        <li><a href="contact-us.html">Contact</a></li>                        
+                    </ul>
+                </div>
+            </div>
+        </nav>	
+    </header><!--/header-->
+    		
+
+			<!-- our-team -->
+			<div class="team">
+				<div class="center wow fadeInDown">
+					<h2>Our Team</h2>
+					<h3 class="lead"> This is our team. We are all 3rd year students of Jiit Noida,working together. 
+
+					</h3>
+				</div>
+
+				<div class="row clearfix">
+					<div class="col-md-3 col-sm-4">	
+						<div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+							<div class="media">
+								<img class="media-object" src="images/man4.png" alt="">
+							
+								<div class="media-body">
+									<h4>Vishal kr. Soni</h4>
+									<h5>Founder </h5>
+									<ul class="tag clearfix">
+										<li class="btn"><a href="#">Web</a></li>
+										<li class="btn"><a href="#">php</a></li>
+										<li class="btn"><a href="#">Jquery</a></li>
+										</ul>
+									
+									<ul class="social_icons">
+										<li><a href="https://www.facebook.com/vishalkrsoni"><i class="fa fa-facebook"></i></a></li>
+										
+									</ul>
+								</div>
+							</div><!--/.media -->
+							<h3>Currently Studying in JIIT Noida.A third year B.tech student.Contributed in 
+                            Front end developement and all the user interfaces. Search algorithm and validations in backend.</h3>
+						</div>
+					</div><!--/.col-lg-4 -->
+
+				<div class="row clearfix">
+					<div class="col-md-3 col-sm-4 col-md-offset-1">	
+						<div class="single-profile-top wow fadeInDown">
+							<div class="media">
+								
+									<img class="media-object" src="images/man2.jpg" alt="">
+									<div class="media-body">
+									<h4>Vishal Pandey</h4>
+									<h5>Founder</h5>
+									<ul class="tag clearfix" >
+										<li class="btn"><a href="#">Android</a></li>
+										<li class="btn"><a href="#">Php</a></li>
+										<li class="btn"><a href="#">Ajax</a></li>
+										</ul>
+									
+									<ul class="social_icons">
+										<li><a href="https://www.facebook.com/vishal.pandey.5602?fref=ts"><i class="fa fa-facebook"></i></a></li>
+										
+									</ul>
+								</div>
+							</div><!--/.media -->
+							<h3>Currently Studying in JIIT Noida. A third year B.tech student. Contributed in 
+                           Android app development and crowling of data through python. Worked on Ajax and backend.</h3>
+						</div>
+					</div><!--/.col-lg-4 -->
+					
+					
+					<div class="col-md-3 col-sm-4 col-md-offset-1">	
+						<div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+							<div class="media">
+							<img class="media-object" src="images/man1.jpg" alt="">
+								
+								<div class="media-body">
+									<h4>Vinay Garg</h4>
+									<h5>Founder</h5>
+									<ul class="tag clearfix">
+										<li class="btn"><a href="#">Web</a></li>
+										<li class="btn"><a href="#">php</a></li>
+										<li class="btn"><a href="#">Javascript</a></li>
+									</ul>
+									<ul class="social_icons">
+										<li><a href="https://www.facebook.com/vinay.garg.528?fref=ts"><i class="fa fa-facebook"></i></a></li>
+										
+									</ul>
+								</div>
+							</div><!--/.media -->
+							<h3>Currently Studying in JIIT Noida. A third year B.tech student. Contributed in 
+                           backend developement of the site and worked on php and slim.User interface.</h3>
+						</div>
+					</div><!--/.col-lg-4 -->					
+				</div> <!--/.row -->
+				<div class="row team-bar">
+					<div class="first-one-arrow hidden-xs">
+						<hr>
+					</div>
+					<div class="first-arrow hidden-xs">
+						<hr> <i class="fa fa-angle-up"></i>
+					</div>
+					<div class="second-arrow hidden-xs">
+						<hr> <i class="fa fa-angle-down"></i>
+					</div>
+					<div class="third-arrow hidden-xs">
+						<hr> <i class="fa fa-angle-up"></i>
+					</div>
+					<div class="fourth-arrow hidden-xs">
+						<hr> <i class="fa fa-angle-down"></i>
+					</div>
+					<div class="fifth-arrow hidden-xs">
+						<hr> <i class="fa fa-angle-up"></i>
+					</div>
+				</div> <!--skill_border-->       
+
+				<div class="row clearfix">   
+					<div class="col-md-3 col-sm-6 col-md-offset-2">	
+						<div class="single-profile-bottom wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
+							<div class="media">
+								
+									<img class="media-object" src="images/man5.jpg" alt="">
+							
+
+								<div class="media-body">
+									<h4>Arjun Setia</h4>
+									<h5>Founder</h5>
+									<ul class="tag clearfix">
+										<li class="btn"><a href="#">Web</a></li>
+										<li class="btn"><a href="#">Ui</a></li>
+										<li class="btn"><a href="#">Database</a></li>
+										
+									</ul>
+									<ul class="social_icons">
+										<li><a href="https://www.facebook.com/profile.php?id=100001048414350&fref=ts"><i class="fa fa-facebook"></i></a></li>
+										
+									</ul>
+								</div>
+							</div><!--/.media -->
+							<h3>Currently Studying in JIIT Noida. A third year B.tech student. Contributed in 
+                           web designing and Images and databases Entries.</h3>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-4 col-md-offset-1">
+						<div class="single-profile-bottom wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
+							<div class="media">
+								<img class="media-object" src="images/man4.png" alt="">
+									<div class="media-body">
+									<h4>Shounak Sarkar</h4>
+									<h5>Founder</h5>
+									<ul class="tag clearfix">
+										<li class="btn"><a href="#">Android</a></li>
+										<li class="btn"><a href="#">Database</a></li>
+										<li class="btn"><a href="#">Entries</a></li>
+										</ul>
+									<ul class="social_icons">
+										<li><a href="https://www.facebook.com/shounak.sarkar.12?fref=ts"><i class="fa fa-facebook"></i></a></li>
+										
+									</ul>
+								</div>
+							</div><!--/.media -->
+							<h3>Currently Studying in JIIT Noida.A third year B.tech student.Contributed in 
+                           Android app development  and Images and databases Entries.</h3>
+						</div>
+					</div>
+				</div>	<!--/.row-->
+			</div><!--section-->
+		</div><!--/.container-->
+    </section><!--/about-us-->
+	
+    <footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2015 <a target="_blank" href="index.html" title="">Fantasy Football league</a>.All Rights Reserved.
+                </div>
+                <div class="col-sm-4">
+                    <ul class="pull-right">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+    
+
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript">
+        $('.carousel').carousel()
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+</body>
+</html>

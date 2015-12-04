@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Terms</title>
+    
+    <!-- core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+
+
+
+<script type="text/javascript">
+    $( document ).ready(function( $ ) {
+        $( '#example1' ).sliderPro({
+            width: 1040,
+            height: 500,
+            arrows: true,
+            buttons: false,
+            waitForLayers: true,
+            thumbnailWidth: 200,
+            thumbnailHeight: 100,
+            thumbnailPointer: true,
+            autoplay: true,
+            autoScaleLayers: false,
+            breakpoints: {
+                500: {
+                    thumbnailWidth: 120,
+                    thumbnailHeight: 50
+                }
+            }
+        });
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+  $(document).ready(function(){
+    $(".scroll").click(function(event){
+        //prevent the default action for the click event
+        event.preventDefault();
+
+        //get the full url - like mysitecom/index.htm#home
+        var full_url = this.href;
+
+        //split the url by # and get the anchor target name - home in mysitecom/index.htm#home
+        var parts = full_url.split("#");
+        var trgt = parts[1];
+
+        //get the top offset of the target anchor
+        var target_offset = $("#"+trgt).offset();
+        var target_top = target_offset.top;
+
+        //goto that anchor by setting the body scroll top to anchor top
+        $('html, body').animate({scrollTop:target_top}, 1500, 'easeInSine');
+    });
+});
+
+
+</script>
+
+
+
+<script type="text/javascript">
+    
+        function post_to_api(email, password, first_name, last_name, method) {
+        $.ajax({
+            type: "POST",
+            url: "api/signup",
+            data: {
+                'email':email,
+                'password':password,
+                'first_name':first_name,
+                'last_name':last_name,
+                'method':method,
+            },
+            success: function(result) {
+                if(result) {
+                    console.log(result);
+                    // result = JSON.parse(result);
+                    // console.log(result['status']);
+                    // console.log(result.message);
+                } else {
+                    console.log('Problem with ajax'); //1423273901281785
+                }
+            }
+        });
+    }
+
+    function submit() {
+        var email      = $('#email').val();
+        var password   = $('#password').val();
+        var first_name = $('#first_name').val();
+        var last_name  = $('#last_name').val();
+        var method     = 'normal';
+        post_to_api(email, password, first_name, last_name, method);
+    }
+
+
+    // Facebook
+    function statusChangeCallback_b(response) {
+        console.log('statusChangeCallback');
+        
+        if (response.status === 'connected') {
+            console.log('Below');
+            FB.api('/me', function(response) {
+                console.log(response)
+                console.log('Successful login for: ' + response.name);
+                // Generate a complicated password and put this in a different func
+                var method = 'facebook';
+                window.location.replace("http://localhost/login/index.html");
+                
+                // post_to_api(response.email, '123456', response.first_name, response.last_name, method)
+            });
+        } else if (response.status === 'not_authorized') {
+            console.log('log into app')
+        } else {
+            console.log('log into facebook')
+        }
+    }
+
+    function statusChangeCallback(response) {
+        console.log('statusChangeCallback');
+        
+        if (response.status === 'connected') {
+            console.log('Below');
+            FB.api('/me', function(response) {
+                console.log(response);
+            });
+        } else if (response.status === 'not_authorized') {
+            console.log('log into app')
+        } else {
+            console.log('log into facebook')
+        }
+    }
+
+    // This function is called when someone finishes with the Login
+    // Button.  See the onlogin handler attached to it in the sample
+    // code below.
+    function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+            //button
+            statusChangeCallback_b(response);
+        });
+    }
+
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '487363794774065',
+            cookie     : true,  // enable cookies to allow the server to access 
+                            // the session
+            xfbml      : true,  // parse social plugins on this page
+            version    : 'v2.1' // use version 2.1
+        });
+
+        FB.getLoginStatus(function(response) {
+            console.log(response.name);
+            statusChangeCallback(response);
+        });
+
+    };
+
+    // Load the SDK asynchronously
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+
+</script>
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+
+<style>
+
+
+
+
+  .bootstrap-demo{margin:30px;}
+</style>
+<style type="text/css">
+
+#flip1:hover #flip2 {
+  transform: rotateY(360deg);
+  
+
+ transform-style: preserve-3d;
+  transition: all 0.5s linear;
+}
+
+
+</style>
+
+<body class="homepage">
+
+
+<header id="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-4">
+                        <div class="top-number"><p><i class="fa fa-phone-square"></i>+917838516299</p></div>
+                    </div>
+                    <div class="col-sm-6 col-xs-8">
+                       
+                       <div class="social">
+                           <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" id="fb">
+</fb:login-button>
+
+                            <button id="submit" onClick="location.href='../../login/index.php'" >Login</button>
+
+
+
+                                
+                                
+                            </ul>
+                           
+                           </div>
+                       </div>
+                    </div>
+                </div>
+            </div><!--/.container-->
+        </div><!--/.top-bar-->
+
+
+   <!---------->
+
+        <nav class="navbar navbar-inverse" role="banner">
+            
+                
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li > <a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li class="active"><a href="terms.html">Terms</a></li>
+                          <li class="dropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown">Teams<i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                               
+                                <li><a href="Chelsea.html">Chelsea</a></li>
+                                <li><a href="Arsenal.html">Arsenal</a></li>
+                                <li><a href="M.C.F.C.html">M.C.F.C</a></li>
+                                <li><a href="Sunderland.html">Sunderland</a></li>
+                                <li><a href="Everton.html">Everton</a></li>
+                                <li><a href="Manchester.html">Manchester</a></li>
+                                <li><a href="Liverpool.html">Liverpool</a></li>
+                                <li><a href="Newcastle.html">Newcastle</a></li>
+                                <li><a href="Southampton.html">Southampton</a></li>
+                                <li><a href="West Ham.html">West Ham</a></li>
+                                <li><a href="Stoke City.html">Stoke City</a></li>
+                        </ul>
+                        </li>
+                      
+                        <li><a href="contact-us.html">Contact</a></li>                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    
+<div class="11" style="color:green;" >
+   <h1> INTRODUCTION</h1> 
+
+   <h2> WHAT ARE FANTASY GAMES ?</h2>
+
+    <p>
+      Have you ever dreamed of what it would be like to own your own professional sports team? Fantasy games are a way to live out that dream. And, to make things easier, all fantasy games are fundamentally the same - real athletes and their real-life performances are used to generate points for fantasy teams in fantasy leagues.
+
+Then throughout the season, you will set your line-up based on how well you think "your" players will perform. The statistics your players generate in their real games are collected, and fantasy points are awarded based on these numbers. The better your players perform, the more fantasy points accrue for your fantasy team.
+
+Ultimately, these points determine a winner in seasonal leagues. The team that accumulates the most points (or points based wins) over the course of the season - or prevails in the postseason-is declared the league winner. With the league championship comes the glory to boast about it until the next season rolls around, at which point the other teams can smell sweet revenge.   
+        
+    </p>
+
+
+
+    <h2>ABOUT OUR FANTASY FOOTBALL LEAGUE? </h2>
+    <p>
+    Welcome to the world of fantasy football.Fantasy Football league is the closest thing you can find to buying your own professional franchise and becoming the team's coach, owner and president. All decisions are yours to make.And lucky for you, football is a game filled with unbiased player performance statistics. By using these statistics, you have everything you need to understand which players are performing well and which ones are not.
+
+
+Once you join a league, we provide you with everything needed to build the best possible football team.There's plenty of room to sling trash- talk throughout your league, and enough stats and weekly analysis to make you a fantasy player for life! We just want to make sure you know what to do with it all! So sit back as we take you through the keys to fantasy football league. Then get crackin' on creating the next fantasy dynasty! 
+   
+
+  </p>
+
+</div>
+
+    
+<div class="22" style="color:green;">
+    
+
+    <h1>Preparing Your Team </h1>
+
+
+    <p>
+        After joining a league with Fantasy Football League you will be taken to your team information screen. You will be provided an amount of $110 to pick your team and once you have access to your team page, you will be able to change any of the following features.
+    </p>
+
+<h2> TEAM Players</h2>
+
+<p>You can edit your team table anytime before a league starts.Once the match has started yoiu can not change the players in team till the next match starts.
+
+</p>
+
+<div class="44" style="color:">
+    
+    <p>
+      While fantasy football is usually an extremely competitive endeavor, it is important to remember that enjoyment of the game is predicated on a certain level of sportsmanship displayed by the participants. Occasionally, some team owners intentionally or unknowingly cross the line.
+    </p>
+
+    <h2>A: More than one team in the same league</h2>
+   <p>
+One person can't control more than one team in the same league. If two or more teams in the same league are under the same account, they must be controlled by different people sharing that account, but not sharing the teams. Violation of this will lead to cancellation of the teams and expulsion from the game.
+
+If an owner finds himself in this situation by accident, he/she should e-mail the League Office immediately and explain the situation.
+  </p>
+
+
+      <h2> B: Owner interaction  </h2>
+
+      <p>
+
+Owners should always be polite and gracious when dealing with one another. Threats and obscenities are not only against the Rules, they are illegal in many jurisdictions. Owners that are found to have sent threatening email to another owner will be warned and/or kicked out of the game completely. This extends to message board posts as well.
+
+</p>
+
+    <h2> C: Offensive posts, league or team names </h2>
+        
+    
+<p>
+Any posts (including league and team names) of a derogatory nature are strictly prohibited, whether it is in a chat room, message board or on a league's bulletin board. This includes personal attacks and sexist or racist remarks. There will be a zero tolerance level - if someone in your league is violating this policy, please contact the League Office.  </p>
+
+
+     <h2>D: Inactivity  </h2>
+
+      <p>
+
+In order to maintain the integrity of the league, the commissioner may contact owners of teams that remain inactive for extended periods of time. The commissioner will send notification to the email of record. Shortly thereafter, if the team remains inactive, the commissioner reserves the right to reassign ownership of the inactive team.
+    </p>
+
+
+</div>
+
+
+
+    
+  <footer id="footer" class="midnight-blue">
+        <div class="container">
+            
+                <div class="col-sm-6">
+                    &copy; 2015 <a  href="index.html" title="">Fantasy Football league</a>.All Rights Reserved.
+                </div>
+                <div class="col-sm-4">
+                    <ul class="pull-right">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+    
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+</body>
+</html>

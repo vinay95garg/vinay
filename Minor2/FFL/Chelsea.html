@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+ 	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700,400italic' rel='stylesheet' type='text/css'>
+<link rel='stylesheet' type='text/css' href='css/style.css' />
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style1.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<title>League Teams</title>
+<style>
+
+
+
+
+
+	#traits
+	{
+		width:100%;
+		height:100px;
+		color:white;
+	}
+</style>
+<script>
+
+var json2;
+
+$(document).ready(function() {
+
+
+
+
+
+  console.log("helloyyjh");
+//var jsonj =JSON.parse(myjsonobj);
+
+//console.log(jsonj.firstname);
+   
+  $("#player").click (function() {
+   
+     
+
+        $.ajax({
+            type: "GET",
+            url: "/minor2/FFL/slim_files/start.php/traits/1",
+            success: 
+                function(data) {
+
+                  console.log(data);
+                  json2=JSON.parse(data);
+
+               
+                  var len=json2["player_id"].length;
+                  console.log(len);
+                  //console.log(json2["stamina"][0]);
+
+                 // var id=document.getElementById("play1");
+               //   id.innerHTML=json2["stamina"][0];
+}
+              });
+
+
+ 
+              
+            
+      
+    });
+});
+    
+                     function trait(i)
+{
+
+                  	  var table = document.getElementById("traits");
+    var row = table.insertRow(0);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(0);
+    var cell5 = row.insertCell(1);
+    var cell6 = row.insertCell(2);
+	//console.log(json2["player_id"][i]);
+	console.log(json2["player_id"][i]);
+	console.log(json2["power"][i]);
+	console.log(json2["stamina"][i]);
+	console.log(json2["balance"][i]);
+	console.log(json2["agility"][i]);
+	console.log(json2["sprint"][i]);
+
+    cell1.innerHTML = json2["player_id"][i];
+    cell2.innerHTML = json2["power"][i];
+    cell3.innerHTML = json2["stamina"][i];
+    cell4.innerHTML = json2["sprint"][i];
+    cell5.innerHTML = json2["balance"][i];
+    cell6.innerHTML = json2["agility"][i];
+
+                  var stamina=document.getElementById("plstamina");
+                  stamina.style.width=json2["stamina"][i];
+                //  stamina.innerHTML=json2["stamina"][i];
+              
+              }           
+
+
+
+    
+ </script>
+
+</head>
+<body>
+	<div class="cd-intro-block">
+		<div class="content-wrapper">
+<div id="page-wrap">
+
+    <section id="portfolio">
+    
+
+	<h1>ACHIEVEMENTS</h1>
+	<br>
+	<br>
+
+	<section class="image-gallery group" >
+
+	    <figure tabindex="1">
+			<img src="ach img\chelsea\chelsea1.jpg"  />
+			<figcaption>2007</figcaption>
+		</figure>
+
+		<figure tabindex="2">
+			<img src="ach img\chelsea\chelsea2.jpg"  />
+			<figcaption>2009</figcaption>
+		</figure>
+
+		<figure tabindex="3">
+			<img src="ach img\chelsea\chelsea3.jpg" />
+			<figcaption>2011</figcaption>
+		</figure>
+
+
+
+	</section>
+
+</div>
+	
+	<div id="page-wrap">
+		<section class="image-gallery group">
+		<figure tabindex="1">
+			<img src="ach img\chelsea\chelsea4.jpg"  />
+			<figcaption>2013</figcaption>
+		</figure>
+
+		<figure tabindex="2">
+			<img src="ach img\chelsea\chelsea5.jpg"  />
+			<figcaption>2013</figcaption>
+		</figure>
+
+		<figure tabindex="3">
+			<img src="ach img\chelsea\chelsea6.jpg"  />
+			<figcaption>2014</figcaption>
+		</figure>
+		</section>
+	</div>
+	 <a href="index.html" class='cd-btn'>Home</a>
+	<a href="#0" class='cd-btn' id='player' data-action="show-projects">Players List</a>
+		</div>
+	</div> <!-- .cd-intro-block -->
+
+	<div class="cd-projects-wrapper">
+		<ul class="cd-slider">
+			<li class="current">
+				<a href="#0" >
+								<img src="club players\chelsea\courtois.png" alt="project image">
+					<div class="project-info">
+					<h3>Courtois</h3>
+                       <button class="player1"  onclick="trait(0)" >click here for traits</button>
+											</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0">
+					<img src="club players\chelsea\branislav-ivanovic.png" alt="project image">
+					<div class="project-info">
+					<h3>Branislav Ivanovic</h3>
+					<button class="player1"  onclick="trait(1)" >click here for traits</button>
+
+					
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0">
+					<img src="club players\chelsea\cesar-azpilicueta.png" alt="project image">
+					
+					<div class="project-info"><h3>Cesar Azpilicueta</h3>
+						<button class="player1"  onclick="trait(2)" >click here for traits</button>
+
+											</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0">
+					<img src="club players\chelsea\cesc fabregas.png" alt="project image">
+					<div class="project-info">
+					<h3>Cesc Fabregas</h3>
+					<button class="player1"  onclick="trait(3)" >click here for traits</button>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0">
+					<img src="club players\chelsea\diego-costa.png" alt="project image">
+					<div class="project-info"><h3>Diego Costa</h3>
+						<button class="player1"  onclick="trait(4)" >click here for traits</button>
+
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0">
+					<img src="club players\chelsea\eden-hazard.png" alt="project image">
+					<div class="project-info"><h3>Eden Hazard</h3>
+<button class="player1"  onclick="trait(5)" >click here for traits</button>
+
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0">
+					<img src="club players\chelsea\john-terry.png" alt="project image">
+					<div class="project-info"><h3>John Terry</h3>
+						<button class="player1"  onclick="trait(6)" >click here for traits</button>
+
+					</div>
+				</a>
+			</li>
+			
+			<li>
+				<a href="#0">
+					<img src="club players\chelsea\juan-cuadrado.png" alt="project image">
+					<div class="project-info"><h3>Juan Cuadrado</h3>
+					<button class="player1"  onclick="trait(7)" >click here for traits</button>
+
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0">
+					<img src="club players\chelsea\Kurt-Zouma.png" alt="project image">
+					<div class="project-info"><h3>Kurt Zouma</h3>
+						<button class="player1"  onclick="trait(8)" >click here for traits</button>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0">
+					<img src="club players\chelsea\nemanja matic.png" alt="project image">
+					<div class="project-info"><h3>Nemanja Matic</h3>
+						<button class="player1"  onclick="trait(9)" >click here for traits</button>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0">
+					<img src="club players\chelsea\Oscar - Chelsea.png" alt="project image">
+					<div class="project-info"><h3>Oscar </h3>
+						<button class="player1"  onclick="trait(10)" >click here for traits</button>
+
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0">
+					<img src="club players\chelsea\radamel falcao.png" alt="project image">
+					<div class="project-info"><h3>Radamel Falcao</h3>
+					<button class="player1"  onclick="trait(11)" >click here for traits</button>
+					</div>
+				</a>
+			</li>
+		</ul>
+
+		
+
+	<div class="cd-project-content">
+		<div>
+<table  id="traits">
+
+<div style="width:80%; padding-left:96px;">
+    
+    <div class="progress" >
+  <div class="progress-bar progress-bar-striped active" role="progressbar" id="plstamina"
+  aria-valuenow="" aria-valuemin="0" aria-valuemax="100" style="width:15%; ">
+Power   
+  </div>
+</div>
+
+</div>
+
+
+<div style="width:80%; padding-left:96px;">
+    
+    <div class="progress" >
+  <div class="progress-bar progress-bar-striped active" role="progressbar"
+  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:63%; ">
+     Stamina
+     </div>
+</div>
+
+</div>
+<div style="width:80%; padding-left:96px;">
+    
+    <div class="progress" >
+  <div class="progress-bar progress-bar-striped active" role="progressbar"
+  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:67%; ">
+   Agility
+  </div>
+</div>
+
+</div>
+<div style="width:80%; padding-left:96px;">
+    
+    <div class="progress" >
+  <div class="progress-bar progress-bar-striped active" role="progressbar"
+  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:88%; ">
+  Balance
+  </div>
+</div>
+
+</div>
+<div style="width:80%; padding-left:96px;">
+   
+</div>
+<div style="width:80%; padding-left:96px;">
+<div class="progress">
+<div class="progress-bar progress-bar-striped active" role="progressbar"
+  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:88%; ">
+  sprint
+    
+ </div>
+</div>
+</div>
+		<a href="#0" class="close cd-img-replace">Close</a>
+	</div> <!-- .cd-project-content -->
+<script src="js/teams1.js"></script>
+<script src="js/teams2.js"></script>
+<script src="js/teams3.js"></script> <!-- Resource jQuery -->
+</body>
+</html>

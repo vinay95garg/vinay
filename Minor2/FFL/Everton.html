@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta charset='UTF-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+ 	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700,400italic' rel='stylesheet' type='text/css'>
+<link rel='stylesheet' type='text/css' href='css/style.css' />
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style1.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+
+
+  	<script>
+
+var json2;
+
+$(document).ready(function() {
+
+
+
+
+
+  console.log("helloyyjh");
+//var jsonj =JSON.parse(myjsonobj);
+
+//console.log(jsonj.firstname);
+   
+  $("#player").click (function() {
+   
+     
+
+        $.ajax({
+            type: "GET",
+            url: "/minor2/FFL/slim_files/start.php/traits/1",
+            success: 
+                function(data) {
+
+                  console.log(data);
+                  json2=JSON.parse(data);
+
+               
+                  var len=json2["player_id"].length;
+                  console.log(len);
+                  //console.log(json2["stamina"][0]);
+
+                 // var id=document.getElementById("play1");
+               //   id.innerHTML=json2["stamina"][0];
+}
+              });
+
+
+ 
+              
+            
+      
+    });
+});
+    
+                     function trait(i)
+{
+
+                  	  var table = document.getElementById("traits");
+    var row = table.insertRow(0);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+       var cell3 = row.insertCell(2);
+       var cell4 = row.insertCell(0);
+    var cell5 = row.insertCell(1);
+       var cell6 = row.insertCell(2);
+//console.log(json2["player_id"][i]);
+console.log(json2["player_id"][i]);
+console.log(json2["power"][i]);
+console.log(json2["stamina"][i]);
+console.log(json2["balance"][i]);
+console.log(json2["agility"][i]);
+console.log(json2["sprint"][i]);
+
+    cell1.innerHTML = json2["player_id"][i];
+    cell2.innerHTML = json2["power"][i];
+    cell3.innerHTML = json2["stamina"][i];
+    cell4.innerHTML = json2["sprint"][i];
+    cell5.innerHTML = json2["balance"][i];
+    cell6.innerHTML = json2["agility"][i];
+
+                  
+              }           
+
+
+
+    
+ </script>
+
+	<title>League Teams</title>
+
+
+</head>
+<body>
+	<div class="cd-intro-block">
+		<div class="content-wrapper">
+<div id="page-wrap">
+
+    <section id="portfolio">
+    
+
+	<h1>ACHIEVEMENTS</h1>
+	<br>
+	<br>
+
+	<section class="image-gallery group" >
+
+		<figure tabindex="1">
+			<img src="ach img\everton\everton1.jpg" alt="jump, matey" />
+			<figcaption>2006</figcaption>
+		</figure>
+
+		<figure tabindex="2">
+			<img src="ach img\everton\everton2.jpg" alt="jump, matey" />
+			<figcaption>2007</figcaption>
+		</figure>
+
+		<figure tabindex="3">
+			<img src="ach img\everton\everton3.jpg" alt="jump, matey" />
+			<figcaption>2008</figcaption>
+		</figure>
+
+
+
+	</section>
+
+</div>
+	
+	<div id="page-wrap">
+		<section class="image-gallery group">
+		<figure tabindex="1">
+			<img src="ach img\everton\everton4.jpg" alt="jump, matey" />
+			<figcaption>2008</figcaption>
+		</figure>
+
+		<figure tabindex="2">
+			<img src="ach img\everton\everton5.jpg" alt="jump, matey" />
+			<figcaption>2010</figcaption>
+		</figure>
+
+		<figure tabindex="3">
+			<img src="ach img\everton\everton6.jpg" alt="jump, matey" />
+			<figcaption>2013</figcaption>
+		</figure>
+		</section>
+	</div>
+	 <a href="index.html" class='cd-btn'>Home</a>
+	<a href="#0" class='cd-btn' data-action="show-projects">Players List</a>
+		</div>
+	</div> <!-- .cd-intro-block -->
+
+	<div class="cd-projects-wrapper">
+		<ul class="cd-slider">
+			<li class="current">
+				<a href="#0">
+					<img src="club players\everton\arouna-kone.png" alt="project image">
+					<div class="project-info">
+						<button class="player1"  onclick="trait(48)" >click here for traits</button>					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0">
+					<img src="club players\everton\brendon galloway.png" alt="project image">
+					<div class="project-info">
+					<button class="player1"  onclick="trait(49)" >click here for traits</button>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0">
+					<img src="club players\everton\bryan-oviedo.png" alt="project image">
+					<div class="project-info">
+						<button class="player1"  onclick="trait(50)" >click here for traits</button>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0">
+					<img src="club players\everton\gareth-barry.png" alt="project image">
+					<div class="project-info">
+					<button class="player1"  onclick="trait(51)" >click here for traits</button>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0">
+					<img src="club players\everton\gerard-deulofeu.png" alt="project image">
+					<div class="project-info">
+					<button class="player1"  onclick="trait(52)" >click here for traits</button>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0">
+					<img src="club players\everton\james-mccarthy.png" alt="project image">
+					<div class="project-info">
+						<button class="player1"  onclick="trait(53)" >click here for traits</button>
+
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0">
+					<img src="club players\everton\john stones.png" alt="project image">
+					<div class="project-info">
+						<button class="player1"  onclick="trait(54)" >click here for traits</button>
+					</div>
+				</a>
+			</li>
+			
+			<li>
+				<a href="#0">
+					<img src="club players\everton\kevin-mirallas.png" alt="project image">
+					<div class="project-info">
+								<button class="player1"  onclick="trait(55)" >click here for traits</button>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0">
+					<img src="club players\everton\phil-jagielka.png" alt="project image">
+					<div class="project-info">
+							<button class="player1"  onclick="trait(56)" >click here for traits</button>
+
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0">
+					<img src="club players\everton\romelu-lukaku.png" alt="project image">
+					<div class="project-info">
+						<button class="player1"  onclick="trait(57)" >click here for traits</button>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0">
+					<img src="club players\everton\Ross-Barkley.png" alt="project image">
+					<div class="project-info">
+				<button class="player1"  onclick="trait(58)" >click here for traits</button>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#0">
+					<img src="club players\everton\seamus-coleman.png" alt="project image">
+					<div class="project-info">
+					<button class="player1"  onclick="trait(59)" >click here for traits</button>
+					</div>
+				</a>
+			</li>
+		</ul>
+
+		<ul class="cd-slider-navigation cd-img-replace">
+			<li><a href="#0" class="prev inactive">Prev</a></li>
+			<li><a href="#0" class="next">Next</a></li>
+		</ul> <!-- .cd-slider-navigation -->
+	</div> <!-- .cd-projects-wrapper -->
+
+	<div class="cd-project-content">
+		<div>
+		<tr>
+    <td></td>
+    <td></td>		
+    <td></td>
+    <td></td>
+    <td></td>		
+    <td></td>
+  </tr>
+  </table>
+		</div>
+		<a href="#0" class="close cd-img-replace">Close</a>
+	</div> <!-- .cd-project-content -->
+<script src="js/teams1.js"></script>
+<script src="js/teams2.js"></script>
+<script src="js/teams3.js"></script> <!-- Resource jQuery -->
+</body>
+</html>

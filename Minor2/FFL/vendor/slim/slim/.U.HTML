@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>my page</title>
+<script tyoe="text/javascript">
+
+function populate(S1,S2){
+var s1 = document.getElementById(s1);
+var s2 = document.getElementById(s2);
+
+s2.innerHTML = "";
+if(s1.value ==  "chevy")
+
+{
+var optionArray=["|","camero|Camero","corvette|Corvette","implala|impala"];
+
+}
+for(var option in optionArray) {
+var pair = optionArray[option].split("|");
+var newOption =document.createElement("option");
+newOption.value=pair[0];
+newOption.innerHTML=pair[1];
+s2.options.add[newOption];
+}
+
+</script>
+</head>
+<body>
+
+<h2>choose your selection</h2>
+<select id="slct1"  name="slct1" onchange="populate('slct1','slct2')">
+<option value=""></option>
+
+<option value="chevy">chevy</option>
+<option value="robhj">robhj</option>
+<option value="dvrfb">dvrfb</option>
+	</select>
+
+<hr/>
+<select id="slct2"  name="slct2">
+</select>
+</body>
+
+</html>

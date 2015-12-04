@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+<?
+
+    require '../slim_files/start.php';
+     require '../slim_files/dash_home.php';
+
+    
+
+
+  ?>
+    <title>Fantasy League</title>
+
+    <link href="../assets/css/bootstrapTheme.css" rel="stylesheet">
+    <link href="../assets/css/custom.css" rel="stylesheet">
+
+    
+    <link href="../top-player-slider/owl.carousel.css" rel="stylesheet">
+    <link href="../top-player-slider/owl.theme.css" rel="stylesheet">
+
+    
+    
+<link rel="stylesheet"href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+<link rel="stylesheet"href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../dist/css/slider-pro.min.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="css/examples.css" media="screen"/>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="../dist/js/jquery.sliderPro.min.js"></script>
+
+<script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js"></script>
+<script>
+
+$(document).ready(function() {
+
+//console.log("pandeyncd");
+
+        $.ajax({
+            type: "GET",
+            url: "/minor2/FFL/slim_files/dash_home.php",
+            
+            success: 
+                function(data) {
+                    console.log(data);
+                     arr=JSON.parse(data);
+                     for(var i=0;i<12;i++){
+                        
+                    document.getElementById("img"+i).setAttribute("src",arr["club_id"][i]+"/"+arr["img_url"][i]);
+                     }
+                   // console.log(arr["rating"]);
+
+                    }
+                });
+    });
+
+</script>
+
+<script>
+
+
+    
+$(document).ready(function() {
+
+
+
+
+
+  console.log("helloyyjh");
+//var jsonj =JSON.parse(myjsonobj);
+
+//console.log(jsonj.firstname);
+   
+ 
+        var data;
+
+     
+  console.log("helloyyjh");
+
+        $.ajax({
+            type: "GET",
+            url: "/minor2/FFL/slim_files/start.php/ranking",
+            success: 
+                function(data) {
+                  
+  console.log("helloyyjh");
+
+                  console.log(data);
+                  var json2=JSON.parse(data);
+                  var id=document.getElementById("pname");
+                    
+                 id.innerHTML=json2["club_name"][0];
+                         var id1=document.getElementById("pld");
+                                    id1.innerHTML=json2["played"][0];
+                         var id2=document.getElementById("pts");
+                                       id2.innerHTML=json2["points"][0];
+
+
+
+                                               var id3=document.getElementById("pname1");
+                    
+                 id3.innerHTML=json2["club_name"][1];
+                         var id4=document.getElementById("pld1");
+                                    id4.innerHTML=json2["played"][1];
+                        var id5=document.getElementById("pts1");
+                                       id5.innerHTML=json2["points"][1];
+
+       var id=document.getElementById("pname2");
+                    
+                 id.innerHTML=json2["club_name"][2];
+                         var id1=document.getElementById("pld2");
+                                    id1.innerHTML=json2["played"][2];
+                         var id2=document.getElementById("pts2");
+                                       id2.innerHTML=json2["points"][2];
+
+        var id=document.getElementById("pname3");
+                    
+                 id.innerHTML=json2["club_name"][3];
+                         var id1=document.getElementById("pld3");
+                                    id1.innerHTML=json2["played"][3];
+                         var id2=document.getElementById("pts3");
+                                       id2.innerHTML=json2["points"][3];
+
+        var id=document.getElementById("pname4");
+                    
+                 id.innerHTML=json2["club_name"][4];
+                         var id1=document.getElementById("pld4");
+                                    id1.innerHTML=json2["played"][4];
+                         var id2=document.getElementById("pts4");
+                                       id2.innerHTML=json2["points"][4];
+
+        var id=document.getElementById("pname5");
+                    
+                 id.innerHTML=json2["club_name"][5];
+                         var id1=document.getElementById("pld5");
+                                    id1.innerHTML=json2["played"][5];
+                         var id2=document.getElementById("pts5");
+                                       id2.innerHTML=json2["points"][5];
+
+        var id=document.getElementById("pname6");
+                    
+                 id.innerHTML=json2["club_name"][6];
+                         var id1=document.getElementById("pld6");
+                                    id1.innerHTML=json2["played"][6];
+                         var id2=document.getElementById("pts6");
+                                       id2.innerHTML=json2["points"][6];
+
+        var id=document.getElementById("pname7");
+                    
+                 id.innerHTML=json2["club_name"][7];
+                         var id1=document.getElementById("pld7");
+                                    id1.innerHTML=json2["played"][7];
+                         var id2=document.getElementById("pts7");
+                                       id2.innerHTML=json2["points"][7];
+
+        var id=document.getElementById("pname8");
+                    
+                 id.innerHTML=json2["club_name"][8];
+                         var id1=document.getElementById("pld8");
+                                    id1.innerHTML=json2["played"][8];
+                         var id2=document.getElementById("pts8");
+                                       id2.innerHTML=json2["points"][8];
+
+        var id=document.getElementById("pname9");
+                    
+                 id.innerHTML=json2["club_name"][9];
+                         var id1=document.getElementById("pld9");
+                                    id1.innerHTML=json2["played"][9];
+                         var id2=document.getElementById("pts9");
+                                       id2.innerHTML=json2["points"][9];
+
+        var id=document.getElementById("pname10");
+                    
+                 id.innerHTML=json2["club_name"][10];
+                         var id1=document.getElementById("pld10");
+                                    id1.innerHTML=json2["played"][10];
+                         var id2=document.getElementById("pts10");
+                                       id2.innerHTML=json2["points"][10];
+
+        var id=document.getElementById("pname11");
+                    
+                 id.innerHTML=json2["club_name"][11];
+                         var id1=document.getElementById("pld11");
+                                    id1.innerHTML=json2["played"][11];
+                         var id2=document.getElementById("pts11");
+                                       id2.innerHTML=json2["points"][11];
+
+        var id=document.getElementById("pname12");
+                    
+                 id.innerHTML=json2["club_name"][12];
+                         var id1=document.getElementById("pld12");
+                                    id1.innerHTML=json2["played"][12];
+                         var id2=document.getElementById("pts12");
+                                       id2.innerHTML=json2["points"][12];
+
+        var id=document.getElementById("pname13");
+                    
+                 id.innerHTML=json2["club_name"][13];
+                         var id1=document.getElementById("pld13");
+                                    id1.innerHTML=json2["played"][13];
+                         var id2=document.getElementById("pts13");
+                                       id2.innerHTML=json2["points"][13];
+
+        var id=document.getElementById("pname14");
+                    
+                 id.innerHTML=json2["club_name"][14];
+                         var id1=document.getElementById("pld14");
+                                    id1.innerHTML=json2["played"][14];
+                         var id2=document.getElementById("pts14");
+                                       id2.innerHTML=json2["points"][14];
+
+        var id=document.getElementById("pname15");
+                    
+                 id.innerHTML=json2["club_name"][15];
+                         var id1=document.getElementById("pld15");
+                                    id1.innerHTML=json2["played"][15];
+                         var id2=document.getElementById("pts15");
+                                       id2.innerHTML=json2["points"][15];
+
+        var id=document.getElementById("pname16");
+                    
+                 id.innerHTML=json2["club_name"][16];
+                         var id1=document.getElementById("pld16");
+                                    id1.innerHTML=json2["played"][16];
+                         var id2=document.getElementById("pts16");
+                                       id2.innerHTML=json2["points"][16];
+
+        var id=document.getElementById("pname17");
+                    
+                 id.innerHTML=json2["club_name"][17];
+                         var id1=document.getElementById("pld17");
+                                    id1.innerHTML=json2["played"][17];
+                         var id2=document.getElementById("pts17");
+                                       id2.innerHTML=json2["points"][17];
+
+
+
+
+                
+                  console.log(json2);
+
+                    /*  var table = document.getElementById("ranking");
+    var row = table.insertRow(0);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    cell1.innerHTML = json2["club_name"][0];
+    cell2.innerHTML = json2["played"][0];
+    cell3.innerHTML = json2["points"][0];*/
+
+               
+                  }
+              
+                });
+      
+    });
+
+               
+
+
+</script>
+
+
+
+<script type="text/javascript">
+
+var detail;
+    $(document).ready(function(){
+        $.ajax({
+            type: "GET",
+            url: "/minor2/FFL/slim_files/news.php",
+            success: 
+                function(data) {
+                   // console.log(data);
+                     detail=JSON.parse(data);
+                   // console.log(detail["news"]);
+                   
+                   for(var i=0;i<10;i++){
+                    var id=document.getElementById("image"+i);
+                    console.log(id);
+                    id.setAttribute("src",detail["url"][i]);
+                    var id1=document.getElementById("title"+i);
+                    id1.innerHTML=detail["news"][i];
+                  //  var id=document.getElementById("pld");
+                    //console.log(id);
+                   // id.setAttribute("src",detail["url"][i]);
+                    //var id1=document.getElementById("title"+i);
+                  //  id.innerHTML=detail["news"][i];
+
+                   // id.setAttribute("data-src",detail["url"][i]);
+                    //id.setAttribute("data-retina",detail["url"][i]);
+                   // var id=document.getElementById("image"+i);
+
+                   }
+                    
+                }, 
+
+            error:                function(err) {
+                    console.log(err);
+                }
+            }); 
+
+    });
+
+</script>
+
+
+<script type="text/javascript">
+    $( document ).ready(function( $ ) {
+        $( '#example1' ).sliderPro({
+            width: 1040,
+            height: 500,
+            arrows: true,
+            buttons: false,
+            waitForLayers: true,
+            thumbnailWidth: 200,
+            thumbnailHeight: 100,
+            thumbnailPointer: true,
+            autoplay: true,
+            autoScaleLayers: false,
+            breakpoints: {
+                500: {
+                    thumbnailWidth: 120,
+                    thumbnailHeight: 50
+                }
+            }
+        });
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+  $(document).ready(function(){
+    $(".scroll").click(function(event){
+        //prevent the default action for the click event
+        event.preventDefault();
+
+        //get the full url - like mysitecom/index.htm#home
+        var full_url = this.href;
+
+        //split the url by # and get the anchor target name - home in mysitecom/index.htm#home
+        var parts = full_url.split("#");
+        var trgt = parts[1];
+
+        //get the top offset of the target anchor
+        var target_offset = $("#"+trgt).offset();
+        var target_top = target_offset.top;
+
+        //goto that anchor by setting the body scroll top to anchor top
+        $('html, body').animate({scrollTop:target_top}, 1500, 'easeInSine');
+    });
+});
+
+
+</script>
+
+
+
+<script type="text/javascript">
+    
+        function post_to_api(email, password, first_name, last_name, method) {
+        $.ajax({
+            type: "POST",
+            url: "api/signup",
+            data: {
+                'email':email,
+                'password':password,
+                'first_name':first_name,
+                'last_name':last_name,
+                'method':method,
+            },
+            success: function(result) {
+                if(result) {
+                    console.log(result);
+                    // result = JSON.parse(result);
+                    // console.log(result['status']);
+                    // console.log(result.message);
+                } else {
+                    console.log('Problem with ajax'); //1423273901281785
+                }
+            }
+        });
+    }
+
+    function submit() {
+        var email      = $('#email').val();
+        var password   = $('#password').val();
+        var first_name = $('#first_name').val();
+        var last_name  = $('#last_name').val();
+        var method     = 'normal';
+        post_to_api(email, password, first_name, last_name, method);
+    }
+
+
+    // Facebook
+    function statusChangeCallback_b(response) {
+        console.log('statusChangeCallback');
+        
+        if (response.status === 'connected') {
+            console.log('Below');
+            FB.api('/me', function(response) {
+                console.log(response)
+                console.log('Successful login for: ' + response.name);
+                // Generate a complicated password and put this in a different func
+                var method = 'facebook';
+                window.location.replace("http://localhost/login/index.html");
+                
+                // post_to_api(response.email, '123456', response.first_name, response.last_name, method)
+            });
+        } else if (response.status === 'not_authorized') {
+            console.log('log into app')
+        } else {
+            console.log('log into facebook')
+        }
+    }
+
+    function statusChangeCallback(response) {
+        console.log('statusChangeCallback');
+        
+        if (response.status === 'connected') {
+            console.log('Below');
+            FB.api('/me', function(response) {
+                console.log(response);
+            });
+        } else if (response.status === 'not_authorized') {
+            console.log('log into app')
+        } else {
+            console.log('log into facebook')
+        }
+    }
+
+    // This function is called when someone finishes with the Login
+    // Button.  See the onlogin handler attached to it in the sample
+    // code below.
+    function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+            //button
+            statusChangeCallback_b(response);
+        });
+    }
+
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '487363794774065',
+            cookie     : true,  // enable cookies to allow the server to access 
+                            // the session
+            xfbml      : true,  // parse social plugins on this page
+            version    : 'v2.1' // use version 2.1
+        });
+
+        FB.getLoginStatus(function(response) {
+            console.log(response.name);
+            statusChangeCallback(response);
+        });
+
+    };
+
+    // Load the SDK asynchronously
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+
+</script>
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+
+<style>
+
+
+
+body {
+
+  background: url(1.jpg);
+  background-attachment: fixed;
+  font-family: 'Open Sans', sans-serif;
+  color:#4e4e4e;
+  line-height: 22px;
+}
+
+
+
+  .bootstrap-demo{margin:30px;}
+</style>
+<style type="text/css">
+
+#flip1:hover #flip2 {
+  transform: rotateY(360deg);
+  
+
+ transform-style: preserve-3d;
+  transition: all 0.5s linear;
+}
+
+
+</style>
+
+<body class="homepage">
+
+
+<header id="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-4">
+                        <div class="top-number"><p><i class="fa fa-phone-square"></i>+917838516299</p></div>
+                    </div>
+                    <div class="col-sm-6 col-xs-8">
+                       
+                       <div class="social">
+                           <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" id="fb">
+</fb:login-button>
+
+                            <button id="submit" onClick="location.href='../../login/index.php'" >Login</button>
+
+
+
+                                
+                                
+                            </ul>
+                           
+                           </div>
+                       </div>
+                    </div>
+                </div>
+            </div><!--/.container-->
+        </div><!--/.top-bar-->
+
+
+   <!---------->
+
+        <nav class="navbar navbar-inverse" role="banner">
+            
+                
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="active"> <a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="terms.html">Terms</a></li>
+
+                     <li><a href="#How-to-play" data-wow-delay="0.3s" class="wow rollIn animated" class="sliding-link">Game</a></li>
+                     <li><a href="#Teams-in-leagues" class="sliding-link">Teams</a></li>
+                     <li><a href="#middle" class="sliding-link">Top in league</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teams<i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                               
+                                <li><a href="Chelsea.html">Chelsea</a></li>
+                                <li><a href="Arsenal.html">Arsenal</a></li>
+                                <li><a href="M.C.F.C.html">M.C.F.C</a></li>
+                                <li><a href="Sunderland.html">Sunderland</a></li>
+                                <li><a href="Everton.html">Everton</a></li>
+                                <li><a href="Manchester.html">Manchester</a></li>
+                                <li><a href="Liverpool.html">Liverpool</a></li>
+                                <li><a href="Newcastle.html">Newcastle</a></li>
+                                <li><a href="Southampton.html">Southampton</a></li>
+                                <li><a href="West Ham.html">West Ham</a></li>
+                                <li><a href="Stoke City.html">Stoke City</a></li>
+                        </ul>
+                        </li>
+                      
+                        <li><a href="contact-us.html">Contact</a></li>                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+   <!--- SLIDER -->
+
+        <div id="example1" class="slider-pro">
+        <div class="sp-slides">
+            
+            <div class="sp-slide">
+                <img class="sp-image" src="" id="image0">
+            </div>
+
+            <div class="sp-slide">
+                <img class="sp-image" src="" id="image1">
+            </div>
+
+            <div class="sp-slide">
+                <img class="sp-image" src="" id="image2">
+            </div>
+
+            <div class="sp-slide">
+                <img class="sp-image" src="" id="image3">
+            </div>
+
+            <div class="sp-slide">
+               <img class="sp-image" src="" id="image4">
+              </div>
+
+           
+            <div class="sp-slide">
+                <img class="sp-image" src="" id="image5">
+            </div>
+
+            <div class="sp-slide">
+                <img class="sp-image" src="" id="image6">
+            </div>
+
+            <div class="sp-slide">
+                <img class="sp-image" src="" id="image7">
+            </div>
+
+            <div class="sp-slide">
+                <img class="sp-image" src="" id="image8">
+            </div>
+
+            <div class="sp-slide">
+                <img class="sp-image" src="" id="image9">
+            </div>
+        </div>
+
+        <div class="sp-thumbnails">
+            <div class="sp-thumbnail">
+                <div class="sp-thumbnail-title" id="title0"></div>
+                
+            </div>
+             <div class="sp-thumbnail">
+                <div class="sp-thumbnail-title" id="title1"></div>
+                
+            </div>
+             <div class="sp-thumbnail">
+                <div class="sp-thumbnail-title" id="title2"></div>
+                
+            </div>
+             <div class="sp-thumbnail">
+                <div class="sp-thumbnail-title" id="title3"></div>
+                
+            </div>
+             <div class="sp-thumbnail">
+                <div class="sp-thumbnail-title" id="title4"></div>
+                
+            </div>
+             <div class="sp-thumbnail">
+                <div class="sp-thumbnail-title" id="title5"></div>
+                
+            </div>
+             <div class="sp-thumbnail">
+                <div class="sp-thumbnail-title" id="title6"></div>
+                
+            </div>
+             <div class="sp-thumbnail">
+                <div class="sp-thumbnail-title" id="title7"></div>
+                
+            </div>
+             <div class="sp-thumbnail">
+                <div class="sp-thumbnail-title" id="title8"></div>
+                
+            </div>
+             <div class="sp-thumbnail">
+                <div class="sp-thumbnail-title" id="title9"></div>
+                
+            </div>
+             </div>
+    </div>
+<!--- TABLES -->
+
+
+
+    <section id="How-to-play" >
+        <div class="container">
+           <div class="center wow fadeInDown">
+           
+           <h1  style=" 
+    color: rgba(0,0,0,0.26);
+    text-shadow: 0px -1px 4px white, 0px -2px 10px yellow, 0px -10px 20px #ff8000, 0px -18px 40px red;
+    font-size: 80px;"
+}>How to Play</h1>
+           
+           
+           
+           
+            <div class="inline-tbl3" >
+           
+
+<div class="terms">
+        
+        <div class="s1of3">
+            <div class="s1">
+                <img src="step1.png" alt="" width="226" height="115">
+               
+                    <h3 class="Heading1">1. Pick your squad</h3>
+                    <p>
+                        Use your budget of $105m to pick a squad of 15 players from the Football Fantasy League.
+                    </p>
+            
+            </div>
+        
+
+        </div>
+        
+        <div class="s2of3">
+            <div class="s2">
+                <img src="step2.png" alt="" width="225" height="115">
+            
+                    <h3 class="Heading2">2. Create and join leagues</h3>
+                    <p>Play against friends and family, colleagues or a web community in private leagues.</p>
+                </div>
+            </div>
+    
+        
+        <div class="s3of3">
+            <div class="s3">
+                <img src="step3.png" alt="" width="228" height="115">
+               
+                    <h3 class="Heading3">3. Pick your team each week</h3>
+                    <p>
+                        Pick your starting 11 each Gameweek, choose your captain,and make transfers.
+                    </p>
+            </div>
+        </div>
+   </div>
+</div>
+           
+           
+<div class="inline-tbl1" >
+
+        
+  
+  <table cellspacing="2" cellpadding="1" class="leagueTable"><tbody><tr><th class="col-club">Club</th><th class="col-pld1">Pld</th><th class="col-pts1">Pts</th></tr><tr class="accent1"><td class="col-club" height="1"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/man-utd" class="external">
+                   Man Utd 
+                </a></td><td class="col-pld" >7</td><td class="col-pts" >16</td></tr><tr class="accent2"><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/man-city" class="external">
+                   Man City 
+                </a></td><td class="col-pld">7</td><td class="col-pts">15</td></tr><tr class="accent2"><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/west-ham" class="external">
+                   West Ham 
+                </a></td><td class="col-pld">7</td><td class="col-pts">13</td></tr><tr class="accent2"><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/arsenal" class="external">
+                   Arsenal 
+                </a></td><td class="col-pld">7</td><td class="col-pts">13</td></tr><tr class="accent3"><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/spurs" class="external">
+                   Spurs 
+                </a></td><td class="col-pld">7</td><td class="col-pts">12</td></tr><tr><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/leicester" class="external">
+                   Leicester 
+                </a></td><td class="col-pld">7</td><td class="col-pts">12</td></tr><tr><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/liverpool" class="external">
+                   Liverpool 
+                </a></td><td class="col-pld">7</td><td class="col-pts">11</td></tr><tr><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/everton" class="external">
+                   Everton 
+                </a></td><td class="col-pld">6</td><td class="col-pts">9</td></tr><tr><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/southampton" class="external">
+                   Southampton 
+                </a></td><td class="col-pld">7</td><td class="col-pts">9</td></tr><tr><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/crystal-palace" class="external">
+                   Crystal Palace 
+                </a></td><td class="col-pld">6</td><td class="col-pts">9</td></tr><tr><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/swansea" class="external">
+                   Swansea 
+                </a></td><td class="col-pld">7</td><td class="col-pts">9</td></tr><tr><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/watford" class="external">
+                   Watford 
+                </a></td><td class="col-pld">6</td><td class="col-pts">9</td></tr><tr><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/norwich" class="external">
+                   Norwich 
+                </a></td><td class="col-pld">7</td><td class="col-pts">9</td></tr><tr><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/west-brom" class="external">
+                   West Brom 
+                </a></td><td class="col-pld">6</td><td class="col-pts">8</td></tr><tr><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/chelsea" class="external">
+                   Chelsea 
+                </a></td><td class="col-pld">7</td><td class="col-pts">8</td></tr><tr><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/bournemouth" class="external">
+                   Bournemouth 
+                </a></td><td class="col-pld">7</td><td class="col-pts">7</td></tr><tr><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/stoke" class="external">
+                   Stoke 
+                </a></td><td class="col-pld">7</td><td class="col-pts">6</td></tr><tr class="accent4"><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/aston-villa" class="external">
+                   Aston Villa 
+                </a></td><td class="col-pld">7</td><td class="col-pts">4</td></tr><tr class="accent4"><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/newcastle" class="external">
+                   Newcastle 
+                </a></td><td class="col-pld">7</td><td class="col-pts">3</td></tr><tr class="accent4"><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/sunderland" class="external">
+                   Sunderland 
+                </a></td><td class="col-pld">7</td><td class="col-pts">2</td></tr></tbody></table>
+</table>
+
+ </div>
+
+
+
+
+
+<div class="inline-tbl2" >
+
+  <table cellspacing="9" cellpadding="11" class="leagueTable" id="ranking"><tbody>
+  <tr><th class="col-club">Club</th>
+  <th class="col-pld1">Pld</th>
+  <th class="col-pts1">Pts</th>
+  </tr>
+  <tr class="accent1" >
+  <td class="col-club" height="1">
+<a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/man-city" class="external" id="pname">
+                   Man City 
+                </a></td><td class="col-pld" id="pld">7</td><td class="col-pts" id="pts">15</td></tr><tr class="accent2"><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/west-ham" class="external" id="pname1">
+                   West Ham 
+                </a></td><td class="col-pld" id="pld1" >7</td><td class="col-pts" id="pts1">13</td></tr>
+                <tr class="accent2"><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/arsenal" class="external" id="pname2">
+                   Arsenal 
+                </a></td><td class="col-pld" id="pld2">7</td><td class="col-pts" id="pts2">13</td></tr><tr class="accent3"><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/spurs" class="external" id="pname3">
+                   Spurs 
+                </a></td><td class="col-pld" id="pld3">7</td><td class="col-pts" id="pts3">12</td></tr><tr><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/leicester" class="external" id="pname4">
+                   Leicester 
+                </a></td><td class="col-pld" id="pld4">7</td><td class="col-pts" id="pts4">12</td></tr><tr><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/liverpool" class="external" id="pname5" >
+                   Liverpool 
+                </a></td><td class="col-pld" id="pld5">7</td><td class="col-pts" id="pts5">11</td></tr><tr><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/everton" class="external" id="pname6">
+                   Everton 
+                </a></td><td class="col-pld" id="pld6">6</td><td class="col-pts" id="pts6">9</td></tr><tr><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/southampton" class="external" id="pname7">
+                   Southampton 
+                </a></td><td class="col-pld" id="pld7">7</td><td class="col-pts" id="pts7" >9</td></tr><tr><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/crystal-palace" class="external" id="pname8">
+                   Crystal Palace  
+                </a></td><td class="col-pld" id="pld8">6</td><td class="col-pts" id="pts8">9</td></tr><tr><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/swansea" class="external" id="pname9">
+                   Swansea 
+                </a></td><td class="col-pld" id="pld9">7</td><td class="col-pts" id="pts9">9</td></tr><tr><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/watford" class="external" id="pname10">
+                   Watford 
+                </a></td><td class="col-pld" id="pld10">6</td><td class="col-pts" id="pts10">9</td></tr><tr><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/norwich" class="external" id="pname11">
+                   Norwich 
+                </a></td><td class="col-pld" id="pld11">7</td><td class="col-pts" id="pts11">9</td></tr><tr><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/west-brom" class="external" id="pname12">
+                   West Brom 
+                </a></td><td class="col-pld" id="pld12">6</td><td class="col-pts" id="pts12">8</td></tr><tr><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/chelsea" class="external" id="pname13">
+                   Chelsea 
+                </a></td><td class="col-pld" id="pld13">7</td><td class="col-pts" id="pts13">8</td></tr><tr><td class="col-club"><a href="http://www.premierleag15e.com/content/premierleague/en-gb/clubs/profile.overview.html/bournemouth" class="external" id="pname14">
+                   Bournemouth 
+                </a></td><td class="col-pld" id="pld14">7</td><td class="col-pts" id="pts14">7</td></tr><tr><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/stoke" class="external" id="pname15">
+                   Stoke 
+                </a></td><td class="col-pld" id="pld15">7</td><td class="col-pts" id="pts15">6</td></tr><tr class="accent4"><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/aston-villa" class="external" id="pname16">
+                   Aston Villa 
+                </a></td><td class="col-pld" id="pld16">7</td><td class="col-pts" id="pts16">4</td></tr><tr class="accent4"><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/newcastle" class="external" id="pname17">
+                   Newcastle 
+                </a></td><td class="col-pld" id="pld17">7</td><td class="col-pts"id="pts17">3</td></tr><tr class="accent4"><td class="col-club"><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/sunderland" class="external" id="pname18">
+                   Sunderland 
+                </a></td><td class="col-pld">7</td><td class="col-pts">2</td></tr></tbody></table>
+        
+</table>
+</table>
+ </div>
+            </div>
+            </div>    
+            </div>
+            </section>
+
+<!--- TEAMS -->
+<section id="Teams-in-leagues">
+        <div class="container">
+            <div class="center wow fadeInDown">
+    <h2 style="
+    color: rgba(0,0,0,0.32); text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px yellow, 0 0 30px #ff2d95, 0 0 40px green, 0 0 50px #ff2d95, 0 0 75px #ff2d95; letter-spacing: 5px; font: 80px 'MisoRegular';
+    ">Teams in League</h2>
+               
+            </div>
+
+            <div class="row">
+
+
+
+
+
+                <div id="flip1" class="col-xs-12 col-sm-4 col-md-3">
+                    
+                    <div id="flip2" class="Teams-in-league-wrap">
+                        <img class="img-responsive" src="images/team-logo/item1.png" alt="">
+                        
+                        <div class="overlay">
+                            
+                            <div class="Teams-in-league-inner">
+                                <h3><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/chelsea">Chelsea</a> </h3>
+                                <p>Club Info.</p>
+                                <a class="preview" href="Chelsea.html"> <i class="fa fa-eye"> </i> View </a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>   
+
+                    <div id="flip1" class="col-xs-12 col-sm-4 col-md-3">
+                    <div id="flip2" class="Teams-in-league-wrap">
+                        <img class="img-responsive" src="images/team-logo/item2.png" alt="">
+                        <div class="overlay">
+
+                            <div class="Teams-in-league-inner">
+                                 <h3><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/arsenal">Arsenal</a> </h3>
+                                <p>Club Info.</p>
+                                <a class="preview" href="Arsenal.html"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div> 
+
+
+                <div id="flip1" class="col-xs-12 col-sm-4 col-md-3">
+                    <div id="flip2" class="Teams-in-league-wrap">
+                        <img class="img-responsive" src="images/team-logo/item3.png" alt="">
+                        <div class="overlay">
+                            <div class="Teams-in-league-inner">
+                                 <h3><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/man-city">M.C.F.C.</a> </h3>
+                                <p>Club Info.</p>
+                                <a class="preview" href="M.C.F.C.html"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>   
+
+
+                <div id="flip1" class="col-xs-12 col-sm-4 col-md-3">
+                    <div id="flip2" class="Teams-in-league-wrap">
+                        <img class="img-responsive" src="images/team-logo/item4.png" alt="">
+                        <div class="overlay">
+                            <div class="Teams-in-league-inner">
+                                <h3><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/sunderland">Sunderland</a> </h3>
+                                <p>Club Info.</p>
+                               <a class="preview" href="Sunderland.html"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                        </div>
+                    </div>
+                </div>   
+                
+
+                <div id="flip1" class="col-xs-12 col-sm-4 col-md-3">
+                    <div id="flip2" class="Teams-in-league-wrap">
+                        <img class="img-responsive" src="images/team-logo/item5.png" alt="">
+                        <div class="overlay">
+                            <div class="Teams-in-league-inner">
+                                 <h3><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/everton">Everton</a> </h3>
+                                <p>Club Info.</p>
+                                <a class="preview" href="Everton.html"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>   
+
+
+                <div id="flip1" class="col-xs-12 col-sm-4 col-md-3">
+                    <div id="flip2" class="Teams-in-league-wrap">
+                        <img class="img-responsive" src="images/team-logo/item6.png" alt="">
+                        <div class="overlay">
+                            <div class="Teams-in-league-inner">
+                                    <h3><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/man-utd">Manchester United</a> </h3>
+                                <p>Club Info.</p>
+                                <a class="preview" href="Manchester.html"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div> 
+
+
+                <div id="flip1" class="col-xs-12 col-sm-4 col-md-3">
+                    <div id="flip2" class="Teams-in-league-wrap">
+                        <img class="img-responsive" src="images/team-logo/item7.png" alt="">
+                        <div class="overlay">
+                            <div class="Teams-in-league-inner">
+                                
+                                 <h3><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/liverpool">Liverpool</a> </h3>
+                                <p>Club Info.</p>
+                                <a class="preview" href="Liverpool.html"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>   
+
+
+                <div id="flip1" class="col-xs-12 col-sm-4 col-md-3">
+                    <div id="flip2" class="Teams-in-league-wrap">
+                        <img class="img-responsive" src="images/team-logo/item8.png" alt="">
+                        <div class="overlay">
+                            <div class="Teams-in-league-inner">
+                                 <h3><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/newcastle">NewCastle</a> </h3>
+                                <p>Club Info.</p>
+                                <a class="preview" href="Newcastle.html"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>   
+                
+
+                <div id="flip1" class="col-xs-12 col-sm-4 col-md-3">
+                    <div id="flip2" class="Teams-in-league-wrap">
+                        <img class="img-responsive" src="images/team-logo/item9.png" alt="">
+                        <div class="overlay">
+                            <div class="Teams-in-league-inner">
+                                <h3><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/southampton">Southampton</a> </h3>
+                                <p>Club Info.</p>
+                                <a class="preview" href="Southampton.html"><i class="fa fa-eye"></i> View</a>
+                                
+                            </div> 
+                        </div>
+                    </div>
+                </div> 
+
+
+                <div id="flip1" class="col-xs-12 col-sm-4 col-md-3">
+                    <div id="flip2" class="Teams-in-league-wrap">
+                        <img class="img-responsive" src="images/team-logo/item10.png" alt="">
+                        <div class="overlay">
+                            <div class="Teams-in-league-inner"> 
+                            <h3><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/west-ham">WestHam</a> </h3>
+                                <p>Club Info.</p>
+                                <a class="preview" href="West Ham.html"><i class="fa fa-eye"></i> View</a>
+                               
+                            </div> 
+                        </div>
+                    </div>
+                </div> 
+
+                  <div id="flip1" class="col-xs-12 col-sm-4 col-md-3">
+                    <div id="flip2" class="Teams-in-league-wrap">
+                        <img class="img-responsive" src="images/team-logo/item11.png" alt="">
+                        <div class="overlay">
+                            <div class="Teams-in-league-inner">
+                                 <h3><a href="http://www.premierleague.com/content/premierleague/en-gb/clubs/profile.overview.html/stoke">StokeCity</a> </h3>
+                                <p>Club Info.</p>
+                                <a class="preview" href="Stoke City.html"><i class="fa fa-eye"></i> View</a>
+                               
+                            </div> 
+                        </div>
+                    </div>
+                </div> 
+
+            </div>
+        </div>
+    </section>
+   
+   <!--- Top players -->
+
+
+ <section id="middle">
+ <div id="title">
+    <div class="center wow fadeInDown">
+    <h1 style="color: grey;
+    text-shadow: 0px -1px 4px grey, 0px -2px 10px red, 0px -10px 20px #ff8000, 0px -18px 40px green;
+    font: 80px 'BlackJackRegular';
+"> Top Players in League<h1>
+
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+     
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div id="demo">
+      <br><br><br>
+        <div id="owl-demo" class="top-player-slider">
+          
+          <div class="item"><h1><img src="" id="img0"></h1></div>
+          <div class="item"><h1><img src="" id="img1"></h1></div>
+          <div class="item"><h1><img src="" id="img2"></h1></div>
+          <div class="item"><h1><img src="" id="img3"></h1></div>
+          <div class="item"><h1><img src="" id="img4"></h1></div>
+          <div class="item"><h1><img src="" id="img5"></h1></div>
+          <div class="item"><h1><img src="" id="img6"></h1></div>
+          <div class="item"><h1><img src="" id="img7"></h1></div>
+          <div class="item"><h1><img src="" id="img8"></h1></div>
+          <div class="item"><h1><img src="" id="img9"></h1></div>
+          <div class="item"><h1><img src="" id="img10"></h1></div>
+          <div class="item"><h1><img src="" id="img11"></h1></div>
+        </div>
+    </div>
+    
+    <script src="../top-player-slider/owl.carousel.js"></script>
+    <!-- Demo -->
+    <style>
+    #owl-demo .item{
+        background: rgba(0, 0, 0, 0);
+        
+        margin: 5px;
+        color: #FFF;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 1px;
+        text-align: center;
+    }
+    </style>
+    <script>
+    $(document).ready(function()
+    {
+    $("#owl-demo").owlCarousel({navigation : true });
+    });
+    </script>
+    
+    </section>
+
+<!---  VIDEOS -->
+    <section id="content">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-8 wow fadeInDown">
+                   <div class="tab-wrap"> 
+                        <div class="media">
+                            <div class="parrent pull-left">
+                                <ul class="nav nav-tabs nav-stacked">
+                                    <li class="active"><a href="#tab1" data-toggle="tab" class="analistic-01">video1</a></li>
+                                    <li class=""><a href="#tab2" data-toggle="tab" class="analistic-02">video2</a></li>
+                                    <li class=""><a href="#tab3" data-toggle="tab" class="tehnical">video3</a></li>
+                                    <li class=""><a href="#tab4" data-toggle="tab" class="tehnical">video3</a></li>
+                                    <li class=""><a href="#tab5" data-toggle="tab" class="tehnical">video5</a></li>
+                                    <li class=""><a href="#tab6" data-toggle="tab" class="tehnical">video6</a></li>
+                                    <li class=""><a href="#tab7" data-toggle="tab" class="tehnical">video7</a></li>
+                                    <li class=""><a href="#tab8" data-toggle="tab" class="tehnical">video8</a></li>
+                                    <li class=""><a href="#tab9" data-toggle="tab" class="tehnical">video9</a></li>
+                                </ul>
+                           </div>
+                            <div class="parrent media-body">
+                                <div class="tab-content">
+                                   
+
+                                    <div class="tab-pane fade active in" id="tab1">
+                                        <div class="media">
+                                           <div class="pull-left">
+                                                <iframe width="1000" height="500" src="https://www.youtube.com/embed/zSg-00p2ES4" frameborder="0" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                     
+                                    <div class="tab-pane fade " id="tab2">
+                                        <div class="media">
+                                           <div class="pull-left">
+                                                <iframe width="1000" height="500" src="https://www.youtube.com/embed/i2ThqOMnpvg" frameborder="0" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                            
+                                    <div class="tab-pane fade " id="tab3">
+                                        <div class="media">
+                                           <div class="pull-left">
+                                                <iframe width="1000" height="500" src="https://www.youtube.com/embed/jfsjX3Rirts" frameborder="0" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade " id="tab4">
+                                        <div class="media">
+                                           <div class="pull-left">
+                                                <iframe width="1000" height="500" src="https://www.youtube.com/embed/nxIWqNfQ27g" frameborder="0" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tab-pane fade " id="tab5">
+                                        <div class="media">
+                                            <div class="pull-left">
+                                                <iframe width="1000" height="500" src="https://www.youtube.com/embed/wPrHkwAtrz0" frameborder="0" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                          
+                                            </div>
+                                        </div>
+                                     </div>
+                                </div>  
+                            </div> 
+                        </div>     
+                    </div>               
+                </div>
+<footer id="footer" class="midnight-blue">
+        <div class="container">
+            
+                <div class="col-sm-6">
+                    &copy; 2015 <a  href="index.html" title="">Fantasy Football league</a>.All Rights Reserved.
+                </div>
+                <div class="col-sm-4">
+                    <ul class="pull-right">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+    
+
+  
+   
+</body>
+</html>
